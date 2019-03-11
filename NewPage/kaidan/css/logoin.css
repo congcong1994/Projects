@@ -1,0 +1,56 @@
+.head-wrap{
+	text-align: center;
+	background-image: url(../img/logoin-bg.jpg);
+    background-size: 100% 100%;
+    background-position: 50% 0;
+    height: 300px;
+}
+.head-wrap h1{
+	color: #fff;
+	font-size: .25rem;
+	margin: 0px;
+	padding-top: 130px;
+}
+
+.logoin{
+	padding: 60px 30px;
+}
+.logoin .input-group{
+	margin-bottom: 20px;
+	position: relative;
+	width: 100%;
+}
+.logoin .input-group input,.input-group-addon{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	box-shadow: none;
+	font-size: 16px;
+	color: #919191;
+	border-radius: 0px;
+}
+.logoin .input-group input{
+	padding-left: 40px;
+}
+.logoin .input-group .input-group-addon{
+	position: absolute;
+	left: 0px;
+	border: none;
+	padding-right: 0px;
+	background-color: #fff;
+	z-index: 10;
+}
+.logoin .input-group .glyphicon{
+	top: 3px;
+}
+.logoin .btn-primary{
+	margin-top: 30px;
+	background-color: #FFF;
+	color: #4397b4;
+	border:1px solid #4397B4;
+	border-radius:40px ;
+	width: 100%;
+	padding: 10px 0;
+	display: block;
+	font-size: 16px;
+}

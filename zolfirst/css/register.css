@@ -1,0 +1,288 @@
+body{
+	font-family:"arial","宋体";
+}
+#registerTop{
+	width:990px;
+	margin:0 auto;
+	height:94px;
+	font-family:"宋体";
+}
+#registertopLogo{
+	padding:14px 0 20px 0;
+}
+#registertopLogo .logo{
+	float:left;
+}
+#registertopLogo .logo a{
+	float:left;
+}
+#registertopLogo .logo a img{
+	float:left;
+	width:182px;
+	height:60px;
+}
+#registertopLogo .logo a p{
+	float:left;
+	margin:8px 0 0 8px;
+	padding-left:10px;
+	font-size:14px;
+	height:44px;
+	line-height:44px;
+	color:#666;
+	border-left:1px solid #e6e6e6;
+	cursor:pointer;
+}
+#registertopLogo .registerbox{
+	float:right;
+	padding:21px 0 0;
+	font-size:14px;
+	height:22px;
+	line-height:22px;
+	font-family:"arial";
+}
+#registertopLogo .registerbox a{
+	float:right;
+	height:16px;
+	padding:3px 10px;
+	color:#c00;
+	font-size:14px;
+	height:14px;
+	line-height:14px;
+	font-family:"微软雅黑";
+}
+#registertopLogo .registerbox a:hover{
+	background:#cd1f1f;
+	color:#fff;
+}
+#registerCenter{
+	width:980px;
+	padding:0 0 100px;
+	border:1px solid #e6e6e6;
+	margin:auto;
+}
+#registerCenter .centerTitle{
+	font-family:"微软雅黑";
+	padding:16px 0 16px 90px;
+	background:#fafafa;
+	font-size:18px;
+	height:28px;
+	line-height:28px;
+	color:#999;
+}
+/*form*/
+#registerForm{
+	display:block;
+}
+#registerForm .registerBox{
+	float:left;
+	padding:30px 0 0 89px;
+	width:500px;
+}
+#registerForm .registerBox .registerWay{
+	height:39px;
+	border-bottom:1px solid #e6e6e6;
+}
+#registerForm .registerBox .registerWay .phoneWay{
+	font-family:"微软雅黑";
+	margin:0 -1px -1px;
+	padding:0 0 2px;
+	background:#fff;
+	float:left;
+	position:relative;
+	width:250px;
+	border:1px solid #e6e6e6;
+	border-top:2px solid #e02d2d;
+	border-bottom:none;
+	text-align:center;
+	line-height:36px;
+	height:36px;
+}
+#registerForm .registerBox .registerWay .phoneWay span{
+	color:#c00;
+	padding:0 0 0 20px;
+	font-size:18px;
+	background:url(../images/register/register-bg.png) no-repeat;
+	background-position:-158px -242px;
+}
+#registerForm .registerBox .registerWaybox{
+	padding:30px 0 0;
+}
+#registerForm .registerBox .registerWaybox .register-form{
+	position:relative;
+	margin:0 0 42px;
+	padding:0 0 0 83px;
+}
+#registerForm .registerBox .registerWaybox .register-form .label{
+	width:83px;
+	height:41px;
+	position:absolute;
+	top:0;
+	left:0;
+	font-size:14px;
+	line-height:40px;
+	text-align:right;
+	color:#666;
+}
+#registerForm .registerBox .registerWaybox .register-form .label .xinghao{
+	padding:0 7px 0 0;
+	font-size:12px;
+	color:#f30;
+}
+#registerForm .registerBox .registerWaybox .register-form .pwd2label .xinghao{
+	padding:0 3px 0 0;
+	font-size:12px;
+	color:#f30;
+}
+#registerForm .registerBox .registerWaybox .register-form .text{
+	display:block;
+	margin:0 10px 0 0;
+	padding:8px 5px;
+	width:278px;
+	height:22px;
+	border:1px solid #ccc;
+	outline:none;
+}
+#registerForm .registerBox .registerWaybox .register-form .righttips{
+	position:absolute;
+	top:12px;
+	left:383px;
+	width:15px;
+	height:15px;
+	background:url(../images/register/register-bg.png) no-repeat;
+	background-position:-155px -162px;
+}
+#registerForm .registerBox .registerWaybox .register-form .wrongtips{
+	position:absolute;
+	top:12px;
+	left:383px;
+	width:15px;
+	height:15px;
+	background:url(../images/register/register-bg.png) no-repeat;
+	background-position:-155px -196px;
+}
+#registerForm .registerBox .registerWaybox .register-form .tips{
+	position:absolute;
+	top:47px;
+	left:83px;
+	color:#aaa;
+	font-size:12px;
+}
+#registerForm .registerBox .registerWaybox .register-form .pwdwrongtips{
+	position:absolute;
+	top:12px;
+	left:383px;
+	height:15px;
+	line-height:15px;
+	background:#ededed url(../images/register/register-bg.png) no-repeat;
+	background-position:-155px -196px;
+	padding-left:20px;
+	width:150px;
+	font-size:12px;
+}
+#registerForm .registerBox .registerWaybox .agreementBox{
+	display:block;
+	padding:0 0 0 83px;
+	height:32px;
+	font-size:12px;
+	line-height:32px;
+	color:#999;
+}
+#registerForm .registerBox .registerWaybox .agreementBox input{
+	margin:0 8px 0 0;
+}
+#registerForm .registerBox .registerWaybox .agreementBox a{
+	color:#134ba0;
+}
+#registerForm .registerBox .registerWaybox .registerbtn{
+	display:block;
+	margin:20px 0 0 83px;
+	width:290px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	color:#fff;
+	text-align:center;
+	border:none;
+	cursor:pointer;
+	background:url(../images/register/bg.png) no-repeat;
+	background-position:0 0;
+}
+#registerCenter .fastLogin{
+	float:right;
+	margin:30px 0 0;
+	padding:0 80px 0 25px;
+	width:170px;
+	border-left:1px solid #f5f5f5;
+}
+#registerCenter .fastLogin p{
+	margin:-6px 0 0;
+	font-size:12px;
+	line-height:24px;
+	color:#666;
+}
+#registerCenter .fastLogin p a{
+	margin:0 5px;
+	color:#134ba0;
+	line-height:24px;
+}
+#registerCenter .fastLogin .fastList{
+	width:170px;
+	height:240px;
+}
+#registerCenter .fastLogin .fastList a{
+	display:block;
+	margin:15px 0 0;
+	width:170px;
+	height:36px;
+	color:transparent;
+	overflow:hidden;
+	background:url(../images/register/register-bg.png) no-repeat;
+}
+#registerCenter .fastLogin .fastList a:hover{
+	opacity:0.8;
+}
+#registerCenter .fastLogin .fastList .wechat{
+	background:url(../images/register/weixin.png) no-repeat;
+}
+#registerCenter .fastLogin .fastList .sinablog{
+	background-position:0 0;
+}
+#registerCenter .fastLogin .fastList .qq{
+	background-position:0 -37px;
+}
+#registerCenter .fastLogin .fastList .alipay{
+	background-position:0 -74px;
+}
+#registerCenter .fastLogin .fastList .baidu{
+	background-position:0 -111px;
+}
+
+
+#registerBottom{
+	margin:70px auto 0;
+	border-top:1px solid #dcdcdc;
+	padding:12px 0 25px;
+}
+#registerBottom .registerbottomCon{
+	width:990px;
+	margin:0 auto;
+}
+#registerBottom .registerbottomCon .bottomAbout{
+	float:left;
+	margin:0 0 0 -10px;
+	color:#ccc;
+}
+#registerBottom .registerbottomCon .bottomAbout a{
+	margin:0 10px;
+	color:#666;
+	font-size:12px;
+	height:18px;
+	line-height:18px;
+}
+#registerBottom .registerbottomCon .bottomCopyright{
+	float:right;
+	color:#666;
+	font-size:12px;
+	height:18px;
+	line-height:18px;
+}

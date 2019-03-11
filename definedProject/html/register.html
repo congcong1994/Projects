@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>registerPage</title>
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/register.css" type="text/css" />
+	</head>
+	<body>
+		<div id="box">
+			<header class="clearfix">
+				<div class="backBtn">
+					<i class="iconfont">&#xe74d;</i>
+				</div>
+				用户注册
+				<div class="homeBtn">
+					<i class="iconfont">&#xe7a4;</i>
+				</div>
+			</header>
+			<section>
+				<div class="userName clearfix">
+					<span>账户名称：</span>
+					<input type="text" placeholder="请输入用户名" id="usernameBox" />
+				</div>
+				<div class="userPwd clearfix">
+					<span>登录密码：</span>
+					<input type="password" placeholder="请输入密码" id="userpwdBox" />
+				</div>
+				<div class="userPwd2 clearfix">
+					<span>确认密码：</span>
+					<input type="password" placeholder="请确认密码" id="userpwd2Box" />
+				</div>
+				<div class="agreeBox">
+					<label for="checkOption">
+						<input type="checkbox" id="checkOption" />
+						<img src="../images/checkbox.png" alt="" />
+						<span>我已阅读并同意<a href="javascript:">《商城注册协议》</a></span>
+					</label>
+				</div>
+				<div class="btnBox">
+					<input type="button" id="registerBtn" value="注册" />
+				</div>
+			</section>
+		</div>
+		<script src="../js/register.js"></script>
+	</body>
+</html>

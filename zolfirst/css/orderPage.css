@@ -1,0 +1,505 @@
+body{
+	font-family:"微软雅黑";
+	font-size:12px;
+	color:#333;
+}
+#MainBox{
+	margin:0 auto;
+	width:960px;
+	font-family:"微软雅黑";
+}
+#MainBox .container{
+	margin:0 0 10px;
+	border:1px solid #e3e3e3;
+}
+#MainBox .container table{
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:2px;
+	border-color:grey;
+}
+#MainBox .container table .cell1{
+	width:118px;
+	font-size:14px;
+	line-height:22px;
+	text-align:center;
+}
+#MainBox .container table .cell2{
+	padding:10px;
+	border-left:1px solid #e3e3e3;
+}
+#MainBox .container table .cell2 .addressList li{
+	position:relative;
+	margin:0 0 2px;
+	padding:6px 88px 6px 10px;
+	color:#666;
+}
+#MainBox .container table .cell2 .addressList .nowBox{
+	background:#fff5d6;
+}
+#MainBox .container table .cell2 .nowBox{
+	background:#fff5d6;
+}
+/*#MainBox .container table .cell2 .addressList .addEdits{
+	background:#fff5d6;
+}*/
+#MainBox .container table .cell2 .addressList .addEdits label{
+	display:block;
+}
+#MainBox .container table .cell2 .addressList .addEdits input{
+	margin:0 10px 0 0;
+}
+/*#MainBox .container table .cell2 .addressList .current{
+	display:none;
+	background:#fff5d6;
+}*/
+#MainBox .container table .cell2 .addressList .current label input{
+	margin:0 10px 0 0;
+	vertical-align:middle;
+}
+#MainBox .container table .cell2 .addressList .current label span strong{
+	font-weight:bold;
+}
+#MainBox .container table .cell2 .addressList .current .operate{
+	position:absolute;
+	top:6px;
+	right:10px;
+}
+#MainBox .container table .cell2 .addressList .current .operate a{
+	margin:0 0 0 20px;
+	color:#36c;
+}
+#MainBox .container table .cell2 .addressList .current .operate a:hover{
+	color:#c00;
+	text-decoration:underline;
+}
+
+
+
+
+
+
+#MainBox .container table .cell2 .add-address{
+	display:none;
+	margin:0 0 2px;
+	padding:6px 10px;
+	color:#666;
+}
+#MainBox .container table .cell2 .add-address label input{
+	margin:0 10px 0 0;
+	vertical-align:middle;
+}
+#inforEditor{
+	padding:15px 0 5px 22px;
+}
+#inforEditor input{
+	outline:none;
+}
+#inforEditor dl{
+	position:relative;
+	padding:0 0 10px 75px;
+}
+#inforEditor dl dt{
+	position:absolute;
+	top:0;
+	left:0;
+	width:75px;
+	font-size:12px;
+	line-height:26px;
+	color:#666;
+}
+#inforEditor dl dt .buyerInfo{
+	padding:0 8px 0 0;
+	color:#f30;
+	font-family:"simsun";
+}
+#inforEditor dl dd{
+	overflow:hidden;
+}
+#inforEditor dl dd .text{
+	float:left;
+	color:#000;
+	margin:0 10px 0 0;
+	padding:2px 5px;
+	width:118px;
+	height:20px;
+	border:1px solid #d6d6d6;
+	font-size:12px;
+	line-height:20px;
+}
+#inforEditor dl dd .none{
+	display:none;
+}
+#inforEditor dl dd .wrong-tips{
+	color:#c00;
+	float:left;
+	font-size:12px;
+	line-height:26px;
+}
+#inforEditor .area dd{
+	height:26px;
+	overflow:hidden;
+}
+#inforEditor .area dd select{
+	width:87px;
+	float:left;
+	margin:4px 5px 0 0;
+	border:1px solid #d6d6d6;
+	outline:none;
+}
+#inforEditor .area dd select option{
+	font-weight:normal;
+	display:block;
+	/*min-height:14em;*/
+	padding:0 2px 1px;
+}
+#inforEditor .detailAddress .text{
+	width:338px;
+}
+#inforEditor .number{
+	width:699px;
+	height:36px;
+	position:relative;
+}
+#inforEditor .number dl{
+	float:left;
+	margin:0 20px 0 0;
+	/*width:152px;*/
+	position:relative;
+	padding:0 0 10px 75px;
+}
+#inforEditor .number .tips{
+	float:left;
+	color:#999;
+	line-height:25px;
+}
+#inforEditor .number dl dd .wrong-tips{
+	color:#c00;
+	float:left;
+	font-size:12px;
+	line-height:26px;
+	height:26px;
+	width:120px;
+	position:absolute;
+	top:0;
+	left:230px;
+}
+#inforEditor .number dl dd{
+	height:26px;
+}
+
+#inforEditor .setupDefault{
+	display:block;
+	padding:7px 0 0 75px;
+	color:#333;
+}
+#inforEditor .setupDefault input{
+	margin:0 10px 0 0;
+}
+#MainBox .container table .cell2 .addressList .addEdits .saveBtn{
+	display:block;
+	margin:15px 0 0 75px;
+	width:120px;
+	height:30px;
+	border:none;
+	cursor:pointer;
+	font-size:14px;
+	line-height:30px;
+	color:#fff;
+	text-align:center;
+	background:url(../images/orderPage/ico.png) no-repeat;
+	background-position:0 -270px;
+}
+.orderList{
+	margin:0 0 10px;
+	border:2px solid #e02d2d;
+}
+.orderList table{
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:2px;
+	border-color:grey;
+}
+.orderList .cell1{
+	width:117px;
+	font-size:14px;
+	line-height:22px;
+	text-align:center;
+}
+.orderList .cell1 label input{
+	margin:-1px 10px 0 0;
+}
+.orderList .cell2{
+	border-left:1px solid #e3e3e3;
+}
+.orderList .cell2 table{
+	border:none;
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:2px;
+}
+.orderList .cell2 .goods th{
+	padding:5px 10px 6px;
+	height:18px;
+	text-align:center;
+	background:#f5f5f5;
+	font-size:12px;
+	line-height:18px;
+	color:#666;
+	border-right:1px solid #fff;
+	font-weight:normal;
+}
+.orderList .cell2 .goods .infor{
+	width:298px;
+}
+.orderList .cell2 .goods .colorSuits{
+	width:85px;
+}
+.orderList .cell2 .goods .saletype{
+	width:71px;
+}
+.orderList .cell2 .goods .price{
+	width:60px;
+}
+.orderList .cell2 .goods .youhui{
+	width:100px;
+}
+.orderList .cell2 .goods .proNumber{
+	width:30px;
+}
+.orderList .cell2 .goods .totalPrice{
+	border-right:none;
+	width:70px;
+}
+.orderList .cell2 .goods td{
+	padding:10px;
+	text-align:center;
+	color:#666;
+	line-height:22px;
+	vertical-align:top;
+	border-top:1px solid #f5f5f5;
+}
+.orderList .cell2 .goods .infor{
+	width:298px;
+}
+.orderList .cell2 .goods .infor .pic{
+	float:left;
+	margin:0 0 0 10px;
+	width:62px;
+	height:62px;
+	color:#36c;
+}
+.orderList .cell2 .goods .infor .pic img{
+	display:block;
+	border:1px solid #ccc;
+}
+.orderList .cell2 .goods .infor .title{
+	float:left;
+	padding:0 10px;
+	width:198px;
+	height:36px;
+	font-size:12px;
+	line-height:18px;
+	overflow:hidden;
+	text-align:left;
+}
+.orderList .cell2 .goods .infor .title a{
+	color:#36c;
+}
+.orderList .cell2 .goods .infor .title a:hover{
+	color:#c00;
+	text-decoration:underline;
+}
+.orderList .cell2 .goods .colorSuits{
+	width:85px;
+}
+.orderList .cell2 .goods .colorSuits .color{
+	text-align:left;
+}
+.orderList .cell2 .goods .colorSuits .suits{
+	padding:2px 0 0;
+	text-align:left;
+	position:relative;
+}
+.orderList .cell2 .goods .colorSuits .suits:hover>.suit-details{
+	display:block;
+}
+.orderList .cell2 .goods .colorSuits .suits span{
+	display:inline-block;
+	padding-right:10px;
+	cursor:pointer;
+	background:url(../images/orderPage/ico.png) no-repeat;
+	background-position:100% -361px;
+}
+.orderList .cell2 .goods .colorSuits .suits .suit-details{
+	display:none;
+	position:absolute;
+	top:26px;
+	left:0;
+	padding:6px 10px;
+	width:158px;
+	border:1px solid #d6d6d6;
+	background:#fff;
+	box-shadow:1px 1px 5px rgba(0,0,0,0.2);
+}
+.orderList .cell2 .goods .saletype{
+	width:71px;
+}
+.orderList .cell2 .goods .price{
+	font-family:"verdana";
+	width:60px;
+}
+.orderList .cell2 .goods .proNumber{
+	width:30px;
+}
+.orderList .cell2 .goods .totalPrice{
+	padding:10px 9px 10px 10px;
+	font-family:"verdana";
+	color:#333;
+	font-weight:bold;
+}
+.orderList .cell2 .orderFoot{
+	padding:0 0 9px;
+	border-top:1px solid #e3e3e3;
+}
+.orderList .cell2 .orderFoot .delivery{
+	float:right;
+	padding:3px 19px 0 0;
+}
+.orderList .cell2 .goods .orderFoot .delivery .payment{
+	padding:7px 0 0;
+	overflow:hidden;
+}
+.orderList .cell2 .orderFoot .delivery .payment span{
+	float:left;
+	line-height:22px;
+	color:#666;
+}
+.orderList .cell2 .orderFoot .delivery .payment select{
+	float:right;
+	margin:2px 0 0;
+	width:158px;
+	border:1px solid #abadb3;
+	outline:none;
+}
+.orderList .cell2 .orderFoot .delivery .payment select option{
+	font-weight:normal;
+	display:block;
+	min-height:14px;
+	padding:0 2px 1px;
+}
+.orderList .cell2 .orderFoot .delivery .payment select span{
+	float:right;
+	line-height:22px;
+	color:#666;
+}
+.orderNote{
+	border:1px solid #e3e3e3;
+}
+.orderNote table{
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:2px;
+	border-color:grey;
+}
+.orderNote table .cell1{
+	width:118px;
+	font-size:14px;
+	line-height:22px;
+	text-align:center;
+}
+.orderNote table .cell2{
+	padding:20px 20px 15px;
+	width:580px;
+	border-left:1px solid #e3e3e3;
+}
+.orderNote table .cell2 textarea{
+	float:left;
+	display:block;
+	padding:2px 5px;
+	width:468px;
+	height:66px;
+	border:1px solid #d6d6d6;
+	resize:none;
+	font-size:12px;
+	line-height:18px;
+	overflow-y:auto;
+	color:#999;
+	outline:none;
+}
+.orderNote table .cell3{
+	border-left:1px solid #e3e3e3;
+}
+.orderNote table .cell3 .totalPrice li{
+	position:relative;
+	padding:0 20px 0 90px;
+	height:30px;
+	font-size:12px;
+	line-height:30px;
+	color:#666;
+	text-align:right;
+}
+.orderNote table .cell3 .totalPrice li span{
+	position:absolute;
+	top:0;
+	left:0;
+	width:90px;
+}
+.orderNote table .cell3 .totalPrice li em{
+	font-family:"verdana";
+}
+.orderNote table .cell3 .totalPrice li em.total{
+	font-size:24px;
+	color:#c71010;
+	font-weight:bold;
+}
+.submitOrder{
+	padding:32px 0 0;
+	text-align:right;
+}
+.submit-return{
+	display:none;
+	float:left;
+	margin-top:-32px;
+	color:#666;
+	line-height:28px;
+}
+.submit-btn{
+	float:right;
+	display:block;
+	margin-left:10px;
+	width:160px;
+	height:46px;
+	overflow:hidden;
+	color:transparent;
+	border:none;
+	cursor:pointer;
+	background:url(../images/orderPage/ico.png) no-repeat;
+	background-position:0 0;
+}
+.submit-loading{
+	display:none;
+	float:right;
+	margin-left:10px;
+	width:160px;
+	height:46px;
+	overflow:hidden;
+	color:transparent;
+	border:none;
+	cursor:pointer;
+	background:url(../images/orderPage/ico.png) no-repeat;
+	background-position:0 -94px;
+}
+.fail-submit{
+	display:none;
+	float:right;
+	margin-left:10px;
+	width:160px;
+	height:46px;
+	overflow:hidden;
+	color:transparent;
+	border:none;
+	background:url(../images/orderPage/ico.png) no-repeat;
+	background-position:0 -141px;
+	cursor:not-allowed;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/register.css" />
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/register.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script>
+		$(function(){
+			registerPage();
+
+		})
+	</script>
+</head>
+<body>
+<!--top-->
+	<div id="registerTop">
+		<div id="registertopLogo" class="clearfix">
+			<div class="logo">
+				<a href="index.html" target="_blank">
+					<img src="../images/register/registerLogo.png" alt="" />
+					<p>中关村在线旗下网上商城</p>
+				</a>
+			</div>
+			<div class="registerbox">
+				<a href="login.html">立即登录</a>
+				已经有ZOL商城账号？
+			</div>
+		</div>
+	</div>
+	<div id="registerCenter" class="clearfix">
+		<div class="centerTitle">
+			30秒快速注册，加入ZOL商城
+		</div>
+		<form action="" id="registerForm">
+			<div class="registerBox">
+				<div class="registerWay clearfix"><!--ul-->
+					<div class="phoneWay">
+						<span>用手机号注册</span>
+					</div>
+				</div>
+				<div class="registerWaybox">
+					<!--手机号-->
+					<div class="register-form phonebox">
+						<div class="label">
+							<span class="xinghao">*</span>
+							手机号：
+						</div>
+						<input type="text" class="text" maxlength="11" id="phonenumber" />
+						<span class="righttips" style="display:none"></span>
+						<span class="wrongtips" style="display:none"></span>
+						<div class="tips">请填写手机号码</div>
+					</div>
+					<!--邮箱-->
+					<div class="register-form emailbox">
+						<div class="label">
+							<span class="xinghao">*</span>
+							邮箱号：
+						</div>
+						<input type="text" class="text" id="emailadd"/>
+						<span class="righttips" style="display:none"></span>
+						<span class="wrongtips" style="display:none"></span>
+						<div class="tips">请填写邮箱号码</div>
+					</div>
+					<!--密码-->
+					<div class="register-form pwdbox">
+						<div class="label">
+							<span class="xinghao">*</span>
+							密码：
+						</div>
+						<input type="password" class="text" id="password1" />
+						<span class="pwdwrongtips" style="display:none">密码不可以包含特殊字符</span>
+						<div class="tips">
+							6-18位小写字母和数字的组合，不可用特殊字符
+						</div>
+					</div>
+					<!--再次输入密码-->
+					<div class="register-form pwd2box">
+						<div class="pwd2label label">
+							<span class="xinghao">*</span>
+							确认密码：
+						</div>
+						<input type="password" class="text" id="password2" />
+						<span class="wrongtips pwd2wrongtips" style="display:none"></span>
+						<div class="tips">再次输入密码</div>
+					</div>
+					<label class="agreementBox">
+						<input type="checkbox" name="checkbox" id="checkbox" checked="checked" />
+						同意
+						<a href="#">《商城用户协议》</a>
+						<a href="#">《隐私权说明》</a>
+					</label>
+					<input type="button" value="注 册" class="registerbtn" id="registerbtn" />
+				</div>
+			</div>
+		</form>
+		<div class="fastLogin">
+			<p>
+				如果您已经注册，请
+				<a href="login.html">直接登录</a>
+				或者用以下方式登录：
+			</p>
+			<div class="fastList">
+				<a href="#" class="wechat">微信登录</a>
+				<a href="#" class="sinablog">新浪微博登录</a>
+				<a href="#" class="qq">腾讯QQ登录</a>
+				<a href="#" class="alipay">支付宝账号登录</a>
+				<a href="#" class="baidu">百度账号登录</a>
+			</div>
+		</div>
+	</div>
+	<div id="registerBottom">
+		<div class="registerbottomCon clearfix">
+			<div class="bottomAbout">
+				<a href="#">关于ZOL商城</a>|
+				<a href="#">联系我们</a>|
+				<a href="#">帮助中心</a>
+			</div>
+			<div class="bottomCopyright">
+				&copy;2016. 中关村在线 版权所有
+			</div>
+		</div>
+	</div>
+</body>
+</html>

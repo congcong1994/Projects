@@ -1,0 +1,50 @@
+[
+	{
+		"imgUrl":"images/sftablet1.jpg",
+		"name":"【全国联保 赠高清膜】苹果 iPad mini 4（16GB/WiFi版）金色16GB",
+		"price":"￥2638.00",
+		"activity":""
+	},
+	{
+		"imgUrl":"images/sftablet2.png",
+		"name":"【下单送高清膜+顺丰包邮】苹果 iPad Air 2 平板电脑 9.7英寸（16G WLAN版/A8X 芯片/Retina显示屏/TouCH ID技术）",
+		"price":"￥2668.00",
+		"activity":"满减"
+	},
+	{
+		"imgUrl":"images/sftablet3.png",
+		"name":"【顺丰包邮】戴尔 Venue 8（V8-RED3840D）  8英吋超薄平板电脑(双核Z3480 16G存储 Micro-USB2.0 Android4.4）",
+		"price":"￥1399.00",
+		"activity":""
+	},
+	{
+		"imgUrl":"images/sftablet4.jpg",
+		"name":"【顺丰包邮】华为揽阅M2 青春版 7.0英寸（M2-703L）（32GB/全网通）",
+		"price":"￥1583.00",
+		"activity":""
+	},
+	{
+		"imgUrl":"images/sftablet5.jpg",
+		"name":"华为 揽阅M2青春版7.0英寸（16GB/全网通版）现货（珍珠白）平板手机，4G全网通，侧边指纹识别  16GB ROM+3GB RAM",
+		"price":"￥1318.00",
+		"activity":""
+	},
+	{
+		"imgUrl":"images/sftablet6.jpg",
+		"name":"联想 S8-50（16GB/WIFI版/乌木黑））·中关村品质认证商·官方授权·*联保·专用绿色通道·*行货·顺丰包邮",
+		"price":"￥1570.00",
+		"activity":""
+	},
+	{
+		"imgUrl":"images/sftablet7.jpg",
+		"name":"即拍即发 华为 揽阅M2青春版10.1英寸（16GB/全网通版）包邮",
+		"price":"￥1800.00",
+		"activity":"赠品"
+	},
+	{
+		"imgUrl":"images/sftablet8.jpg",
+		"name":"【顺丰包邮】三星 GALAXY Tab S T800（WLAN版）真8核处理器 Super AMOLED屏 2560x1600分辨率 指纹识别 6.6mm，298g！",
+		"price":"￥2479.00",
+		"activity":""
+	}
+]

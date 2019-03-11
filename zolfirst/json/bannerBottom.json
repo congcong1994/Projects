@@ -1,0 +1,27 @@
+[
+	{
+		"name":"联想 IdeaPad 710S",
+		"price":"直降500元",
+		"imgUrl":"images/banBli1.jpg"
+	},
+	{
+		"name":"乐视 乐Max 2",
+		"price":"团购价1388元",
+		"imgUrl":"images/banBli2.jpg"
+	},
+	{
+		"name":"苹果 iPhone 4S",
+		"price":"团购抄底649元",
+		"imgUrl":"images/banBli3.jpg"
+	},
+	{
+		"name":"小苍VR眼镜",
+		"price":"团购价：38.8元",
+		"imgUrl":"images/banBli4.jpg"
+	},
+	{
+		"name":"三星曲面显示器",
+		"price":"仅售949元",
+		"imgUrl":"images/banBli5.jpg"
+	}
+]

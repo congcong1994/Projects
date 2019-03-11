@@ -1,0 +1,185 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "微软雅黑";
+}
+ul,li,ol,dt,dd{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+.clearfix:after {
+  content: ".";
+  width: 0;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+html{
+    width:100%;
+    height:100%;
+    font-size:100px;
+    body{
+        width:100%;
+        height:100%;
+        font-size:100px;
+        #searchPagebox{
+            width:100%;
+            height:100%;
+            font-size:0.14rem;
+            display:box;
+            display:-webkit-box;
+            display:-moz-box;
+            box-orient:vertical;
+            -webkit-box-orient:vertical;
+            -moz-box-orient:vertical;
+            header{
+                width:100%;
+                height:0.48rem;
+                background:#c10000;
+                text-align:center;
+                color:#fff;
+                line-height:0.48rem;
+                font-size:0.2rem;
+//              position:relative;
+                display:box;
+                display:-webkit-box;
+                display:-moz-box;
+                box-orient:horizontal;
+                -webkit-box-orient:horizontal;
+                -moz-box-orient:horizontal;
+                position:fixed;
+                left:0;
+                top:0;
+                z-index:30;
+                .backBtn{
+//                  position:absolute;
+//                  top:0;
+                    display:block;
+                    width:0.48rem;
+                    height:0.48rem;
+                    line-height:0.48rem;
+                    font-size:0.24rem;
+                    text-align:center;
+                    i.iconfont{
+                        font-size:0.24rem;
+                    }
+//                  left:5%;
+                }
+                .inputbox{
+                    box-flex:1;
+                    -webkit-box-flex:1;
+                    -moz-box-flex:1;
+                    height:0.48rem;
+                    line-height:0.48rem;
+                    box-sizing:border-box;
+                    position:relative;
+                    input{
+                        width:95%;
+                        height:0.3rem;
+                        line-height:0.3rem;
+                        border:none;
+                        outline:none;
+                        border-radius:0.1rem;
+                        box-sizing:border-box;
+                        padding-left:0.1rem;
+                        position:absolute;
+                        left:1%;
+                        top:50%;
+                        margin-top:-0.15rem;
+                    }
+                    i.iconfont{
+                        position:absolute;
+                        top:0;
+                        right:7%;
+                        color:#c10000;
+                        font-size:0.2rem;
+                    }
+                }
+            }
+            section{
+                box-flex:1;
+                -webkit-box-flex:1;
+                -moz-box-flex:1;
+                width:100%;
+                margin-top:0.48rem;
+                ul{
+                    height:100%;
+                    overflow-y:auto;
+                    overflow-x:hidden;
+                    li{
+                        float:left;
+                        box-sizing:border-box;
+                        width:47%;
+//                      height:1.3rem;
+                        overflow:hidden;
+                        border:1px solid #eee;
+                        position:relative;
+                        padding-top:0.15rem;
+                        margin:2%;
+                        margin-right:0;
+                        text-align:center;
+                        .imgbox{
+                            width:100%;
+                            height:1rem;
+                            border:none;
+                            position:relative;
+                            img{
+                                display:block;
+                                width:1rem;
+                                height:1rem;
+                                position:absolute;
+                                left:50%;
+                                margin-left:-0.5rem;
+                                top:0;
+                            }
+                        }
+                        .textBox{
+                            box-flex:1;
+                            -webkit-box-flex:1;
+                            -moz-box-flex:1;
+                            overflow:hidden;
+                            font-size:0.2rem;
+                            margin-top:0.15rem;
+                            .title{
+                                display:block;
+//                              color:#666;
+                                color:#c10000;
+                                height:0.4rem;
+                                line-height:0.2rem;
+                                font-size:0.16rem;
+                            }
+                            .toinfoPage{
+                                text-decoration:underline;
+                                color:#999;
+                                font-size:0.14rem;
+                                height:0.4rem;
+                                line-height:0.4rem;
+                            }
+                            i.iconfont{
+                                font-size:0.14rem;
+                                color:#999;
+                            }
+                        }
+                    }
+                    #inputnogoods{
+                        width:100%;
+                        line-height:0.3rem;
+                        font-size:0.16rem;
+                        border:none;
+                        text-align:left;
+                        box-sizing:border-box;
+                        padding:0 5%;
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+}

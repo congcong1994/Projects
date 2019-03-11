@@ -1,0 +1,9 @@
+angular.module("myProject").controller("indexhotCtrl",["$scope","$http",function($scope,$http){
+	$scope.indexhotArr=[];
+	$http.get("http://congcong.duapp.com/sentaiPhp/indexhot.php").success(function(data){
+		$scope.indexhotArr=data;
+	});
+	$scope.indexhotClick=function(item){
+		window.location.href="html/product.html?goodsID="+item.goodsID+"&classID="+item.classID+"&smallClassId="+item.smallClassId;
+	}
+}]);

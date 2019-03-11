@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<link rel="stylesheet" href="css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body ng-app="myProject">
+		<div id="indexBox">
+			<header>
+				<i class="iconfont headerleftBtn" ng-controller="indexheadCtrl" ng-click="backClick()">&#xe74d;</i>
+				森泰花卉
+				<i class="iconfont headerrightBtn" ng-controller="indexheadCtrl" ng-click="searchClick()">&#xe632;</i>
+				<ul>
+					<li>商品分类</li>
+					<li class="norightBorder">会员中心</li>
+				</ul>
+			</header>
+			<ion-content style="width:100%;height:100%">
+				<section>
+					<div class="bannerBox" ng-controller="indexbannerCtrl">
+						<!--<indexbanner-directive></indexbanner-directive>-->
+						<ion-slide-box active-slide="model.activeIndex" does-continue="true" auto-play="true" slide-interval="3000" on-slide-changed="slideHasChanged($index)" show-pager="true" pager-click="pageClick(index)" delegate-handle="delegateHandler" ng-click="coverFlowClick()">
+						    <ion-slide ng-repeat="item in bannerArr" ng-click="pageTurnFn(item)">
+							    <a class="box" href="javascript:">
+							    	<img src="{{item.imgsUrl}}" alt="" />
+							    </a>
+						    </ion-slide>
+						</ion-slide-box>
+					</div>
+					<div class="indexNavbox" ng-controller="indexnavCtrl">
+						<ul class="clearfix">
+							<li class="li1" ng-click="indexnavTurnlist(1)">
+								<a href="javascript:">
+									<i class="iconfont icon1">&#xe6e0;</i>
+									绿植
+								</a>
+							</li>
+							<li class="li2" ng-click="indexnavTurnlist(2)">
+								<a href="javascript:" class="noborder">
+									<i class="iconfont icon2">&#xe60a;</i>
+									鲜花
+								</a>
+							</li>
+							<li class="li3" ng-click="indexnavTurnCenter()">
+								<a href="javascript:">
+									<i class="iconfont icon3">&#xe69e;</i>
+									会员中心
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="indexhotGoods">
+						<ul ng-controller="indexhotCtrl">
+							<li ng-repeat="item in indexhotArr" ng-click="indexhotClick(item)">
+								<em>{{item.ranking}}</em>
+								<img src="{{item.imgsUrl}}" alt="" />
+								<div class="textbox">
+									<span class="goodsname">{{item.goodsName}}</span>
+								</div>
+								<i class="iconfont">&#xe63b;</i>
+							</li>
+						</ul>
+					</div>
+					<div class="indexFooter" ng-controller="indexuserCtrl">
+						<ul id="indexfooterBox">
+							<li>
+								<a href="html/login.html">登录</a>
+							</li>
+							<li>|</li>
+							<li>
+								<a href="html/login.html">注册</a>
+							</li>
+						</ul>
+						<ul id="useronBox">
+							<li id="indexusernameBox">
+								用户名
+							</li>
+							<li>
+								<a href="javascript:">退出</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</ion-content>	
+		</div>
+		<!--<script type="text/javascript" src="js/ionic.bundle.js"></script>
+		<script type="text/javascript" src="js/mainModule.js"></script>
+		<script type="text/javascript" src="js/services/indexbannerSer.js"></script>
+		<script type="text/javascript" src="js/controllers/indexbannerCtrl.js"></script>
+		<script type="text/javascript" src="js/controllers/indexnavCtrl.js"></script>
+		<script type="text/javascript" src="js/controllers/indexhotCtrl.js"></script>
+		<script type="text/javascript" src="js/controllers/indexheaderCtrl.js"></script>
+		<script type="text/javascript" src="js/controllers/indexuserCtrl.js"></script>-->
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

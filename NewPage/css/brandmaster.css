@@ -1,0 +1,272 @@
+html,
+body {
+    height: 100%;
+font-family: PingFangSC, Helvetica, 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', STHeiti, 'WenQuanYi Micro Hei', sans-serif;
+}
+
+/*
+ * slider-1
+ */
+#slider-1{
+	text-align: center;
+	background-image: url(../img/bg-3.jpg);
+    background-size: cover;
+    background-position: 50% 0;
+    
+}
+#slider-1 h1{
+	padding: 200px 0;
+	color: #fff;
+}
+
+
+/*
+ * slider-2
+ */
+#slider-2{
+	text-align: center;
+	background-color: #fff;
+	padding-bottom: 50px;
+
+}
+#slider-2 h3{
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+#slider-2 .row{
+	position: relative;
+}
+#slider-2 .md-4{
+	width: 33.3%;
+	float: left;
+}
+#slider-2 .md-4 img{
+	width: .8rem;
+}
+#slider-2 .title{
+	font-size: .13rem;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+/*
+ * slider-3
+ */
+#slider-3{
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #ececec;
+	text-align: center;
+
+}
+#slider-3 h3{
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+#slider-3 .function{
+	padding-bottom: 80px;
+	display: inline-block;
+}
+#slider-3 .function img{
+	width: 1rem;
+	margin-bottom: 20px;
+}
+#slider-3 .function .function-title{
+	font-size: .14rem;
+	margin-bottom: 0px;
+}
+#slider-3 .function .function-details{
+	font-size: .12rem;
+	margin-top: 40px;
+	line-height: 25px;
+	color: #8c9398;
+	text-align: justify;　
+}
+#slider-3 .function #line{
+	position: relative;
+}
+#slider-3 .function #line:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 2px;
+    background-color: #ed9b22;
+    transition:ease all .5s;
+}
+#slider-3 .function:hover #line:after{
+	width: 130px;
+} 
+/*
+ * bridge
+ */
+#bridge{
+	padding: 0;
+	background-image: url(../img/bg-4.jpg);
+    background-size: cover;
+    background-position: 50% 0;
+    height: 4.5rem;
+    text-align: right;
+
+}
+#bridge img{
+	width: 3.5rem;
+	float: left;
+    margin-top: 80px;
+}
+#bridge h2{
+	padding-top: 1.2rem;
+	color: #fff;
+	margin-right: 25px;
+
+}
+#bridge p{
+	display: inline-block;
+    width: 3.5rem;
+    font-size: .12rem;
+    color: #fff;
+    line-height: 30px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+
+/*
+ * slider-4
+ */
+
+#slider-4{
+	background-color: #fff;
+	border-bottom: 1px solid #ececec;
+	overflow-x:hidden ;
+}
+#slider-4 img{
+	position: relative;
+    z-index: 10;
+    width: 185px;
+    height: 185px;
+}
+
+#slider-4 .item{
+	padding: 50px 0;
+	position: relative;
+}
+#slider-4 .item-left{
+	padding: 50px 0;
+    text-align: right;
+    padding-right: 50%;
+    margin-right: -92.5px;
+    border-right: 1px solid #f1f1f1;
+    position: relative;
+}
+#slider-4 .item-right{
+	padding: 50px 0;
+    padding-left: 50%;    
+	text-align: left;
+    margin-left: -92.5px;
+    position: relative;
+}
+#slider-4 .item h3{
+	color: #ed9b22;
+	margin-top: 0;
+}
+#slider-4 .item p{
+	font-size: 14px;
+	display: inline-block;
+	text-align: justify;
+}
+#slider-4 .details{
+	position: absolute;
+    display: inline-block;
+}
+#slider-4 .details p{
+	color:#8c9398;
+}
+#slider-4 .details.left{
+	left: 50%;
+    margin-left: 200px;
+}
+#slider-4 .details.right{
+	right: 50%;
+    margin-right: 200px;
+}
+#slider-4 i{
+	width: 185px;
+	height: 185px;
+	display: inline-block;
+	border-radius: 50%;
+	text-align: center;
+}
+#slider-4 .line{
+	position: absolute;
+    height: 1100px;
+    width: 2px;
+    background-color: #f1f1f1;
+    top: 150px;
+	left: 50%;
+	margin-left: -1px;
+}
+
+@media (max-width: 1000px){
+	#bridge {
+		text-align: center;
+		height: 7rem;
+	}
+	#bridge img{
+		float: none;
+		width: 2.5rem;
+	}
+	#bridge h2{
+		margin-right: 0;
+		padding-top: .5rem;
+	} 
+	#bridge p{
+		width: 3rem;
+	}
+}
+@media (max-width: 800px){
+	#slider-4 i{
+		width: .6rem;
+		height: .6rem;
+		position: absolute;
+	}
+	#slider-4 .i-right{
+		top: 0;
+    	right: 0;
+	}
+	#slider-4 img{
+		width: .6rem;
+		height: .6rem;
+	}
+	#slider-4 .line{
+		display: none;
+	}
+	#slider-4 .details{
+		position: static;
+	}
+	#slider-4 .item-left{
+		border-right:none;
+		padding-right: 0px;
+		margin-right:0px ;
+		padding: 0 0 .6rem  ;
+	}
+	#slider-4 .details.right{
+		margin-right: .8rem;
+	}
+	#slider-4 .item-right{
+		border-left:none;
+		padding-left: 0px;
+		margin-left:0px ;
+		padding: 0 0 .6rem;
+	}
+	#slider-4 .details.left{
+		margin-left:.8rem;
+	}
+}
+@media (max-width: 700px){
+	#slider-1 h1{
+		padding: 150px 0 100px;
+	}
+}

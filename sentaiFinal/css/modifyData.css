@@ -1,0 +1,240 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "微软雅黑";
+}
+.clearfix:after {
+  content: ".";
+  width: 0;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+}
+html body #modifyBox {
+  width: 100%;
+  height: 100%;
+}
+html body #modifyBox header {
+  width: 100%;
+  height: 4rem;
+  background: #c10000;
+  color: #fff;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 2rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+html body #modifyBox header .mdbackBtn {
+  width: 9%;
+  height: 3rem;
+  line-height: 3rem;
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  margin-top: -1.5rem;
+}
+html body #modifyBox header .mdbackBtn .iconfont {
+  font-size: 2.4rem;
+}
+html body #modifyBox header .mdsearchBtn {
+  width: 9%;
+  height: 3rem;
+  line-height: 3rem;
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  margin-top: -1.5rem;
+}
+html body #modifyBox header .mdsearchBtn .iconfont {
+  font-size: 2.4rem;
+}
+html body #modifyBox section {
+  width: 100%;
+  margin-top: 4rem;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem;
+  background: #f7f7f7;
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  overflow-y: auto;
+}
+html body #modifyBox section form p {
+  margin-bottom: 1rem;
+  position: relative;
+  font-size: 1.6rem;
+}
+html body #modifyBox section form table {
+  border-spacing: 0.2rem;
+  border-color: grey;
+  font-size: 1.4rem;
+}
+html body #modifyBox section form table tbody {
+  vertical-align: middle;
+}
+html body #modifyBox section form table tbody tr td {
+  padding: 0.5rem 0;
+  line-height: 1.4rem;
+}
+html body #modifyBox section form table tbody tr td .selectbox {
+  position: relative;
+}
+html body #modifyBox section form table tbody tr td .selectbox select {
+  outline: none;
+  padding: 0.3rem 1.5rem 0.3rem 0.3rem;
+  margin-right: 0.2rem;
+  border: 1px solid #d9d8d4;
+  border-radius: 0.5rem;
+  background: #f7f7f7;
+  box-shadow: inset 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1), 0 0.1rem 0.2rem rgba(245, 245, 245, 0.7);
+}
+html body #modifyBox section form table tbody tr td .selectbox select option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2rem;
+  padding: 0 0.2rem 0.1rem;
+}
+html body #modifyBox section form table tbody tr td #box {
+  position: relative;
+}
+html body #modifyBox section form table tbody tr td #box select {
+  outline: none;
+  padding: 0.3rem 1.5rem 0.3rem 0.3rem;
+  margin-right: 0.2rem;
+  border: 1px solid #d9d8d4;
+  border-radius: 0.5rem;
+  background: #f7f7f7;
+  box-shadow: inset 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1), 0 0.1rem 0.2rem rgba(245, 245, 245, 0.7);
+}
+html body #modifyBox section form table tbody tr td #box select option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2rem;
+  padding: 0 0.2rem 0.1rem;
+}
+html body #modifyBox section form table tbody tr td label input {
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 2rem;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0;
+  border: 1px solid #d9d8d4;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: inset 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1), 0 0.1rem 0.2rem rgba(245, 245, 245, 0.7);
+}
+html body #modifyBox section form .lineBox {
+  height: 0.1rem;
+  width: 100%;
+  background: #ccc;
+  margin: 1rem 0;
+}
+html body #modifyBox section form .submitBtn {
+  margin-top: 1.8rem;
+  line-height: 4.2rem;
+  width: 90%;
+  margin-left: 5%;
+  background: #c10000;
+  color: #fff;
+  font-size: 1.6rem;
+  border: 1px solid #b20000;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(152, 3, 3, 0.4);
+  text-align: center;
+}

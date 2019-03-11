@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>procontent</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="../css/publicNav.css" />
+	<link rel="stylesheet" type="text/css" href="../css/activity.css" />
+	<link rel="stylesheet" type="text/css" href="../css/procontent.css" />
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/cookie.js"></script>
+	<script type="text/javascript" src="../js/publicNav.js"></script>
+	<script type="text/javascript" src="../js/smooth.js"></script>
+	<script type="text/javascript" src="../js/prolistajax.js"></script>
+	<script>
+		$(function(){
+			navclassific();
+			//rightfix
+			function rightFixbox(){
+				$("#rightfixTop .fixtopIcon").stop().hover(function(){
+					$(this).find('div').css('visibility','visible');
+					$(this).find('div').stop().animate({left:"-68px"},300);
+				},function(){
+					$(this).find('div').css('visibility','hidden');
+					$(this).find('div').stop().animate({left:"38px"},200);
+				});
+			}
+			rightFixbox();
+
+			
+		})
+	</script>
+</head>
+<body>
+<div class="whole"></div>
+<!--top-->
+	<div id="top">
+		<div id="topCon" class="commonCon">
+			<div class="toplogin">
+				<span class="backHome"><a href="#">商城首页</a></span>
+				<span class="login">
+					Hi~欢迎来到ZOL商城
+					<a href="javascript:" target="_blank" class="userLogin"></a>
+					<script>
+						var cccookie=new DealCookie();
+						var oUser=cccookie.getCookie("username");
+						if(oUser==null){
+							$(".userLogin").html("登录");
+						}else{
+							$(".userLogin").html(oUser);
+						}
+						if($(".userLogin").html()=="登录"){
+							$(".userLogin").click(function(){
+								window.open("login.html");
+							});
+						}
+					</script>
+				</span>
+				<a href="javascript:" target="_blank" class="exitRegister"></a>
+				<script>
+						var cccookie=new DealCookie();
+						var oUser=cccookie.getCookie("username");
+						if(oUser==null){
+							$(".exitRegister").html("免费注册");
+						}else{
+							$(".exitRegister").html("退出");
+						}
+						if($(".exitRegister").html()=="免费注册"){
+							window.open("register.html");
+						}
+					</script>
+			</div>
+			<ul class="topright">
+				<li><a href="#">我的订单</a></li>
+				<li class="li1">
+					<a class="li1title" href="#">
+						买家中心
+						<span></span>
+					</a>
+					<div class="topsecMenu1">
+						<a href="#">
+							<span>关注的店铺&nbsp;&nbsp;</span>
+							<span>30</span>
+						</a>
+						<a href="#">
+							<span>关注的商品&nbsp;&nbsp;</span>
+							<span>47</span>
+						</a>
+					</div>
+				</li>
+				<li><a href="#">购物车0件</a></li>
+				<li><a href="#">帮助中心</a></li>
+				<li>|</li>
+				<li class="li2">
+					<a class="li2title" href="#">
+						手机商城
+						<span></span>
+					</a>
+					<div class="topsecMenu2">
+						<img src="../images/topCode.jpg" />
+					</div>
+				</li>
+				<li><a href="#">中关村在线</a></li>
+				<li><a href="#">商家入驻</a></li>
+				<li class="li3">
+					<a class="li3title" href="#">
+						联系客服
+						<span></span>
+					</a>
+					<div class="topsecMenu3">
+						400-678-0068
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!--logo-->
+	<div id="logo" class="commonCon">
+		<h1><img src="../images/logo.png" /></h1>
+		<div id="logoRightbox">
+			<p class="zoldesc">中关村在线旗下网上商城</p>
+		</div>
+		<div id="searchBox">
+			<form action="get" name="inputSearch">
+				<input class="logoText" type="text" value="" />
+				<input class="logoSubmit" type="submit" value="搜索" />
+			</form>
+			<div class="hotWords">
+				<a href="#">三星s7 Edge</a>
+				<a href="#">华为P9</a>
+				<a href="#">i7四核游戏本3399元！</a>
+				<a href="#">GTX1060</a>
+				<a href="#">九阳豆浆机直降100！</a>
+				<a href="#">热销机械键盘</a>
+			</div>
+		</div>
+		<div class="servicePro">
+			<img src="../images/logoBoxright.jpg" alt="" />
+		</div>
+	</div>
+<!--nav-->
+	<div id="nav" class="clearfix commonCon">
+		<!--二级菜单-->
+		<div class="classification">
+			<h2>
+				全部商品分类
+				<span class="ico"></span>
+			</h2>
+			<!--鼠标滑过出现的二级菜单-->
+			<div class="navMenu" style="display:none;z-index:10">
+				<ul class="nav_Menu">
+					<li id="navmenuli1">
+						<div class="item">
+							<i class="iconfont iconfont-phone">&#xe63f;</i>
+							<a href="#">手机通讯</a>/
+							<a href="#">手机配件</a>
+						</div>
+						<div class="content1" style="display:none">
+							<dl class="service">
+								<dt>
+									<a href="#">服务保障</a>
+								</dt>
+								<dd class="clearfix">
+									<a href="#">
+										<i class="iconfont">&#xe60a;</i>
+										行货保证
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe604;</i>
+										发票保障
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe6b8;</i>
+										顺丰包邮
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe66b;</i>
+										无忧退换
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe603;</i>
+										先行赔付
+									</a>
+								</dd>
+							</dl>
+							<dl class="content11">
+								<dt><a href="#">手机通讯</a></dt>
+								<dd>
+									<a href="#">手机</a>|
+									<a href="#">老人机</a>|
+									<a href="#">华为</a>|
+									<a href="#">苹果</a>|
+									<a href="#">三星</a>|
+									<a href="#">魅族</a>|
+									<a href="#">oppo</a>|
+									<a href="#">小米</a>|
+									<a href="#">HTC</a>|
+									<a href="#">乐视</a>|
+									<a href="#">vivo</a>|
+									<a href="#">SONY</a>|
+									<a href="#">飞利浦</a>|
+									<a href="#">nubia</a>|
+									<a href="#">诺基亚</a>|
+									<a href="#">摩托罗拉</a>|
+									<a href="#">中兴</a>
+								</dd>
+							</dl>
+							
+							<dl class="content12">
+								 <dt><a href="#">手机配件</a></dt>
+								 <dd>
+								 	<a href="#">保护套</a>|
+								 	<a href="#">充电器</a>|
+								 	<a href="#">数据线</a>|
+								 	<a href="#">手机电池</a>|
+								 	<a href="#">手机贴膜</a>|
+								 	<a href="#">手机附件</a>
+								 </dd>
+							</dl>
+							<dl class="content13">
+								<dt><a href="#">通讯设备</a></dt>
+								<dd>
+									<a href="#">移动pos机</a>
+								</dd>
+							</dl>
+						</div>
+					</li>
+					<li id="navmenuli2">
+						<div class="item">
+							<i class="iconfont iconfont-computer">&#xe625;</i>
+							<a href="#">笔记本</a>/
+							<a href="#">平板</a>/
+							<a href="#">品牌整机</a>
+						</div>
+						<div class="content1" style="display:none">
+							<dl class="service">
+								<dt>
+									<a href="#">服务保障</a>
+								</dt>
+								<dd class="clearfix">
+									<a href="#">
+										<i class="iconfont">&#xe60a;</i>
+										行货保证
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe604;</i>
+										发票保障
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe6b8;</i>
+										顺丰包邮
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe66b;</i>
+										无忧退换
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe603;</i>
+										先行赔付
+									</a>
+								</dd>
+							</dl>
+							<dl class="content11">
+								<dt><a href="#">笔记本</a></dt>
+								<dd>
+									<a href="#">游戏本</a>|
+									<a href="#">商务本</a>|
+									<a href="#">超薄本</a>|
+									<a href="#">影音娱乐本</a>|
+									<a href="#">校园学生本</a>|
+									<a href="#">飞行堡垒</a>|
+									<a href="#">戴尔灵越</a>|
+									<a href="#">联想小Y</a>|
+									<a href="#">15英寸大屏</a>|
+									<a href="#">酷睿i7</a>|
+									<a href="#">联想</a>|
+									<a href="#">华硕</a>|
+									<a href="#">戴尔</a>|
+									<a href="#">ThinkPad</a>|
+									<a href="#">苹果</a>|
+									<a href="#">惠普</a>|
+									<a href="#">神州</a>|
+									<a href="#">宏碁</a>|
+									<a href="#">Alienware</a>|
+									<a href="#">MSI微星</a>
+								</dd>
+							</dl>
+							<dl class="content12">
+								 <dt><a href="#">平板</a></dt>
+								 <dd>
+								 	<a href="#">微软</a>|
+								 	<a href="#">安卓</a>|
+								 	<a href="#">苹果IOS</a>|
+								 	<a href="#">10.1英寸</a>|
+								 	<a href="#">娱乐平板</a>|
+								 	<a href="#">商务平板</a>|
+								 	<a href="#">2合1平板电脑</a>|
+								 	<a href="#">苹果</a>|
+								 	<a href="#">三星</a>|
+								 	<a href="#">联想</a>|
+								 	<a href="#">小米</a>|
+								 	<a href="#">华为</a>|
+								 	<a href="#">台电</a>|
+								 	<a href="#">华硕</a>|
+								 	<a href="#">微软</a>|
+								 	<a href="#">荣耀</a>|
+								 	<a href="#">ThinkPad</a>
+								 </dd>
+							</dl>
+							<dl class="content13">
+								<dt><a href="#">品牌整机</a></dt>
+								<dd>
+									<a href="#">一体机</a>|
+									<a href="#">商用电脑</a>|
+									<a href="#">家用电脑</a>|
+									<a href="#">时尚电脑</a>|
+									<a href="#">游戏电脑</a>|
+									<a href="#">酷睿i7</a>|
+									<a href="#">发烧级独立显卡</a>|
+									<a href="#">联想</a>|
+									<a href="#">戴尔</a>|
+									<a href="#">华硕</a>|
+									<a href="#">惠普</a>|
+									<a href="#">联想ThinkCentre</a>|
+									<a href="#">Acer宏碁</a>|
+									<a href="#">神州</a>|
+									<a href="#">Alienware</a>
+								</dd>
+							</dl>
+						</div>
+					</li>
+					<li id="navmenuli3">
+						<div class="item">
+							<i class="iconfont iconfont-camera">&#xe673;</i>
+							<a href="#">摄影摄像</a>/
+							<a href="#">数码配件</a>
+						</div>
+						<div class="content1" style="display:none">
+							<dl class="service">
+								<dt>
+									<a href="#">服务保障</a>
+								</dt>
+								<dd class="clearfix">
+									<a href="#">
+										<i class="iconfont">&#xe60a;</i>
+										行货保证
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe604;</i>
+										发票保障
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe6b8;</i>
+										顺丰包邮
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe66b;</i>
+										无忧退换
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe603;</i>
+										先行赔付
+									</a>
+								</dd>
+							</dl>
+							<dl class="content11">
+								<dt><a href="#">摄影摄像</a></dt>
+								<dd>
+									<a href="#">数码相机</a>|
+									<a href="#">单反相机</a>|
+									<a href="#">运动相机</a>|
+									<a href="#">摄像机</a>|
+									<a href="#">镜头</a>|
+									<a href="#">户外器材</a>|
+									<a href="#">影棚器材</a>|
+									<a href="#">数码相框</a>|
+									<a href="#">佳能</a>|
+									<a href="#">索尼</a>|
+									<a href="#">尼康</a>|
+									<a href="#">三星</a>|
+									<a href="#">卡西欧</a>|
+									<a href="#">奥林巴斯</a>
+								</dd>
+							</dl>
+							<dl class="content12">
+								 <dt><a href="#">数码配件</a></dt>
+								 <dd>
+								 	<a href="#">三脚架/云台</a>|
+								 	<a href="#">闪光灯配件</a>|
+								 	<a href="#">单反手柄</a>|
+								 	<a href="#">机身附件</a>|
+								 	<a href="#">镜头附件</a>|
+								 	<a href="#">存储卡</a>|
+								 	<a href="#">闪光灯</a>|
+								 	<a href="#">相机包</a>|
+								 	<a href="#">充电器</a>|
+								 	<a href="#">遮光罩</a>|
+								 	<a href="#">遥控器</a>|
+								 	<a href="#">电池</a>|
+								 	<a href="#">滤镜</a>
+								 </dd>
+							</dl>
+						</div>
+					</li>
+					<li id="navmenuli4">
+						<div class="item">
+							<i class="iconfont iconfont-game">&#xe602;</i>
+							<a href="#">游戏电玩</a>/
+							<a href="#">游戏本</a>
+						</div>
+						<div class="content1" style="display:none">
+							<dl class="service">
+								<dt>
+									<a href="#">服务保障</a>
+								</dt>
+								<dd class="clearfix">
+									<a href="#">
+										<i class="iconfont">&#xe60a;</i>
+										行货保证
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe604;</i>
+										发票保障
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe6b8;</i>
+										顺丰包邮
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe66b;</i>
+										无忧退换
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe603;</i>
+										先行赔付
+									</a>
+								</dd>
+							</dl>
+							<dl class="content11">
+								<dt><a href="#">游戏电玩</a></dt>
+								<dd>
+									<a href="#">体感游戏机</a>|
+									<a href="#">PlayStation4</a>|
+									<a href="#">Xbox One</a>|
+									<a href="#">索尼</a>|
+									<a href="#">微软</a>
+								</dd>
+							</dl>
+							<dl class="content12">
+								 <dt><a href="#">游戏本</a></dt>
+								 <dd>
+								 	<a href="#">玩家国度</a>|
+								 	<a href="#">战神</a>|
+								 	<a href="#">Alienware</a>|
+								 	<a href="#">雷蛇</a>
+								 </dd>
+							</dl>
+						</div>
+					</li>
+					<li id="navmenuli5">
+						<div class="item">
+							<i class="iconfont iconfont-diy">&#x3440;</i>
+							<a href="#">DIY硬件</a>/
+							<a href="#">外设配件</a>
+						</div>
+						<div class="content1" style="display:none">
+							<dl class="service">
+								<dt>
+									<a href="#">服务保障</a>
+								</dt>
+								<dd class="clearfix">
+									<a href="#">
+										<i class="iconfont">&#xe60a;</i>
+										行货保证
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe604;</i>
+										发票保障
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe6b8;</i>
+										顺丰包邮
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe66b;</i>
+										无忧退换
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe603;</i>
+										先行赔付
+									</a>
+								</dd>
+							</dl>
+							<dl class="content11">
+								<dt><a href="#">DIY硬件</a></dt>
+								<dd>
+									<a href="#">DIY主机</a>|
+									<a href="#">显卡</a>|
+									<a href="#">主板</a>|
+									<a href="#">固态硬盘</a>|
+									<a href="#">散热器</a>|
+									<a href="#">硬盘</a>|
+									<a href="#">内存</a>|
+									<a href="#">机箱</a>|
+									<a href="#">CPU</a>|
+									<a href="#">电源</a>|
+									<a href="#">光驱</a>|
+									<a href="#">华硕</a>|
+									<a href="#">技嘉</a>|
+									<a href="#">MSI微星</a>|
+									<a href="#">三星</a>|
+									<a href="#">联想</a>|
+									<a href="#">浦科特</a>|
+									<a href="#">金士顿</a>|
+									<a href="#">威刚</a>|
+									<a href="#">Intel</a>|
+									<a href="#">九州风神</a>|
+									<a href="#">ID-COOLING</a>|
+									<a href="#">先马</a>|
+									<a href="#">TT</a>|
+									<a href="#">西部数据</a>|
+									<a href="#">希捷</a>
+								</dd>
+							</dl>
+							<dl class="content12">
+								 <dt><a href="#">外设配件</a></dt>
+								 <dd>
+								 	<a href="#">耳机</a>|
+								 	<a href="#">音箱</a>|
+								 	<a href="#">U盘</a>|
+								 	<a href="#">摄像头</a>|
+								 	<a href="#">鼠标垫</a>|
+								 	<a href="#">键盘</a>|
+								 	<a href="#">鼠标</a>|
+								 	<a href="#">移动硬盘</a>|
+								 	<a href="#">惠普</a>|
+								 	<a href="#">达尔优</a>|
+								 	<a href="#">摩豹</a>|
+								 	<a href="#">PNY</a>|
+								 	<a href="#">雷蛇</a>|
+								 	<a href="#">赛睿</a>|
+								 	<a href="#">罗技</a>
+								 </dd>
+							</dl>
+							<dl class="content13">
+								<dt><a href="#">网络设备</a></dt>
+								<dd>
+									<a href="#">路由器</a>|
+									<a href="#">网络存储</a>|
+									<a href="#">B-link</a>|
+									<a href="#">西部数据</a>|
+									<a href="#">巴法络</a>|
+									<a href="#">群晖</a>
+								</dd>
+							</dl>
+						</div>
+					</li>
+					<li id="navmenuli6">
+						<div class="item">
+							<i class="iconfont iconfont-diy">&#xe74a;</i>
+							<a href="#">智能生活</a>/
+							<a href="#">智能设备</a>
+						</div>
+						<div class="content1" style="display:none">
+							<dl class="service">
+								<dt>
+									<a href="#">服务保障</a>
+								</dt>
+								<dd class="clearfix">
+									<a href="#">
+										<i class="iconfont">&#xe60a;</i>
+										行货保证
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe604;</i>
+										发票保障
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe6b8;</i>
+										顺丰包邮
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe66b;</i>
+										无忧退换
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe603;</i>
+										先行赔付
+									</a>
+								</dd>
+							</dl>
+							<dl class="content11">
+								<dt><a href="#">智能生活</a></dt>
+								<dd>
+									<a href="#">智能称</a>|
+									<a href="#">智能家居</a>|
+									<a href="#">智能穿越</a>|
+									<a href="#">智能手表</a>|
+									<a href="#">智能手环</a>|
+									<a href="#">智能插座</a>|
+									<a href="#">智能创意</a>|
+									<a href="#">智能电子</a>|
+									<a href="#">智能机器人</a>|
+									<a href="#">智能摄像机</a>|
+									<a href="#">智能头戴设备</a>|
+									<a href="#">HTC</a>|
+									<a href="#">乐心</a>|
+									<a href="#">华为</a>
+								</dd>
+							</dl>
+							<dl class="content12">
+								 <dt><a href="#">智能设备</a></dt>
+								 <dd>
+								 	<a href="#">MP3</a>|
+								 	<a href="#">录音笔</a>|
+								 	<a href="#">摄像头</a>|
+								 	<a href="#">移动电源</a>|
+								 	<a href="#">蓝牙音箱</a>|
+								 	<a href="#">插座/插排</a>|
+								 	<a href="#">品胜</a>|
+								 	<a href="#">羽博</a>|
+								 	<a href="#">小米</a>|
+								 	<a href="#">索尼</a>|
+								 	<a href="#">飞利浦</a>
+								 </dd>
+							</dl>
+							<dl class="content13">
+								<dt><a href="#">智能投影</a></dt>
+								<dd>
+									<a href="#">投影机吊架</a>|
+									<a href="#">3D眼镜</a>|
+									<a href="#">投影幕布</a>|
+									<a href="#">投影机</a>
+								</dd>
+							</dl>
+						</div>
+					</li>
+					<li id="navmenuli7">
+						<div class="item">
+							<i class="iconfont iconfont-print">&#xe63a;</i>
+							<a href="#">家用设备</a>/
+							<a href="#">办公设备</a>
+						</div>
+						<div class="content1" style="display:none">
+							<dl class="service">
+								<dt>
+									<a href="#">服务保障</a>
+								</dt>
+								<dd class="clearfix">
+									<a href="#">
+										<i class="iconfont">&#xe60a;</i>
+										行货保证
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe604;</i>
+										发票保障
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe6b8;</i>
+										顺丰包邮
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe66b;</i>
+										无忧退换
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe603;</i>
+										先行赔付
+									</a>
+								</dd>
+							</dl>
+							<dl class="content11">
+								<dt><a href="#">家用设备</a></dt>
+								<dd>
+									<a href="#">手柄</a>|
+									<a href="#">游戏机</a>|
+									<a href="#">掌上游戏机</a>
+								</dd>
+							</dl>
+							<dl class="content12">
+								 <dt><a href="#">办公设备</a></dt>
+								 <dd>
+								 	<a href="#">投影幕布</a>|
+								 	<a href="#">POS机</a>|
+								 	<a href="#">投影仪</a>|
+								 	<a href="#">拉卡拉</a>|
+								 	<a href="#">极米</a>|
+								 	<a href="#">坚果</a>|
+								 	<a href="#">飞利浦</a>
+								 </dd>
+							</dl>
+						</div>
+					</li>
+					<li id="navmenuli8">
+						<div class="item">
+							<i class="iconfont iconfont-iron">&#xe60f;</i>
+							<a href="#">生活电器</a>/
+							<a href="#">个护</a>/
+							<a href="#">家用电器</a>
+						</div>
+						<div class="content1" style="display:none">
+							<dl class="service">
+								<dt>
+									<a href="#">服务保障</a>
+								</dt>
+								<dd class="clearfix">
+									<a href="#">
+										<i class="iconfont">&#xe60a;</i>
+										行货保证
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe604;</i>
+										发票保障
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe6b8;</i>
+										顺丰包邮
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe66b;</i>
+										无忧退换
+									</a>
+									<a href="#">
+										<i class="iconfont">&#xe603;</i>
+										先行赔付
+									</a>
+								</dd>
+							</dl>
+							<dl class="content11">
+								<dt><a href="#">生活电器</a></dt>
+								<dd>
+									<a href="#">加湿器</a>|
+									<a href="#">电暖气</a>|
+									<a href="#">收音机</a>|
+									<a href="#">吸尘器</a>|
+									<a href="#">护眼灯</a>|
+									<a href="#">小公举</a>|
+									<a href="#">驱蚊防蚊</a>|
+									<a href="#">扫地机器人</a>|
+									<a href="#">空气净化器</a>
+								</dd>
+							</dl>
+							<dl class="content12">
+								 <dt><a href="#">个护</a></dt>
+								 <dd>
+								 	<a href="#">洁面仪</a>|
+								 	<a href="#">剃须刀</a>|
+								 	<a href="#">电吹风</a>|
+								 	<a href="#">电子秤</a>|
+								 	<a href="#">按摩器</a>|
+								 	<a href="#">血压计</a>
+								 </dd>
+							</dl>
+							<dl class="content13">
+								<dt><a href="#">家用电器</a></dt>
+								<dd>
+									<a href="#">平板电视</a>|
+									<a href="#">迷你音响</a>|
+									<a href="#">电视盒子</a>|
+									<a href="#">烤箱</a>|
+									<a href="#">电水壶</a>|
+									<a href="#">蒸蛋器</a>|
+									<a href="#">酸奶机</a>|
+									<a href="#">电火锅</a>|
+									<a href="#">咖啡机</a>|
+									<a href="#">豆浆机</a>|
+									<a href="#">电饭煲</a>|
+									<a href="#">多士炉</a>|
+									<a href="#">电压力锅</a>|
+									<a href="#">料理/榨汁机</a>
+								</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+				<div class="adBox">
+					<a href="#">
+						<img src="../images/activity/xianshi.gif" alt="" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--navright-->
+		<ul class="navright clearfix">
+			<li>
+				<a href="../index.html" target="_blank">首页</a>
+			</li>
+			<li>
+				<a href="#">团购</a>
+			</li>
+			<li>
+				<a href="#">ZOL智选</a>
+			</li>
+			<li>
+				<a href="#">DIY攒机馆</a>
+			</li>
+		</ul>
+		<!--adright-->
+		<div class="navad">
+			<a href="#">
+				魅族MX6(32G/全网通/香槟金)
+			</a>
+		</div>
+	</div>
+<!--protop-->
+	<div id="protop" class="commonCon"><!--wrapper-->
+		<div class="protopTop">
+			<a href="../index.html" target="_blank">首页</a>
+			>
+			<a href="prolist.html" target="_blank">平板电视</a>
+			>
+			<span>酷开</span>
+		</div>
+		<div class="protopBottom clearfix">
+			<div class="prodetail"></div>
+			<div class="storeinfo">
+				<div class="storeName">
+					<a href="#">
+						<img src="../images/procontent/coocai.jpg" alt="" />
+					</a>
+					<h3>
+						<a href="#">酷开官方旗舰店</a>
+					</h3>
+					<span>品牌直营</span>
+				</div>
+				<div class="modbox">
+					<div class="modbox-head">在线客服：</div>
+					<ul class="custom-service">
+						<li>
+							<a href="#">
+								<img src="../images/procontent/zx_qq.gif" alt="" />
+							</a>
+							<span>和我联系</span>
+						</li>
+					</ul>
+				</div>
+				<div class="modbox">
+					<ul class="contactway">
+						<li>
+							<span>客服电话：</span>
+							<p>0755-86360631</p>
+						</li>
+					</ul>
+				</div>
+				<div class="modbox">
+					<ul class="contactway">
+						<li>
+							<span>接待时间：</span>
+							<p>9:00-18:00</p>
+						</li>
+					</ul>
+				</div>
+				<div class="modbox">
+					<ul class="contactway">
+						<li>
+							<span>店铺30天退款率：</span>
+							<p style="margin-left:40px">-</p>
+						</li>
+					</ul>
+				</div>
+				<div class="modbox">
+					<div class="modbox-head">店铺动态评分：</div>
+					<ul class="storeScore">
+						<li>
+							描述：
+							<em class="flat">5.0</em>
+							<span class="flat">持平</span>
+							同行 0.00%
+						</li>
+						<li>
+							服务：
+							<em class="flat">5.0</em>
+							<span class="flat">持平</span>
+							同行 0.00%
+						</li>
+						<li>
+							物流：
+							<em class="flat">5.0</em>
+							<span class="flat">高于</span>
+							同行 0.00%
+						</li>
+					</ul>
+				</div>
+				<div class="collectbox">
+					<a href="#">进入店铺</a>
+					<a href="#">关注店铺</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--proBottom-->
+	<div id="proBottom" class="clearfix commonCon"><!--wrapper clearfix-->
+		<div class="bottomLeft"><!--zs-side zs-side-left-->
+			<div class="modbox"><!--moveTop-->
+				<div class="modbox-head">
+					搜索店内商品
+				</div>
+				<form>
+					<div class="searchgoods">
+						<dl>
+							<dt>商品名：</dt>
+							<dd>
+								<input type="text" class="text" />
+							</dd>
+						</dl>
+						<dl class="searchprice">
+							<dt>价&nbsp;&nbsp;格：</dt>
+							<dd>
+								<input type="text" class="text" name="minPrice" />
+								<span>到</span>
+								<input type="text" class="text" name="maxPrice" />
+							</dd>
+						</dl>
+						<input type="submit" value="搜索" class="goodsBtn" />
+					</div>
+				</form>
+			</div>
+			<div class="modbox">
+				<h2 class="modbox-head">商品分类</h2>
+				<div class="goodsCategory">
+					<dl class="allGoods">
+						<dt id="allGoods">
+							<a href="#">
+								查看全部商品
+							</a>
+						</dt>
+						<dd>
+							<a href="#">按关注</a>
+							<a href="#">按价格</a>
+							<a href="#">按时间</a>
+						</dd>
+					</dl>
+					<dl class="unfold">
+						<dt>
+							<h3>平板电视</h3>
+						</dt>
+						<dd>
+							<ul>
+								<li>
+									<a href="#">酷开</a>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="modbox" id="store-promo-goods">
+				<div class="modbox-head">
+					看了还看
+				</div>
+				<ul class="salesNews">
+					<li>
+						<a href="#">
+							<img src="../images/procontent/kanlehaikan.jpg" alt="" />
+						</a>
+						<div class="proPrice">
+							<span class="sale-price">
+								￥
+								<em>2799</em>
+							</span>
+						</div>
+						<span class="title">
+							<a href="#">
+								酷开(coocaa)50U2 50英寸智能超高清 20核4K游戏平板液晶电视
+							</a>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="modbox">
+				<div class="modbox-head">
+					宝贝排行榜
+				</div>
+				<ul class="side-tab clearfix">
+					<li>人气TOP5</li>
+				</ul>
+				<ul class="ranking-list" id="hotGoods">
+					<li>
+						<a href="#" class="pic">
+							<img src="../images/procontent/baby1.jpg" alt="" />
+						</a>
+						<div class="title">
+							<a href="#">
+								酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)
+							</a>
+						</div>
+						<span class="price">￥2399</span>
+						<span class="saleNumber">
+							已售出<em>6</em>笔
+						</span>
+					</li>
+					<li>
+						<a href="#" class="pic">
+							<img src="../images/procontent/baby2.jpg" alt="" />
+						</a>
+						<div class="title">
+							<a href="#">
+								酷开(coocaa)A43 43英吋智能平板液晶电视 酷开系统 WIFI(银色)
+							</a>
+						</div>
+						<span class="price">￥1799</span>
+						<span class="saleNumber">
+							已售出<em>2</em>笔
+						</span>
+					</li>
+					<li>
+						<a href="#" class="pic">
+							<img src="../images/procontent/baby3.jpg" alt="" />
+						</a>
+						<div class="title">
+							<a href="#">
+								酷开(coocaa)55U2 55英寸智能超高清 20核4K游戏平板液晶电视
+							</a>
+						</div>
+						<span class="price">￥3599</span>
+						<span class="saleNumber">
+							已售出<em>1</em>笔
+						</span>
+					</li>
+					<li>
+						<a href="#" class="pic">
+							<img src="../images/procontent/baby4.jpg" alt="" />
+						</a>
+						<div class="title">
+							<a href="#">
+								酷开 43K2
+							</a>
+						</div>
+						<span class="price">￥1699</span>
+						<span class="saleNumber">
+							已售出<em>1</em>笔
+						</span>
+					</li>
+					<li>
+						<a href="#" class="pic">
+							<img src="../images/procontent/baby5.jpg" alt="" />
+						</a>
+						<div class="title">
+							<a href="#">
+								酷开(coocaa)K50 50英吋智能平板液晶电视 酷开系统 十核 WIFI(黑色)
+							</a>
+						</div>
+						<span class="price">￥1999</span>
+						<span class="saleNumber">
+							已售出<em>1</em>笔
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottomMain"><!--zs-main-->
+			<div class="tabbarNav clearfix" id="zsTabbar">
+				<ul class="clearfix" id="zp-tabbar">
+					<li class="cur">
+						<a href="#show">商品详情</a>
+					</li>
+					<li>
+						<a href="javascript:">参数</a>
+					</li>
+					<li>
+						<a href="#buycomment">
+							购买评价
+							<em class="order-review">1</em>
+						</a>
+					</li>
+					<li>
+						<a href="#zp-tab-order-record">
+							成交记录
+							<em class="order-record">6</em>
+						</a>
+					</li>
+					<li>
+						<a href="#zp-tab-goods-message">购买咨询</a>
+					</li>
+					<li>
+						<a href="#serviceBanner">商城服务承诺</a>
+					</li>
+					<li>
+						<div class="phone-purchase">
+							<a href="javascript:">手机购买<i class="ico"></i></a>
+							<div class="code">
+								<img src="../images/procontent/qrcodegen.png" alt="" />
+							</div>
+						</div>
+					</li>
+					<li class="zs-buy-btn">
+						<span class="zs-btn">立即购买</span>
+					</li>
+				</ul>
+			</div>
+			<div class="zs-container">
+				<!--商品详情-->
+				<div class="goodsDetail">
+					<a href="#">
+						<div class="sevice-banner" id="serviceBanner">
+							ZOL商城Z
+							<span class="add-plus">+</span>
+							升级服务 新服务 心开始 让您的网购体验 从此安全无忧
+						</div>
+					</a>
+					<div class="service-title" id="show">
+						<span class="title">商品介绍</span>
+						<span class="english-title">Products</span>
+					</div>
+					<div class="service-content">
+						<div class="goods-content">
+							<p>
+								<img src="../images/procontent/proli2.jpg" alt="" />
+							</p>
+							<p><br /></p>
+							<p>
+								<img src="../images/procontent/proli3.jpg" alt="" />
+							</p>
+							<p><br /></p>
+							<p>
+								<img src="../images/procontent/proli4.jpg" alt="" />
+							</p>
+							<p>
+								<img src="../images/procontent/proli5.jpg" alt="" />
+							</p>
+							<p><br /></p>
+							<p><br /></p>
+							<p><br /></p>
+							<p><br /></p>
+							<p>
+								<img src="../images/procontent/proli6.jpg" alt="" />
+							</p>
+							<p>
+								<img src="../images/procontent/proli7.jpg" alt="" />
+							</p>
+							<p><br /></p>
+						</div>
+					</div>
+					<div class="service-title" id="hours">
+						<span class="title">48小时发货</span>
+						<span class="english-title">48 Hours</span>
+					</div>
+					<div class="service-content">
+                        <p>购买带有"Z<sup class="add-plus">+</sup>"标识店铺的商品时，商家承诺您所下的订单，将在48小时内进行发货（部分商家节假日不发货），让您尽快收到商品。</p>
+                        <dl>
+                            <dt>1、赔付保障权益</dt>
+                            <dd>
+                            	如您的收货地址在商家承诺的服务区域内，商家承诺在下单后的48小时内将商品发出，从您下单时间开始计算，如超时未发出，您可根据ZOL商城“先行赔付”进行维权、获得赔偿。
+                        	</dd>
+                        </dl>
+                        <dl>
+                            <dt>2、如何跟踪配送信息</dt>
+                            <dd>
+                            	配送信息可直接在您购买的商品订单中查看。或直接与卖家联系确认。您可以在商品详细页面查看入驻卖家联系信息，订单状态变为"已发货"后，点击查询"物流状态"即可查询到您所购买的商品的在途情况。或请您点击对应的物流承运商网站进行查询，快递单号可以登陆ZOL商城账号的订单管理中获取，建议发货后48小时后进行查询。查询方式如下：
+                                <br>顺丰快递：服务热线&nbsp;&nbsp;&nbsp;&nbsp;95338&nbsp;&nbsp;&nbsp;&nbsp;快递单号由"10"或"01"开头的12位数字组成，例如：10******8888或01******9999。
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="service-title" id="fapiao">
+                    	<span class="title">发票保障</span>
+                    	<span class="english-title">Invoice</span>
+                    </div>
+                    <div class="service-content">
+                        <p>
+                        	指买家在zol购买商品时，店铺内带有"Z<sup class="add-plus">+</sup>"标识的店铺内所购买商品均带有正规商品发票。且使用该服务不向买家收取任何其他费用。
+                        </p>
+                        <dl>
+                            <dt>1、赔付保障权益</dt>
+                            <dd>如商家未履行所承诺的发票保障服务，您可根据ZOL商城"先行赔付"进行维权、获得赔偿。</dd>
+                        </dl>
+                        <dl>
+                            <dt>2、发票的开具</dt>
+                            <dd>
+                            	1. 开具发票的金额以实际支付的金额为准。
+                                <br>
+                                2. ZOL提供的发票种类有为"普通发票"。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>3、普通发票</dt>
+                            <dd>
+                                1. 个人及不具有一般纳税人资格的企业客户，均开具普通发票
+                                <br> 
+                                2. 开具普通发票时，抬头默认为收货人"个人姓名"，请需要更改抬头的客户在修改信息中进行修改。
+                                <br> 
+                                3. 普通发票信息与您输入的信息一致的情况下，发票一经开出，恕不退换。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>4、开发票的注意事项</dt>
+                            <dd>
+                                1.发票金额不能高于订单金额。
+                                <br> 
+                                2.为了享受厂商提供的质保服务，请您将商品发票开具为明细。如果您购买的是数码类、手机及配件、笔记本、台式机、家电类商品，为了保证您能充分享受生产厂家提供的售后服务（售后服务需根据发票确认您的购买日期），发票内容默认为您订购的商品明细。
+                                <br> 
+                                3.不同物流中心开具的发票无法合并。
+                                <br> 
+                                4.使用优惠券、积分的金额不开具发票。
+                                <br> 
+                                5.一个包裹对应一张发票或多张发票。
+                                <br> 
+                                6、销售产品均可开具正规机打发票（普通增值税发票），无需加税点，但为了保证发票不遗漏和错开，请下订单时在补充说明（或者卖家留言），留言注明：需开发票抬头XXX公司或者XXX人名。如忘记注明，请及时联系客服帮助备注。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>5、发票的退换</dt>
+                            <dd>
+                                1. 如果您收到的发票与您输入的开票信息、订单信息不一致，请及时联系我们的客服人员，我们会及时为您联系商家解决您的问题。
+                                <br> 
+                                2.未经易ZOL商城人员的允许，客服部门将不接受电话、传真、邮件、邮寄等形式的重开发票申请，如您擅自将发票寄到我公司的任一办公地址，在寄送过程中发生的发票遗失、缺失等情况，恕我们概不负责。
+                                <br>                                         
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="service-title" id="wuliu">
+                    	<span class="title">物流配送</span>
+                    	<span class="english-title">Logistics</span>
+                    </div>
+                    <div class="service-content">
+                        <p>
+                        	当您购买ZOL带有"Z<sup class="add-plus">+</sup>"标识店铺，商家承诺全店商品满399元，如收货地址在顺丰速运(即顺丰速运（集团）有限公司及其子公司)所覆盖的派送区域内，均采用顺丰速运为消费者提供免费物流配送服务；如收货地址不在顺丰速运派送范围内时，商家需使用其它可送达快递为消费者提供免费物流配送服务。如在商家店铺未购买达到399元，除商家优惠外，物流费用由买家自己承担。
+                        </p>
+                        <dl>
+                            <dt>1、赔付保障权益</dt>
+                            <dd>如商家向您收取物流费用，您可根据ZOL商城"先行赔付"进行维权、获得赔偿。</dd>
+                        </dl>
+                        <dl>
+                            <dt>2、因以下原因导致延误或退回的，不在此服务保障范围内：</dt>
+                            <dd>
+                                1)&nbsp;&nbsp;&nbsp;&nbsp;部份城市的偏远地区因交通等问题，配送时间可能在预计到达时间基础上延后1-2天。
+                                <br> 
+                                2)&nbsp;&nbsp;&nbsp;&nbsp;因买家原因（更改收货地址、地址不详、地址错误、联系不上、拒收、无代收人等）导致包裹延误派送或无法送达的；
+                                <br> 
+                                3)&nbsp;&nbsp;&nbsp;&nbsp;因不可抗力造成延误的（"不可抗力"指不可预见、不可避免或不可克服的客观情况以及其他影响配送时间、造成包裹配送延误的客观情况，包括但不限于全国性或区域性空中或地面交通系统管制或中断（如天气原因等）、或通讯系统干扰或故障、或政府行为、邮政主管部门政策变化、战争、地震、台风、洪水、火灾、大雨、大雾等其他类似事件）
+                                <br> 
+                                4)&nbsp;&nbsp;&nbsp;&nbsp;航空违禁品、手机、电子类产品、易碎品等因航空安检查验导致无法正常配载航班或改走陆路运输的；
+                                <br> 
+                                5)&nbsp;&nbsp;&nbsp;&nbsp;寄递物品违反禁、限寄规定或有关运输管理条例，经有关部门没收或依照有关法规、规定处理的；
+                                <br> 
+                                6)&nbsp;&nbsp;&nbsp;&nbsp;收件人地址为机关、单位等机构，而周六、周日和公众节假日不接收邮件、包裹，造成延误的；
+                                <br> 
+                                7)&nbsp;&nbsp;&nbsp;&nbsp;收件人学校、单位或住宅小区不允许投递人员入内，或买家代收方原因，导致造成延误的；
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>3、买家须知</dt>
+                            <dd>
+                                1)&nbsp;&nbsp;&nbsp;&nbsp;如收货地址不在顺丰速运派送范围内时，且在商家店铺购买达到399元，商家需使用其它可送达快递为消费者提供免费物流配送服务；
+                                <br> 
+                                2)&nbsp;&nbsp;&nbsp;&nbsp;寄递物品违反禁、限寄规定或有关运输管理条例，经有关部门没收或依照有关法规、规定处理的，不在补偿范围内；
+                                <br> 
+                                3)&nbsp;&nbsp;&nbsp;&nbsp;顺丰速运的配送范围以本页公示的范围为准。港澳台及海外地区，大陆地区的部队（含武警）或受部队（含武警）管制的等顺丰不予收送快件的机构不在配送范围内。
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="service-title" id="confirm">
+	                    <span class="title">签收与验货</span>
+	                    <span class="english-title">Receipt and inspection</span>
+                    </div>
+                    <div class="service-content">
+                        <dl>
+                            <dt>1、开箱验货</dt>
+                            <dd>
+                            	签收时在付款后与配送人员当面核对：商品及配件、应付金额、商品数量及发货清单、发票（如有）、赠品（如有）等；如存在包装破损、商品错误、商品短缺、商品 存在质量问题等影响签收的因素，请您可以拒收全部或部分商品，相关的赠品，配件或捆绑商品应一起当场拒收；为了保护您的权益，建议您尽量不要委托他人代为签收；如由他人代为签收商品而没有在配送人员在场的情况下验货，则视为您所订购商品的包装无任何问题。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>2、签收与验货流程</dt>
+                            <dd>
+                                <img src="../images/procontent/img-2.jpg" width="624" height="124">
+                                <br> 
+                                1）&nbsp;&nbsp;&nbsp;&nbsp;付款及签收完毕后，请在配送人员在场的情况下，参照顾客签收单对商品数量、型号、外观、配件等依次进行核对验收；
+                                <br> 
+                                2）&nbsp;&nbsp;&nbsp;&nbsp;若发现异常（如商品缺失、损坏、渗漏等），请务必让配送人员在顾客签收单上签字确认，并立即联系商家进行反馈和登记处理。
+                                <br> 
+                                3）&nbsp;&nbsp;&nbsp;&nbsp;如您在配送人员离开后再提出包裹外包装或封带异常，以及商品的型号、数量或外观等存在异常而要求退换货，此时因无法确认责任，将无法为您做进一步处理，请您谅解。
+                                <br> 
+                                4）&nbsp;&nbsp;&nbsp;&nbsp;货到付款的商品送达时，请您当面与配送员核对商品与款项，确保货、款两清；若您在配送员离开后发现款项有误，将无法为您核实处理。
+                                <br> 
+                                5）&nbsp;&nbsp;&nbsp;&nbsp;如配送人员以公司没有规定或着急送货等借口，不配合您进行验货和签字确认，请及时联系ZOL商城客服进行投诉，客服人员将会在第一时间为您处理；一旦出现此情况，为了维护您的权益，建议您先不要拆开包裹。
+                                <br> 
+                                6）&nbsp;&nbsp;&nbsp;&nbsp;为了保护您的权益，建议您尽量不要委托他人签收；如由他人代为签收商品而没有在配送人员在场的情况下验货，则视为您所订购商品的包装无任何问题。
+                            </dd>
+                        </dl>
+                    </div>
+					<div class="service-title" id="service">
+						<span class="title">售后服务</span>
+						<span class="english-title">After-sales Service</span>
+                    </div>
+                    <div class="service-content">
+                        <p>
+                        	购买带有"Z<sup class="add-plus">+</sup>"标识店铺的商品，售出产品有非人为质量问题凭有效检测报告、不影响商家二次销售的情况下可享受商品在自售出之日（以实际收货日期为准）起7日内无理由退换货、15日内换货的服务。如商家未履行所承诺的售后服务，您可根据ZOL商城"先行赔付"进行维权、获得赔偿。
+                        </p>
+                        <dl>
+                            <dt style="color:red;">特别声明</dt>
+                            <dd>
+                            	本站ZOL商城所出售商品的商品详情信息及包装参数信息均由卖家自行设计、制作并通过ZOL商城向其开放的数据端口自行发布，其真实性、准确性和合法性由卖家负责。本站保证ZOL商城所出售商品均为原厂正品行货，但因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本站不能确保用户收到的货物与本站展示的图片、产地、附件说明完全一致。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt style="color:red;">价格声明</dt>
+                            <dd>
+                            	购买价：购买价为商品的销售价，是您最终决定是否购买商品的依据。划线价：商品展示的划横线价，可能是如官方网站零售价、厂商指导价、厂商建议零售价、销售商门店挂牌价；由于地区、时间的差异性和市场行情波动，可能会与您购物时展示的不一致，该价格仅供您参考。折扣价：折扣指卖家在划线价（如官方网站零售价、厂商指导价、厂商建议零售价、销售商门店挂牌价）等某一价格基础上计算出的优惠比例或优惠金额。促销价：商品促销信息以商品详情页“促销”信息为准；商品的具体售价以订单结算页价格为准；如您发现商品售价或促销信息有异常，建议购买前先联系销售商咨询。
+                            </dd>
+                        </dl>
+                    </div>
+				</div>
+				<!--购买评价-->
+				<div class="comment-mod" id="buycomment">
+					<div class="detail-head">
+						<div class="title">
+							<h4>累计评价（1）</h4>
+						</div>
+						<div class="detail-head-filter clearfix">
+							<span class="goods-num">
+								好评率:
+								<em>100.00%</em>
+							</span>
+							<div class="checks">
+								<label for="" class="cur">
+									<input type="radio" value="4" name="order-review" checked="checked"/>
+									全部评价（1）
+								</label>
+								<label for="">
+									<input type="radio" value="1" name="order-review" />
+									好评（1）
+								</label>
+								<label for="">
+									<input type="radio" value="2" name="order-review" />
+									中评（0）
+								</label>
+								<label for="">
+									<input type="radio" value="3" name="order-review" />
+									差评（0）
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="intro_cont">
+                        <div id="review_list">
+                        	<table class="comment-table">
+	                        	<tbody>
+	                        		<tr>
+	                        			<th class="th-item1">评价心得</th>
+	                        			<th class="th-item2">购买信息</th>
+	                        			<th class="th-item3">评论者</th>
+                        			</tr>
+                        			<tr>
+                        				<td class="td-1">
+                        					<div class="comment-text">
+                        						<p>
+                        							很好.电视图象质量好,彩色艳丽,伴音动听,操作简单方便,功能多.很滿意.
+                        						</p>
+                        						<div class="comment-score">
+                        							<span>描述符合<em>5</em></span>
+                        							<span>服务态度<em>5</em></span>
+                        							<span>发货速度<em>5</em></span>
+                    							</div>
+                							</div>
+            							</td>
+            							<td class="td-2">
+            								<p>颜色：<span>默认</span></p>
+            								<p>套装：<span>默认</span></p>
+        								</td>
+        								<td class="td-3">
+        									<p class="name">zo********y1</p>
+        									<p>2016-07-08 21:47 评价</p>
+    									</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+                    </div>
+				</div>
+				<!--交易记录-->
+				<div class="purchase-record" id="zp-tab-order-record" style="display: block;">
+					<div class="detail-head">
+						<div class="title">
+							<h4>累计成交记录(6)</h4>
+						</div>
+						<div class="detail-head-filter clearfix">
+							<div class="checks">
+								<label for="">
+									<input type="radio" />
+									近30天成交记录(0件)
+								</label>
+								<label class="cur" for="">
+									<input type="radio" checked="" />
+									累计成交记录(6件)
+								</label>
+							</div>
+						</div>
+					</div>
+					<div style="display:block;">
+						<table>
+							<tbody>
+								<tr>
+									<th class="zs-cell-buyer">买家</th>
+									<th class="zs-cell-sku">款式和型号</th>
+									<th class="zs-cell-amount">数量</th>
+									<th class="zs-cell-time">成交时间</th>
+								</tr>
+								<tr>
+									<td class="zs-cell-buyer">kie****</td>
+									<td class="zs-cell-type">
+										<p>酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)</p>
+									</td>
+									<td class="zs-cell-price" style="display: none;">
+										¥<em>2199</em>
+										<span class="zs-cu-ico" alt="促销">促</span>
+									</td>
+									<td class="zs-cell-amount">1</td>
+									<td class="zs-cell-time">2016-08-07 14:44:59成交 </td>
+								</tr>
+								<tr>
+									<td class="zs-cell-buyer">zol****1901461my1</td>
+									<td class="zs-cell-type">
+										<p>酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)</p>
+									</td>
+									<td class="zs-cell-price" style="display: none;">
+										¥<em>2199</em>
+									</td>
+									<td class="zs-cell-amount">1</td>
+									<td class="zs-cell-time">2016-07-01 16:51:53成交 </td>
+								</tr>
+								<tr>
+									<td class="zs-cell-buyer">zol****99111lq7ta</td>
+									<td class="zs-cell-type">
+										<p>酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)</p>
+									</td>
+									<td class="zs-cell-price" style="display: none;">
+										¥<em>1999</em>
+									</td>
+									<td class="zs-cell-amount">1</td><td class="zs-cell-time">2016-06-29 22:34:39成交 </td>
+								</tr>
+								<tr>
+									<td class="zs-cell-buyer">a60****6</td>
+									<td class="zs-cell-type">
+										<p>酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)</p>
+									</td>
+									<td class="zs-cell-price" style="display: none;">
+										¥<em>1999</em>
+									</td>
+									<td class="zs-cell-amount">1</td>
+									<td class="zs-cell-time">2016-06-28 01:15:34成交 </td>
+								</tr>
+								<tr>
+									<td class="zs-cell-buyer">zol****60c1229864</td>
+									<td class="zs-cell-type">
+										<p>酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)</p>
+									</td>
+									<td class="zs-cell-price" style="display: none;">
+										¥<em>1999</em>
+									</td>
+									<td class="zs-cell-amount">1</td>
+									<td class="zs-cell-time">2016-06-26 11:04:54成交 </td>
+								</tr>
+								<tr>
+								<td class="zs-cell-buyer">qq_****56q5y8</td>
+								<td class="zs-cell-type">
+									<p>酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)</p>
+								</td>
+								<td class="zs-cell-price" style="display: none;">
+									¥<em>2799</em>
+								</td>
+								<td class="zs-cell-amount">1</td>
+								<td class="zs-cell-time">2016-02-20 13:10:33成交 </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!--购买咨询-->
+				<div class="message-mod" style="display:block" id="zp-tab-goods-message">
+					<div class="detail-head"> 
+						<div class="title">
+							<h4 id="messageNumTitle">购买咨询(0)</h4>
+						</div>
+						<div class="detail-head-filter clearfix">
+							<div class="checks">
+								<label class="cur" for=""><input type="radio" checked="" value="10" name="wordsKey">全部咨询</label>
+								<label for=""><input type="radio" value="1" name="wordsKey">商品咨询</label>
+								<label for=""><input type="radio" value="2" name="wordsKey">库存与配送</label>
+								<label for=""><input type="radio" value="3" name="wordsKey">支付问题</label>
+								<label for=""><input type="radio" value="4" name="wordsKey">发票与保修</label>
+								<label for=""><input type="radio" value="5" name="wordsKey">促销及赠品</label>
+								<label for=""><input type="radio" value="6" name="wordsKey">其他</label>
+							</div>
+							<a href="javascript:volid(0);" class="ask-link">我要咨询</a>
+						</div>
+					</div>
+					<ul class="ask-list" id="zp-message-list">
+						<div class="zs-no-comment-prompt">
+							暂无咨询记录，有问题可以在下面留言给商家
+						</div>
+					</ul>
+					<div class="zs-enter-message" id="zp-enter-message">
+						<div class="detail-head">
+							<div class="title">
+								<h4>发表咨询</h4>
+								<span class="close"></span>
+							</div>
+							<div class="detail-head-filter clearfix">
+								<div class="checks">
+									<label class="cur" for=""><input type="radio" value="1" name="saveWordsKey" checked="">商品咨询</label>
+									<label for=""><input value="2" name="saveWordsKey" type="radio">库存与配送</label>
+									<label for=""><input value="3" name="saveWordsKey" type="radio">支付问题</label>
+									<label for=""><input value="4" name="saveWordsKey" type="radio">发票及保修</label>
+									<label for=""><input value="5" name="saveWordsKey" type="radio">促销及赠品</label>
+									<label for=""><input value="6" name="saveWordsKey" type="radio">其它</label>
+								</div>
+							</div>
+						</div>
+						<div class="zs-messagebox">
+							<textarea name="zs-goods-message-content" id="zp-goods-message-content"></textarea>
+							<div class="zs-question-foot clearfix" id="message-button">
+								<label><input name="zp-goods-message-show" type="checkbox" value="1">仅商家可见</label>
+								<span id="submit-content">（选择后，您的留言只有商家可以看到，建议您在询问价格等隐私信息时选择）</span><a href="javascript:void(0)" class="zs-publish-btn" onclick="$.saveGoodsMessage({goodsId:'26081782', merchantId:'191303', goodsName:'酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)'})">发表留言</a>
+								<span class="zs-number" id="limtset"><em>0</em>/200</span>
+								<a href="javascript:void(0)" class="zs-publish-btn" onclick="$.saveGoodsMessage({goodsId: '26081782', merchantId: '191303', goodsName: '酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)'})">发表留言</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--右侧导航栏-->
+			<div class="sidebar">
+				<div class="quick-menu">
+					<ul>
+						<li class="cur">
+							<a href="#">商品介绍</a>
+						</li>
+						<li>
+							<a href="#">48小时发货</a>
+						</li>
+						<li>
+							<a href="#">发票保障</a>
+						</li>
+						<li>
+							<a href="#">物流配送</a>
+						</li>
+						<li>
+							<a href="#">签收与验货</a>
+						</li>
+						<li>
+							<a href="#">售后服务</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!--rightfix-->
+	<div id="rightfix">
+		<div id="rightfixTop">
+			<div class="fixtopIcon topOrder">
+				<div>我的订单</div>
+			</div>
+			<div class="fixtopIcon topFootprint">
+				<div>我的足迹</div>
+			</div>
+			<div class="fixtopIcon topShopcar">
+				<span>0</span>
+				<div>购物车</div>
+			</div>
+			<div class="fixtopIcon topCoupon">
+				<div>优惠券</div>
+			</div>
+		</div>
+		<div id="rightfixBottom">
+			<a href="#" target="_blank" class="advice">建议反馈</a>
+			<a href="#top" class="rightfixBacktop"></a>
+		</div>
+	</div>
+<!--feedBack-->
+	<div id="feedBack">
+		<a href="#" class="feedback">建议反馈</a>
+		<a href="#top" class="backtop">返回顶部</a>
+	</div>
+<!--customerService-->
+	<div id="customerService">
+		<a class="fastservice" href="#">快速咨询</a>
+		<a class="qqservice" href="#">QQ咨询</a>
+	</div>
+
+
+
+<!--surveyLinks-->
+	<a href="#" id="surveyLinks">
+		问卷调查
+	</a>
+<!--footer-->
+	<div id="footer">
+		<div class="footerContent">
+			<ul class="service clearfix">
+				<li>
+					<a href="#">
+						<i class="iconfont">&#xe60a;</i>
+						行货保证
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="iconfont">&#xe604;</i>
+						发票保障
+					</a>
+				</li>
+				<li class="special">
+					<a href="#">
+						<i></i>
+						48小时发货
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="iconfont">&#xe6b8;</i>
+						顺丰包邮
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="iconfont">&#xe66b;</i>
+						无忧退换
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="iconfont">&#xe603;</i>
+						先行赔付
+					</a>
+				</li>
+			</ul>
+			<div id="footerBottom">
+				<ul>
+					<li class="liTitle"><a href="#">购物指南</a></li>
+					<li><a href="#">账号注册</a></li>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">付款方式</a></li>
+				</ul>
+				<ul>
+					<li class="liTitle"><a href="#">售后服务</a></li>
+					<li><a href="#">先行赔付</a></li>
+					<li><a href="#">退款退货流程</a></li>
+					<li><a href="#">投诉举报</a></li>
+				</ul>
+				<ul>
+					<li class="liTitle"><a href="#">商城保障</a></li>
+					<li><a href="#">行货保障</a></li>
+					<li><a href="#">如实描述</a></li>
+					<li><a href="#">物流配送</a></li>
+					<li><a href="#">48小时发货</a></li>
+					<li><a href="#">发票保障</a></li>
+				</ul>
+				<ul>
+					<li class="liTitle"><a href="#">商家服务</a></li>
+					<li><a href="#">商家中心</a></li>
+					<li><a href="#">商城规则</a></li>
+					<li><a href="#">商家帮助</a></li>
+				</ul>
+				<div class="hotLine">
+					<p class="hotTitle">400-678-0068</p>
+					<p>工作日9:00 - 18:00</p>
+					<p><a href="#">关注新浪微博</a></p>
+				</div>
+				<div class="business">
+					<h5>商家合作</h5>
+					<p>错过天猫？别再错过我们！</p>
+					<p>ZOL商城开启全新旅程！</p>
+					<a href="#">关于入驻 <span>&gt;</span> </a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+<!--bottom-->
+	<div id="bottom">
+		<div class="bottomCon">
+			<div class="bottom2">
+				<a href="#">中关村在线</a>|
+				<a href="#">ZOL商城</a>|
+				<a href="#">团购</a>|
+				<a href="#">限时抢购</a>|
+				<a href="#">经销商</a>|
+				<a href="#">产品报价</a>|
+				<a href="#">论坛</a>|
+				<a href="#">问答</a>
+			</div>
+			<div class="bottom3">
+				<a href="#">关于ZOL商城</a>|
+				<a href="#">帮助中心</a>|
+				<a href="#">联系我们</a>|
+				<a href="#">发展历程</a>|
+				<a href="#">媒体报道</a>
+			</div>
+			<div class="bottom4">
+				<span>&copy;2016 中关村在线 版权所有.</span>
+				<span><a href="#">京ICP证150096号</a></span>
+				<span>京ICP备14061128号</span>
+				<span><a href="#">京公安网备11010802020026号</a></span>
+				<span><a href="#">网络文化经营许可证京网文[2016]1631-199</a></span>
+				<a class="bottomAd" href="#">广告</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

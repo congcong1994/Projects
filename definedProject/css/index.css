@@ -1,0 +1,137 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*background: transparent;*/
+  font-family: "微软雅黑";
+}
+.clearfix:after {
+  content: ".";
+  width: 0;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size:20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 20px;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: -ms-box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -ms-box-orient: vertical;
+}
+#box header{
+  width:100%;
+  height:2.5rem;
+  background:#c10000;
+  display:box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: -ms-box;
+  box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+}
+#box header div{
+  width:16%;
+  height:2.5rem;
+  line-height:2.5rem;
+  text-align:center;
+  color:#fff;
+}
+#box header div .iconfont{
+  font-size:1.3rem;
+}
+#box header .leftBtn .iconfont{
+  font-size:1.6rem;
+}
+#box header h1{
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  background:#c10000;
+  position:relative;
+}
+#box header h1 img{
+  display:block;
+  width:68%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-34%;
+  margin-top:-0.9rem;
+}
+#box section{
+  box-flex:1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+}
+#bannerBox{
+  width:100%;
+  height:8rem;
+}
+#bannerBox .slider {
+  height:100%;
+}
+#bannerBox .slider-slide {
+  color:#000; 
+  background-color:#fff;
+  text-align:center; 
+  font-family:"微软雅黑";
+  font-weight:300;
+}
+#bannerBox .box{
+  display:block;
+  width:100%;
+  height:100%; 
+} 
+#bannerBox .box img{
+  display:block;
+  width:100%;
+  height:100%;
+}
+#bannerBox .slider .slider-pager .slider-pager-page{
+  display: inline-block;
+  margin: 0px 3px;
+  color: white;
+  opacity: 0.3;
+  font-size: 10px;
+}

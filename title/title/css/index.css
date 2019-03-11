@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: PingFangSC, Helvetica, "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", STHeiti, "WenQuanYi Micro Hei", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    background: url(../images/bg.png) center center;
+    background-size: cover;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 670px;
+    height: 100%;
+    padding: 20px 15px 15px;
+    text-align: center;
+}
+
+h1 {
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.input-group {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.input-group-addon {
+    width: 34px;
+    height: 34px;
+    background: #babdc2 url(../images/search_icon.png) no-repeat center center;
+    background-size: 60% 60%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.input-group-addon:active {
+    top: 1px;
+}
+
+ul {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.list-group-item {
+    margin-bottom: 20px;
+    border: 1px dashed #5f8ef3;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.list-group-item h5 {
+    color: #9f9f9f;
+}
+
+.list-group-item div {
+    color: #fff;
+    height: 24px;
+    line-height: 24px;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.list-group-item:last-child {
+    background: #606586;
+}
+
+.list-group-item:last-child a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+footer {
+    height: 20px;
+    line-height: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: right;
+    position: relative;
+}
+
+footer img {
+    display: inline-block;
+    height: 20px;
+    margin-right: 125px;
+}
+
+footer span {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -8px;
+    height: 20px;
+    font-size: 12px;
+    color: #9ea3d9;
+}
+
+.bestbox ul {
+    width: 95%;
+}
+
+.bestbox .list-group-item {
+    position: relative;
+}
+
+.bestbox .list-group-item em {
+    display: block;
+    height: 28px;
+    width: 40px;
+    font-size: 28px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -14px;
+    color: #9f9f9f;
+}
+
+.bestbox .list-group-item h5,
+.bestbox .list-group-item div {
+    padding-left: 40px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@media screen and (min-width:768px) {
+    footer {
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+    }
+}

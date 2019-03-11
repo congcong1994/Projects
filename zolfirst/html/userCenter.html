@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>userCenter</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/usercenter.css" />
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/smooth.js"></script>
+	<script type="text/javascript" src="../js/cookie.js"></script>
+	<script type="text/javascript" src="../js/usercenter.js"></script>
+</head>
+<body>
+<!--top-->
+	<!--sitenav-links-->
+	<div id="top">
+		<div class="topCon">
+			<div class="sitenav-links"><!---->
+				<a href="javascript:" class="zolLink">中关村在线</a>
+				
+				<!--sitenav-personal-center-->
+				<div class="topLeft1"><!--class="sitenav-groupsite" id="sitenavPc"-->
+					<span class="topLeft1nav">网站导航<i></i></span><!-- class="sitenav-trigger"-->
+					<div class="topLeft1navbody"><!--class="groupsite-sitemap-body"-->
+						<ul class="topleft1navCon"><!--class="sitemap-items"-->
+							<li>
+								<a class="liTitle">网站功能</a><!--sitemap-sub-title-->
+								<a href="javascript:">查报价</a>
+								<a href="javascript:">商城</a>
+								<a href="javascript:">团购</a>
+								<a href="javascript:">经销商</a>
+								<a href="javascript:">专题</a>
+								<a href="javascript:">口碑榜</a>
+								<a href="javascript:">行情</a>
+								<a href="javascript:">新闻</a>
+								<a href="javascript:">模拟攒机</a>
+								<a href="javascript:">论坛</a>
+								<a href="javascript:">二手</a>
+								<a href="javascript:">视频</a>
+								<a href="javascript:">图说</a>
+								<a href="javascript:">软件下载</a>
+							</li>
+							<li>
+								<a href="javascript:" class="more">更多&gt;&gt;</a>
+								<a class="liTitle">产品频道</a>
+								<a href="javascript:">手机</a>
+								<a href="javascript:">笔记本</a>
+								<a href="javascript:">平板电脑</a>
+								<a href="javascript:">台式机</a>
+								<a href="javascript:">数码相机</a>
+								<a href="javascript:">数码配件</a>
+								<a href="javascript:">硬件DIY</a>
+								<a href="javascript:">外设</a>
+								<a href="javascript:">企业</a>
+								<a href="javascript:">办公</a>
+								<a href="javascript:">家电</a>
+								<a href="javascript:">汽车</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--sitenav-personal-center-->
+
+				<!--sitenav-personal-center-->
+				<div class="topLeft2" id="sitenavBbs"><!--sitenav-groupsite sitenav-groupsite-bbs-->
+					<span class="topLeft2title">论坛导航<i></i></span><!--sitenav-trigger-->
+					<div class="topLeft2body"> <!--groupsite-sitemap-body-->
+						<ul class="sitemap-items">
+							<li>
+								<a class="sitemap-sub-title">热门版块</a>
+								<a href="javascript:">ZOL论坛</a>
+								<a href="javascript:">论坛活动</a>
+								<a href="javascript:">手机论坛</a>
+								<a href="javascript:">笔记本论坛</a>
+								<a href="javascript:">硬件论坛</a>
+								<a href="javascript:">平板论坛</a>
+								<a href="javascript:">摄影论坛</a>
+							</li>
+							<li>
+								<a class="sitemap-sub-title">兴趣圈子</a>
+								<a href="javascript:">Z神通联盟</a>
+								<a href="javascript:">有问必答</a>
+								<a href="javascript:">试用圈子</a>
+								<a href="javascript:">手机摄影</a>
+								<a href="javascript:">美女摄影部落</a>
+								<a href="javascript:">拆机堂</a>
+								<a href="javascript:">折本办</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--sitenav-personal-center-->
+				<div class="clientEnter">
+					<a href="javascript:" class="clientTitle">手机客户端</a>
+					<div class="clientEnterbody">
+						<h3 class="slogan">数码爱好者必备神器</h3>
+						<div class="clientEnterinner clearfix">
+							<img src="../images/usercenter/client-enter-code.png"alt="" class="client-code" />
+							<h4 class="client-text">中关村在线客户端</h4>
+							<div class="clientbtns">
+								<a href="javascript:" class="client-android">Android版</a>
+								<a href="javascript:" class="client-iphone">iPhone版</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<!--topRight 未登录状态-->
+				<div class="topRight"><!--login-bar-->
+					<div class="topRightbox"><!--login-box-->
+						<span class="toprightbox">登录</span>
+						<div class="toprightbox-form">
+							<iframe src="http://service.zol.com.cn/user/siteLogin.php?type=small&amp;callback=login" frameborder="0" scrolling="no" width="190px" height="200px">
+							</iframe>
+						</div>
+					</div>
+					<div class="toprightLinks"><!--login-links-->
+						<a href="javascript:" class="loginbyweibo" title="使用新浪微博登录"></a>
+						<a href="javascript:" class="loginbyqq" title="使用腾讯qq登录"></a>
+					</div>
+				</div>
+
+				<!--topRight 登录状态-->
+				<div class="positionbox">
+					<div class="bbsBox">
+						<div class="accountbox">
+							<a href="javascript:" class="zhanghao">
+								账号
+								<i></i>
+							</a>
+							<div class="dropdown-body">
+								<a href="javascript:">修改资料</a>
+								<a href="javascript:">更改头像</a>
+								<a href="javascript:">修改密码</a>
+							</div>
+						</div>
+						<div class="followbox">
+							<a href="javascript:" class="attention">
+								关注
+								<i></i>
+							</a>
+							<div class="dropdown-body">
+								<a href="javascript:">新动态</a>
+								<a href="javascript:">新粉丝</a>
+							</div>
+						</div>
+						<div class="mybbs-box">
+							<a href="javascript:" class="myzol">
+								我的论坛
+								<i></i>
+							</a>
+							<div class="dropdown-body">
+								<a href="javascript:">我的论坛</a>
+								<a href="javascript:">我的帖子</a>
+								<a href="javascript:">我的收藏</a>
+								<a href="javascript:">我的问答</a>
+								<a href="javascript:">我的任务</a>
+							</div>
+						</div>
+					</div>
+					<div class="personalCenter">
+						<a href="javascript:" class="exitbox">退出</a>
+						<a href="javascript:" class="personalmsg">
+							<i></i>
+						</a>
+						<div class="personal-welcome">
+							欢迎您
+							<a href="javascript:" class="username">username</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<!--nav-->	
+	<div id="nav"><!--headbox-->
+		<div class="navCon clearfix"><!--head-inner-->
+			<div class="logo"></div>
+			<div class="navBox clearfix">
+				<a href="../index2.html">
+					首页
+					<i class="arrow"></i>
+				</a>
+				<a href="javascript:">
+					个人主页
+					<i class="arrow"></i>
+				</a>
+				<a href="javascript:">
+					消息
+					<i class="arrow"></i>
+				</a>
+			</div>
+			<div class="selfBox">
+				<span class="selfboxTitle">个人设置</span>
+				<div class="selfboxList">
+					<i class="arrow"></i>
+					<a href="javascript:">个人资料</a>
+					<a href="javascript:">账号设置</a>
+				</div>
+			</div>
+			<div class="searchBox">
+				<form>
+					<input type="text" class="searchbox" placeholder="请输入要搜索的内容" value="" />
+					<input type="submit" class="searchbtn" value="搜索" />
+				</form>
+			</div>
+		</div>
+	</div>
+<!--mainHead-->
+	<div id="mainHead">
+		<div class="mainheadCon">
+			<div class="userbox">
+				<a href="javascript:" class="user-pic">
+					<span class="userpic-text">上传头像</span>
+					<img src="../images/usercenter/zoler.jpg" alt="" />
+				</a>
+				<div class="usernamebox clearfix">
+					<a href="javascript:" class="username">username</a>
+					<div class="user-levelbox clearfix">
+						<a href="javascript:" class="userlevel">Lv.1</a>
+						<div class="uplevelbox">
+							<i class="arrow"></i>
+							<div>
+								当前经验
+								<span class="red-color">0</span>
+								分，升级还需
+								<span class="red-color">280</span>
+								分
+							</div>
+							<div>
+								下一等级
+								<span class="orange-color">Lv.2</span>
+								&nbsp;&nbsp;
+								<a href="javascript:">如何升级？</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="user-function clearfix">
+					<a href="javascript:" class="editBox">编辑个人资料</a>
+				</div>
+				<div class="user-numbox clearfix">
+					<span class="friendnum">
+						<a href="javascript:">0</a>
+						<br />
+						好友
+					</span>
+					<span class="fans-num">
+						<a href="javascript:">0</a>
+						<br />
+						粉丝
+					</span>
+					<span class="focus-num">
+						<a href="javascript:">0</a>
+						<br />
+						关注
+					</span>
+				</div>
+			</div>
+			<div class="hometab clearfix">
+				<a href="javascript:" class="homesub">动态</a>
+				<a href="javascript:" class="homesub">论坛</a>
+				<a href="javascript:" class="homesub task">任务</a>
+				<a href="javascript:" class="homesub">资讯</a>
+				<a href="javascript:" class="homesub current">资料</a>
+				<a href="javascript:" class="homesub">Z金豆</a>
+				<a href="javascript:" class="homesub">设备</a>
+			</div>
+		</div>
+	</div>
+<!--mainContent-->
+	<div id="mainContent" class="clearfix"><!--wrap-data-->
+		<div class="sidebar">
+			<div class="navList">
+				<span class="navtitle">资料</span>
+				<a href="javascript:" class="nav-item current" id="nav-baseInfo">个人资料</a>
+				<a href="javascript:" class="nav-item" id="nav-picInfo">修改头像</a>
+				<a href="javascript:" class="nav-item" id="nav-passwordset">修改密码</a>
+				<a href="javascript:" class="nav-item" id="nav-daren">达人属性</a>
+				<a href="javascript:" class="nav-item" id="nav-signature">个性签名</a>
+				<a href="javascript:" class="nav-item" id="nav-others">其他</a>
+			</div>
+			<div class="navList">
+				<span class="navtitle">账号设置</span>
+				<a href="javascript:" class="nav-item" id="nav-manageset">账号管理</a>
+				<a href="javascript:" class="nav-item" id="nav-numbind">账号绑定</a>
+				<a href="javascript:" class="nav-item" id="nav-privacyset">隐私管理</a>
+				<a href="javascript:" class="nav-item" id="nav-verify">认证</a>
+			</div>
+		</div>
+		<div class="main">
+			<!--修改密码-->
+			<div class="section sectionPwd">
+				<div class="sec-header clearfix">
+					<h3>修改密码</h3>
+				</div>
+				<div class="setting-cont">
+					<form>
+						<div class="data-item">
+							<span class="label">旧密码：</span>
+							<div>
+								<input type="password" maxlength="20" class="text" id="oldPwd" />
+								<span class="tip"></span>
+
+							</div>
+						</div>
+						<div class="data-item">
+							<span class="label">新密码：</span>
+							<div>
+								<input type="password" maxlength="20" class="text" id="newPwd" />
+								<span class="tip">
+									6-18位数字/字母/下划线，且以字母开头
+								</span>
+							</div>
+						</div>
+						<div class="data-item">
+							<span class="label">确认新密码：</span>
+							<div>
+								<input type="password" maxlength="20" class="text" id="newPwd2"/>
+								<span class="tip"></span>
+							</div>
+						</div>
+						<div class="save-btn">
+							<input type="text" class="saveBtn" value="保存修改" />
+						</div>
+					</form>
+				</div>
+			</div>
+			<!--修改个人资料-->
+			<div class="section current sectionUser">
+				<div class="sec-header clearfix">
+					<h3>基本信息</h3>
+				</div>
+				<div class="setting-cont">
+					<form>
+						<div class="data-item">
+							<span class="label">昵称：</span>
+							<div id="usernickName">
+								<input type="text" class="text" id="userinfonickName" value="" maxlength="10" minlength="4" />
+								<span class="tip"></span>
+							</div>
+						</div>
+						<div class="data-item">
+							<span class="label">用户名：</span>
+							<div id="userName"></div>
+						</div>
+						<div class="data-item">
+							<span class="label">邮箱：</span>
+							<div id="userEmail">
+								<input type="text" class="text" id="userinfoEmail" value="" />
+								<span class="tip"></span>
+							</div>
+						</div>
+						<div class="save-btn">
+							<input type="text" class="saveBtn" value="保存修改" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+<!--fixRight-->
+	<div id="fixRight">
+		<a href="#top" class="backtop">返回顶部</a>
+		<a href="javascript:" class="feedback">
+			建议
+			<br />
+			反馈
+		</a>
+	</div>
+<!--bottom-->
+	<div id="bottom">
+		<div class="bottomCon">
+			<div class="bottomcon">
+				<span>
+					<a href="javascript:">公司简介</a>|
+					<a href="javascript:">公司历程</a>|
+					<a href="javascript:">营销推广</a>|
+					<a href="javascript:">媒体合作</a>|
+					<a href="javascript:">品牌大全</a>|
+					<a href="javascript:">账号注册</a>|
+					<a href="javascript:">招聘信息</a>|
+					<a href="javascript:">联系方式</a>|
+					<a href="javascript:">隐私声明</a>|
+					<a href="javascript:">站点地图</a>|
+					<a href="javascript:">反馈纠错</a>
+				</span>
+				&nbsp;&copy;2016 中关村在线 版权所有
+			</div>
+		</div>
+	</div>
+</body>
+</html>

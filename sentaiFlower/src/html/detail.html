@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/detail.css" />
+	</head>
+	<body ng-app="myProject" ng-controller="detailCtrl">
+		<div id="detailBox">
+			<header>
+				<i class="iconfont backBtn" ng-click="backclickFn()">&#xe74d;</i>
+				{{thisgoodsInfo.goodsName}}
+				<i class="iconfont homeBtn" ng-click="homeclickFn()">&#xe7a4;</i>
+			</header>
+			<section>
+				<div class="imgbox">
+					<img src="{{thisgoodsInfo.imgsUrl}}" alt="" />
+				</div>
+				<div>
+					商品名称：
+					<span>{{thisgoodsInfo.goodsName}}</span>
+				</div>
+				<div>
+					所属分类：
+					<span>{{thisgoodsInfo.className}}　</span>
+					<span>{{thisgoodsInfo.smallClassName}}</span>
+				</div>
+				<div>
+					植物花语：
+					<span>{{thisgoodsInfo.plantSays}}</span>
+				</div>
+				<div>
+					植物介绍：
+					<span>{{thisgoodsInfo.detail}}</span>
+				</div>
+			</section>
+		</div>
+		<script src="../js/ionic.bundle.js"></script>
+		<script src="../js/mainModule.js"></script>
+		<script src="../js/controllers/detailCtrl.js"></script>
+	</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>orderPage</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="../css/shopcar.css" />
+	<link rel="stylesheet" type="text/css" href="../css/orderPage.css" />
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/cookie.js"></script>
+	<script type="text/javascript" src="../js/orderPage.js"></script>
+</head>
+<body>
+<!--top-->
+	<div id="top">
+		<div id="topCon" class="commonCon clearfix">
+			<div class="topConleft">
+				<span class="backHome">
+					<a href="../index2.html" target="_blank">商城首页</a>
+				</span>
+				<span class="loginName">
+					您好，
+					<a href="#" class="userLogin"></a>
+					<script>
+						var cccookie=new DealCookie();
+						var oUser=cccookie.getCookie("username");
+						if(oUser==null){
+							$(".userLogin").html("登录");
+						}else{
+							$(".userLogin").html(oUser);
+						}
+						if($(".userLogin").html()=="登录"){
+							$(this).click(function(){
+								window.open("login.html");
+							});
+						}
+					</script>
+				</span>
+				<a class="quitLogin" href="../index.html" target="_self">退出</a>
+			</div>
+			<ul class="topConright">
+				<li>
+					<a href="#">我的订单</a>
+				</li>
+				<li class="userCenter">
+					<a class="centerHead" href="#">
+						买家中心
+						<i class="ico"></i>
+					</a>
+					<div class="centerBody">
+						<a href="#">
+							关注的店铺&nbsp;&nbsp;
+							<em>0</em>
+						</a>
+						<a href="#">
+							关注的商品&nbsp;&nbsp;
+							<em>0</em>
+						</a>
+					</div>
+				</li>
+				<li>
+					<a href="#">购物车0件</a>
+				</li>
+				<li>
+					<a href="#">帮助中心</a>
+				</li>
+				<li class="line">|</li>
+				<li class="mobileCenter">
+					<a class="mobileHead" href="#">
+						手机商城
+						<i class="ico"></i>
+					</a>
+					<div class="mobileBody">
+						<img src="../images/topCode.jpg" alt="" />
+					</div>
+				</li>
+				<li>
+					<a href="#">中关村在线</a>
+				</li>
+				<li>
+					<a href="#">商家入驻</a>
+				</li>
+				<li class="contact">
+					<a class="contactHead" href="#">
+						联系客服
+						<i class="ico"></i>
+					</a>
+					<div class="contactBody">
+						400-678-0068
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!--logo-->
+	<div id="logo" class="clearfix commonCon">
+		<div id="logoLeft">
+			<a href="../index.html" target="_self">
+				<img class="img1" src="../images/shopcar/shop_212x40.jpg" alt="" />
+				<img class="img2" src="../images/shopcar/logo-text.png" alt="" />
+			</a>
+		</div>
+		<div id="logoRight">
+			<ul class="payStep">
+				<li>下订单</li>
+				<li>去付款</li>
+				<li>确认收货</li>
+				<li class="comment">评价</li>
+			</ul>
+		</div>
+	</div>
+<!--MainBox-->
+	<div id="MainBox"><!--.wrapper-->
+    	<form name="confirmOrder" id="confirmOrder" method="post">
+			<!-- 收货人信息 -->
+    		<div class="container consignee">
+        		<table>
+            		<tbody>
+            			<tr>
+                			<td class="cell1">收货人信息</td>
+                			<td class="cell2">
+                    			<ul class="addressList">
+                    				<!--添加收货地址-->
+                        			<li class="addEdits">
+                            			<label>
+                            				<input type="radio" value="" checked="" name="addressCheck" />添加新地址
+                        				</label>                                
+                        				<div class="inforEditor editBox " id="inforEditor">
+                                			<dl>
+                                    			<dt><em class="buyerInfo">*</em>收货人：</dt><!--xh-->
+                                    			<dd>
+                                        			<input id="deliverName" type="text" value="" class="text recinput" maxlength="10">
+                                        			<span class="wrong-tips none" id="deliverNameTips">请填写收货人</span>
+			                                    </dd>
+			                                </dl>
+			                                <dl class="area">
+			                                    <dt><em class="buyerInfo">*</em>所在地区：</dt>
+			                                    <dd class="clearfix">
+                                        			<select id="s_province" name="s_province"></select>
+		    										<select id="s_city" name="s_city" ></select>
+		    										<select id="s_county" name="s_county"></select>
+		    										<script class="resources library" src="../js/area.js" type="text/javascript"></script>
+		    										<script type="text/javascript">_init_area();</script>
+                                    			</dd>
+                                			</dl>                                        
+                                			<dl class="detailAddress"><!--detailed-address-->
+                                    			<dt><em class="buyerInfo">*</em>详细地址：</dt>
+                                    			<dd>
+                                        			<input id="deliverAddress" type="text" value="" class="text addinput" maxlength="30">
+                                        			<span class="wrong-tips none" id="deliverAddressTips">请填写详细地址，5~30字</span>
+                                    			</dd>
+                                			</dl>
+                                			<div class="number clearfix">
+                                    			<dl>
+                                       	 			<dt><em class="buyerInfo">*</em>手机号码：</dt>
+                                    				<dd>
+                                            			<input id="deliverMobile" type="text" value="" class="text" maxlength="11">
+                                            			<span class="wrong-tips none" id="deliverMobileTips">请填写正确的手机号码</span>
+			                                        </dd>
+			                                    </dl>
+                                			</div>
+                                			<label class="setupDefault">
+                                				<input id="deliverDefault" type="checkbox" class="checkbox" value="0" />
+                                				设置为默认地址
+                            				</label>
+                                			<input id="deliverButton" type="button" class="saveBtn" value="确认收货地址" />
+                            			</div>
+                    				</li>
+                    				<!--显示已有收货地址-->
+                    				<!-- <li class="current">
+                    					<label>
+                    						<input type="radio" checked="checked" />
+                    						<span>
+                    							<strong>
+                    								<em>username</em>
+                    							</strong>
+                    						</span>
+                    					</label>
+                    					<div class="operate">
+                    						<a href="javascript:">编辑</a>
+                    						<a href="javascript:">删除</a>
+                    					</div>
+                    				</li> -->
+                				</ul>
+								<div class="add-address">
+									<label>
+										<input type="radio" name="addressCheck" />
+										添加新地址(最多可添加10个地址，您还可以添加9个地址)
+									</label>
+								</div>
+                			</td>
+            			</tr>
+        			</tbody>
+    			</table>
+    		</div>
+<!-- //收货人信息 -->
+        <!-- 购物车商品信息 -->
+        	<div class="orderList order-current">
+                <table>
+                    <tbody>
+                    	<tr>
+                        	<td class="cell1">
+                        		<label>
+                        			<input name="merchantId" type="radio" invoice="0" value="190330" checked="">商品订单
+                    			</label>
+                			</td>
+                        	<td class="cell2">
+                        		<table class="goods">
+                                	<tbody>
+		                                <tr>
+		                                    <th class="infor">商品信息</th>
+		                                    <th class="colorSuits">颜色套装</th>
+		                                    <th class="saletype">销售类型</th>
+		                                    <th class="price">单价</th>
+		                                    <th class="youhui">优惠</th><!--agio-->
+		                                    <th class="proNumber">数量</th><!--amount-->
+		                                    <th class="totalPrice">总价</th>
+		                                </tr>
+		                                <!--<tr>
+                                        	<td class="infor">
+                                            	<a href="#" target="_blank" class="pic">
+                                            		<img width="60" height="60" src="../images/orderPage/orderpage1.jpg" />
+                                        		</a>
+                                            	<h3 class="title">
+                                            		<a href="#" target="_blank">
+                                            			 酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)
+                                            		</a>
+                                        		</h3>
+                                        	</td>                                     
+                                            <td class="colorSuits">-</td>
+                                            <td class="saletype">-</td>          
+                                            <td class="price">￥2399</td>
+                                            <td>-</td>
+                                            <td class="proNumber">1</td>
+                                            <td class="totalPrice">￥2399</td>
+                                        </tr>
+                                        <tr>
+                                        	<td class="infor">
+                                            	<a href="#" target="_blank" class="pic">
+                                            		<img width="60" height="60" src="../images/orderPage/orderpage1.jpg" />
+                                        		</a>
+                                            	<h3 class="title">
+                                            		<a href="#" target="_blank">
+                                            			 酷开（coocaa）U50 50英寸闪电4K 超高清智能液晶平板电视 酷开系统 WIFI(黑色)
+                                            		</a>
+                                        		</h3>
+                                        	</td>                                     
+                                            <td class="colorSuits">-</td>
+                                            <td class="saletype">-</td>          
+                                            <td class="price">￥2399</td>
+                                            <td>-</td>
+                                            <td class="proNumber">1</td>
+                                            <td class="totalPrice">￥2399</td>
+                                        </tr>
+                                        -->
+                                    </tbody>
+                                </table>
+                                <div class="orderFoot clearfix">
+                                    <div class="delivery">
+                                    	<div class="payment">
+                                            <select id="payType">
+                            	            	<option value="2" selected="">网上支付</option>
+                                            	<span>支付方式：</span>
+                                        	</select>
+                                        	<span>
+                                        		<em id="sendArea"> &nbsp;&nbsp;</em>支付方式：
+                                    		</span>
+                                    	</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //购物车商品信息 -->
+			<!-- 订单备注 -->
+			<div class="orderNote">
+				<table>
+					<tbody>
+						<tr>
+							<td class="cell1">订单备注</td>
+							<td class="cell2">
+							<!--textarea onfocus="if(this.value==&#39;您可以填写对商品、配送的要求...&#39;) this.value=&#39;&#39;;this.style.color=&#39;#333&#39;" onblur="if(this.value==&#39;&#39;) {this.value=&#39;您可以填写对商品、配送的要求...&#39;;this.style.color=&#39;#999999&#39;}" style="color:#999999;"-->
+								<textarea id="orderNote" fn="limit" limit="200" tipsid="haveFonts" >您可以填写对商品、配送的要求...
+								</textarea>
+							</td>
+							<td class="cell3">
+								<ul class="totalPrice">
+									<li><span>商品总价：</span><em id="goods-total-price">￥2399</em></li>
+									<li><span>运费：</span><em id="goods-freight-price">￥0</em></li>
+									<li><span>订单总计：</span><em class="total" id="total-price">￥2399</em></li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+		<!-- //订单备注 -->
+		<!-- 提交订单 -->
+		<div class="submitOrder clearfix">
+            <a href="javascript:" class="submit-return">返回修改购物车</a>
+            <input class="submit-btn" name="confirmOrder" type="button" value="提交订单" />
+            <script>
+            	$(".submitOrder .submit-btn").click(function(){
+            		var ccookie=new DealCookie();
+            		var add=ccookie.getCookie("receiver");
+            		if(add==null){
+            			alert("请完善收货地址");
+            		}else{
+            			alert("提交成功");
+            		}
+            	});
+            </script>
+			<div class="submit-loading">提交中...</div>
+			<div class="fail-submit" title="填写错误，不能提交订单">不能提交订单</div>
+    	</div>
+		<!-- //提交订单 -->
+	</div>
+
+<!--bottom-->
+	<div id="bottom" class="commonCon">
+		<p class="yqLink">
+			<a href="#">关于商城</a>|
+			<a href="#">营销中心</a>|
+			<a href="#">服务中心</a>|
+			<a href="#">联系我们</a>|
+			<a href="#">发展历程</a>|
+			<a href="#">媒体报道</a>
+		</p>
+		<p class="copyInf">
+			&copy;2016中关村在线 版权所有.京ICP备09041801号-182
+			<a href="#">京ICP证010391号</a>
+		</p>
+		<div class="picBox">
+			<a href="#">
+				<img src="../images/shopcar/beian.png" alt="" />
+			</a>
+			<a href="#">
+				<img src="../images/shopcar/jingcha.png" alt="" />
+			</a>
+			<a href="#">
+				<img src="../images/shopcar/cert.png" alt="" />
+			</a>
+		</div>
+	</div>
+</body>
+</html>

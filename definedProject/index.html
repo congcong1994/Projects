@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>indexPage</title>
+		<link rel="stylesheet" href="css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="css/ionic.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body ng-app="myApp" ng-controller="articlePageCtrl">
+		<div id="box">
+			<header>
+				<div class="buttons leftBtn">
+					<i class="iconfont">&#xe60b;</i>
+			  	</div>
+			  	<h1 class="title">
+			  		<img src="images/sentaititle.png" alt="" />
+			  	</h1>
+			  	<div class="buttons">
+			    	<i class="iconfont">&#xe632;</i>
+			  	</div>
+			</header>
+			<section>
+				<div id="bannerBox">
+					<ion-slide-box active-slide="model.activeIndex" does-continue="true" auto-play="true" slide-interval="3000" on-slide-changed="slideHasChanged($index)" show-pager="true" pager-click="pageClick(index)" delegate-handle="delegateHandler" ng-click="coverFlowClick()">
+					    <ion-slide ng-repeat="item in bannerArr">
+						    <a class="box" href="javascript:">
+						    	<img src="{{item}}" alt="">
+						    </a>
+					    </ion-slide>
+					</ion-slide-box>
+				</div>
+			</section>
+		</div>
+		<script src="js/ionic.bundle.js"></script>
+		<script src="js/module.js"></script>
+		<script src="js/services/homebannerSer.js"></script>
+		<script src="js/controllers/homebannerCtrl.js"></script>
+	</body>
+</html>

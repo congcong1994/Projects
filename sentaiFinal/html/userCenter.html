@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>userCenter</title>
+	<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+	<link rel="stylesheet" href="../css/usercenter.css" />
+</head>
+<body ng-app="myProject" ng-controller="ucCtrl">
+	<div id="usercenterBox">
+		<header class="clearfix">
+			<div class="ucbackBtn" ng-click="backPage()">
+				<i class="iconfont">&#xe74d;</i>
+			</div>
+			会员中心
+			<div class="ucsearchBtn" ng-click="searchPage()">
+				<i class="iconfont">&#xe632;</i>
+			</div>
+		</header>
+		<section>
+			<div class="imgbox" id="ucimgBox" ng-controller="ucCtrl">
+				<img src="../images/title.png" alt="" />
+			</div>
+			<div class="dataBox" ng-click="turnPage()">
+				<i class="iconfont leftbtn">&#xe89f;</i>
+				修改个人资料
+				<i class="iconfont rightbtn">&#xe63b;</i>
+			</div>
+			<div class="footerbox">
+				<span id="usercenterID">用户名</span>
+				<a id="ucQuitbtn" href="javascript:">退出</a>
+			</div>
+			<a class="uchomeBtn" href="../index.html">首页</a>
+		</section>	
+	</div>
+	<!--<script type="text/javascript" src="../js/ionic.bundle.js"></script>
+	<script type="text/javascript" src="../js/mainModule.js"></script>
+	<script type="text/javascript" src="../js/controllers/usercenterCtrl.js"></script>-->
+	<script type="text/javascript" src="../js/common.js"></script>
+</body>
+</html>

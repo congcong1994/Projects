@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>modifinedData</title>
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<!--<link rel="stylesheet" href="../css/ionic.min.css" />-->
+		<link rel="stylesheet" href="../css/modifyData.css" />
+	</head>
+	<body>
+		<div id="modifyBox">
+			<header class="clearfix">
+				<div class="mdbackBtn">
+					<i class="iconfont">&#xe74d;</i>
+				</div>
+				修改资料
+				<div class="mdsearchBtn">
+					<i class="iconfont">&#xe632;</i>
+				</div>
+			</header>
+			<section>
+				<form action="">
+					<p>
+						<b>基本信息</b>
+					</p>
+					<table>
+						<tbody>
+							<tr>
+								<td class="title">会员名：</td>
+								<td>
+									<span id="mduserName">
+										用户名
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="title">性　别：</td>
+								<td>
+									<span class="selectbox">
+										<select name="sex" id="">
+											<option value="0" selected="selected">保密</option>
+											<option value="1">男</option>
+											<option value="2">女</option>
+										</select>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="title">生　日：</td>
+								<td>
+									<div id="box">
+										<select name="sel1" id="sel1">
+											<option value="year">年</option>
+										</select>
+										<select name="sel2" id="sel2">
+											<option value="month">月</option>
+										</select>
+										<select name="sel3" id="sel3">
+											<option value="day">日</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="title">手机号：</td>
+								<td>
+									<label for="mobile">
+										<input id="mdmobileBox" type="tel" name="mobile" maxlength="11" />
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="title">邮　箱：</td>
+								<td>
+									<label for="email">
+										<input type="text" name="email" maxlength="20" />
+									</label>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="lineBox"></div>
+					<p class="borderTop">
+						<b>修改密码</b>
+						(不修改请留空)
+					</p>
+					<table>
+						<tbody>
+							<tr>
+								<td class="title">原密码：</td>
+								<td>
+									<label for="">
+										<input type="text" id="oldPwd" />
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="title">新密码：</td>
+								<td>
+									<label for="">
+										<input type="text" id="newPwd" />
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="title">新密码：</td>
+								<td>
+									<label for="">
+										<input type="text" id="newPwd" />
+									</label>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<input type="button" class="submitBtn" id="mdsubmitBtn" value="确定" />
+				</form>
+			</section>	
+		</div>
+		
+		<!--<script src="../js/ionic.bundle.js"></script>
+		<script src="../js/mainModule.js"></script>
+		<script src="../js/controllers/modifyDataCtrl.js"></script>-->
+		<!--<script src="../js/js/jquery-1.11.3.js"></script>
+		<script src="../js/js/modifyDd.js"></script>
+		<script src="../js/js/modifyData.js"></script>-->
+		<script type="text/javascript" src="../js/common.js"></script>
+	</body>
+</html>

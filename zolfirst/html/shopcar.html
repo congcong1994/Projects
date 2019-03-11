@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shopcar</title>
+	<link rel="stylesheet" href="../css/shopcar.css" />
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/cookie.js"></script>
+	<script type="text/javascript" src="../js/shopcar.js"></script>
+</head>
+<body>
+<!--top-->
+	<div id="top">
+		<div id="topCon" class="commonCon clearfix">
+			<div class="topConleft">
+				<span class="backHome">
+					<a href="../index2.html" target="_blank">商城首页</a>
+				</span>
+				<span class="loginName">
+					您好，
+					<a href="#" class="userLogin"></a>
+					<script>
+						var cccookie=new DealCookie();
+						var oUser=cccookie.getCookie("username");
+						if(oUser==null){
+							$(".userLogin").html("登录");
+						}else{
+							$(".userLogin").html(oUser);
+						}
+						if($(".userLogin").html()=="登录"){
+							$(".userLogin").click(function(){
+								window.open("login.html");
+							});
+						}
+					</script>
+				</span>
+				<a class="quitLogin" href="../index.html" target="_self">退出</a>
+			</div>
+			<ul class="topConright">
+				<li>
+					<a href="#">我的订单</a>
+				</li>
+				<li class="userCenter">
+					<a class="centerHead" href="#">
+						买家中心
+						<i class="ico"></i>
+					</a>
+					<div class="centerBody">
+						<a href="#">
+							关注的店铺&nbsp;&nbsp;
+							<em>0</em>
+						</a>
+						<a href="#">
+							关注的商品&nbsp;&nbsp;
+							<em>0</em>
+						</a>
+					</div>
+				</li>
+				<li>
+					<a href="#">购物车0件</a>
+				</li>
+				<li>
+					<a href="#">帮助中心</a>
+				</li>
+				<li class="line">|</li>
+				<li class="mobileCenter">
+					<a class="mobileHead" href="#">
+						手机商城
+						<i class="ico"></i>
+					</a>
+					<div class="mobileBody">
+						<img src="../images/topCode.jpg" alt="" />
+					</div>
+				</li>
+				<li>
+					<a href="#">中关村在线</a>
+				</li>
+				<li>
+					<a href="#">商家入驻</a>
+				</li>
+				<li class="contact">
+					<a class="contactHead" href="#">
+						联系客服
+						<i class="ico"></i>
+					</a>
+					<div class="contactBody">
+						400-678-0068
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!--logo-->
+	<div id="logo" class="clearfix commonCon">
+		<div id="logoLeft">
+			<a href="../index.html" target="_self">
+				<img class="img1" src="../images/shopcar/shop_212x40.jpg" alt="" />
+				<img class="img2" src="../images/shopcar/logo-text.png" alt="" />
+			</a>
+		</div>
+		<div id="logoRight">
+			<ul class="payStep">
+				<li>下订单</li>
+				<li>去付款</li>
+				<li>确认收货</li>
+				<li class="comment">评价</li>
+			</ul>
+		</div>
+	</div>
+<!--MainBox-->
+	<div id="MainBox" class="commonCon clearfix">
+		<form action="">
+			<div class="orderBox">
+				<table>
+					<tbody>
+						<tr class="line1">
+							<th class="th-1">
+								<label>
+									<input type="checkBox" name="checkAll" />
+									全选
+								</label>
+							</th>
+							<th class="th-2">所选商品</th>
+							<th class="th-3">单价（元）</th>
+							<th class="th-4">数量</th>
+							<th class="th-5">优惠</th>
+							<th class="th-6">小计（元）</th>
+							<th class="th-7">操作</th>
+						</tr>
+					</tbody>
+				</table>
+				<div class="totalPrice">
+					商品总价
+					<span>(不含运费)</span>
+					:
+					<span class="rmbIco">￥</span>
+					<span class="rmbNum">3998</span>
+				</div>
+				<div class="probottom clearfix">
+					<label>
+						<input type="checkbox" />全选
+					</label>
+					<a href="#">批量删除</a>
+					<a href="#" class="goshopping"><<继续购物</a>
+					<input type="submit" value="去结算" class="calcBtn" />
+				</div>
+			</div>
+		</form>
+	</div>
+<!--bottom-->
+	<div id="bottom" class="commonCon">
+		<p class="yqLink">
+			<a href="#">关于商城</a>|
+			<a href="#">营销中心</a>|
+			<a href="#">服务中心</a>|
+			<a href="#">联系我们</a>|
+			<a href="#">发展历程</a>|
+			<a href="#">媒体报道</a>
+		</p>
+		<p class="copyInf">
+			&copy;2016中关村在线 版权所有.京ICP备09041801号-182
+			<a href="#">京ICP证010391号</a>
+		</p>
+		<div class="picBox">
+			<a href="#">
+				<img src="../images/shopcar/beian.png" alt="" />
+			</a>
+			<a href="#">
+				<img src="../images/shopcar/jingcha.png" alt="" />
+			</a>
+			<a href="#">
+				<img src="../images/shopcar/cert.png" alt="" />
+			</a>
+		</div>
+	</div>
+</body>
+</html>

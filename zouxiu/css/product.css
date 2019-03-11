@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.clearfix:after {
+  content: ".";
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  visibility: hidden;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑";
+}
+html .alertBox,
+body .alertBox {
+  width: 65%;
+  height: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -33%;
+  margin-top: -2rem;
+  border: 1px solid #b62222;
+  background: #fff;
+  z-index: 50;
+}
+html .alertBox .topBox,
+body .alertBox .topBox {
+  width: 100%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  color: #fff;
+  font-size: 0.7rem;
+  background: #b62222;
+  box-sizing: border-box;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+html .alertBox .topBox .textbox,
+body .alertBox .topBox .textbox {
+  float: left;
+}
+html .alertBox .topBox .closebtn,
+body .alertBox .topBox .closebtn {
+  float: right;
+}
+html .alertBox .bottomBox,
+body .alertBox .bottomBox {
+  width: 100%;
+  height: 2.5rem;
+  line-height: 1.25rem;
+  color: #000;
+  font-size: 0.7rem;
+  box-sizing: border-box;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+html .alertBox .bottomBox span,
+body .alertBox .bottomBox span {
+  display: block;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  color: #b62222;
+  text-decoration: underline;
+}
+html #box,
+body #box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: -ms-box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -ms-box-orient: vertical;
+}
+html #box header,
+body #box header {
+  width: 100%;
+  height: 2.15rem;
+  background: -webkit-linear-gradient(#b62222, #a21412);
+  background: -moz-linear-gradient(#b62222, #a21412);
+  background: -o-linear-gradient(#b62222, #a21412);
+  background: linear-gradient(#b62222, #a21412);
+  text-align: center;
+  line-height: 2.15rem;
+  color: #fff;
+  font-size: 36px;
+  position: relative;
+}
+html #box header i.goback,
+body #box header i.goback {
+  height: 1.35rem;
+  font-size: 1.35rem;
+  line-height: 1.35rem;
+  position: absolute;
+  left: 0.8rem;
+  top: 0.45rem;
+}
+html #box header i.shoppingcar,
+body #box header i.shoppingcar {
+  display: block;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 38px;
+  width: 2.5rem;
+  background: -webkit-linear-gradient(#ce1614, #900906);
+  background: -moz-linear-gradient(#ce1614, #900906);
+  background: -o-linear-gradient(#ce1614, #900906);
+  background: linear-gradient(#ce1614, #900906);
+  border: 3px solid #9d2929;
+  border-radius: 15%;
+  position: absolute;
+  top: 0.375rem;
+  right: 0.5rem;
+}
+html #box section,
+body #box section {
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  width: 100%;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: -ms-box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -ms-box-orient: vertical;
+}
+html #box section .top,
+body #box section .top {
+  height: 9.15rem;
+  width: 100%;
+  overflow: hidden;
+}
+html #box section .top .swiper-container,
+body #box section .top .swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html #box section .top .swiper-container .swiper-wrapper,
+body #box section .top .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+html #box section .top .swiper-container .swiper-wrapper .swiper-slide,
+body #box section .top .swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+html #box section .top .swiper-container .swiper-wrapper .swiper-slide img,
+body #box section .top .swiper-container .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+html #box section .center,
+body #box section .center {
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  height: 1;
+  width: 100%;
+}
+html #box section .center .titleCon,
+body #box section .center .titleCon {
+  width: 100%;
+  line-height: 1.5rem;
+  font-size: 0.75rem;
+  margin-top: 0.75rem;
+  color: #454545;
+  box-sizing: border-box;
+  padding: 0 5%;
+}
+html #box section .center .priceCon,
+body #box section .center .priceCon {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 5%;
+  margin-top: 0.75rem;
+  line-height: 1.5rem;
+  font-size: 0.75rem;
+  color: #ba0951;
+}
+html #box section .center .buyNumber,
+body #box section .center .buyNumber {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 5%;
+  margin-top: 0.75rem;
+  line-height: 1.5rem;
+  font-size: 0.75rem;
+  color: #4b494a;
+}
+html #box section .bottom,
+body #box section .bottom {
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  box-sizing: border-box;
+  padding-left: 13%;
+  color: #656565;
+  font-size: 0.7rem;
+  position: relative;
+}
+html #box section .bottom i,
+body #box section .bottom i {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 5%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 0.85rem;
+}
+html #box section .bottom i.letterI,
+body #box section .bottom i.letterI {
+  left: 3.75%;
+  color: #b62021;
+}
+html #box section .bottom i.goBtn,
+body #box section .bottom i.goBtn {
+  right: 5%;
+}
+html #box section .bottom span,
+body #box section .bottom span {
+  height: 0.7rem;
+  font-size: 0.7rem;
+  color: #656565;
+}
+html #box footer,
+body #box footer {
+  width: 100%;
+  height: 2.45rem;
+  background: #a3a3a3;
+}
+html #box footer input,
+body #box footer input {
+  display: block;
+  width: 68%;
+  height: 1.95rem;
+  border: 1px solid #920400;
+  border-radius: 5%;
+  background: -webkit-linear-gradient(#c32927, #910f0f);
+  background: -moz-linear-gradient(#c32927, #910f0f);
+  background: -o-linear-gradient(#c32927, #910f0f);
+  background: linear-gradient(#c32927, #910f0f);
+  color: #fff;
+  line-height: 1.95rem;
+  font-size: 0.75rem;
+  margin: 0.225rem 16% 0.225rem 16%;
+}

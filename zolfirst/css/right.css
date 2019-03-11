@@ -1,0 +1,242 @@
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{margin:0;padding:0;}
+body{font-family:"微软雅黑";}
+a,u{text-decoration:none;}
+ul,ol,li{list-style:none;}
+img{display:block;border:0;}
+em,i{font-style:normal;}
+b,strong{font-weight:100;}
+h1,h2,h3,h4,h5,h6{font-weight:100;font-size:16px;}
+.clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility:hidden;}
+
+#rightSidebar{
+	position:fixed;
+	top:0;
+	right:0;
+	z-index:1800;
+	height:100%;
+	background:transparent;
+}
+
+
+
+
+
+#rightfix{
+	position:absolute;
+	top:0;
+	left:-37px;
+	width:37px;
+	height:100%;
+	background:#2d2d2d;
+	z-index:1;
+}
+#rightfixTop{
+	position:absolute;
+	top:50%;
+	left:0;
+	margin:-250px 0 0;
+	width:37px;
+	height:266px;
+}
+#rightfixTop .fixtopIcon{
+	width:37px;
+	height:37px;
+	cursor:pointer;
+	background:#2d2d2d url(../images/bar_ico.png) no-repeat;
+	position:relative;
+	margin-bottom:12px;
+}
+#rightfixTop .topOrder{
+	background-position:0 0;
+}
+#rightfixTop .topFootprint{
+	background-position:0 -74px;
+}
+#rightfixTop .topShopcar{
+	background-position:0 -111px;
+}
+#rightfixTop .topShopcar span{
+	position:absolute;
+	top:-4px;
+	right:3px;
+	padding:1px 4px 0;
+	height:13px;
+	font-size:12px;
+	line-height:13px;
+	background:#ff3333;
+	color:#fff;
+	border-radius:10px;
+}
+#rightfixTop .topCoupon{
+	background-position:0 -693px;
+}
+#rightfixTop .fixtopIcon:hover{
+	background-color:#ff3333;
+}
+#rightfixTop .topShopcar:hover>span{
+	background-color:#fff;
+	color:#ff3333;
+}
+#rightfixTop .fixtopIcon div{
+	width:68px;
+	height:37px;
+	position:absolute;
+	left:-68px;
+	top:0;
+	background:#ff3333;
+	color:#fff;
+	cursor:pointer;
+	line-height:37px;
+	text-align:center;
+	font-size:12px;
+}
+#rightfixBottom{
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:37px;
+	height:75px;
+}
+#rightfixBottom .advice{
+	display:block;
+	padding:5px;
+	font-size:12px;
+	text-align:center;
+	color:#fff;
+	text-decoration:none;
+}
+#rightfixBottom .rightfixBacktop{
+	display:block;
+	width:37px;
+	height:37px;
+	background:#2d2d2d url(../images/bar_ico.png) no-repeat;
+	background-position:0 -185px;
+	cursor:pointer;
+}
+#rightfixBottom .rightfixBacktop:hover{
+	background-color:#ff3333;
+}
+
+#rightSidebar .shopcarBox{
+	position:relative;
+	width:240px;
+	height:100%;
+	background:#ededed;
+	/*z-index:10;*/
+}
+#rightSidebar .shopcarBox .rightbarRight{
+	position:absolute;
+	left:0;
+	top:0;
+	width:240px;
+	height:100%;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_head{
+	position:relative;
+	height:50px;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_head .title{
+	font-size:16px;
+	line-height:50px;
+	text-align:center;
+	color:#333;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_head .closebtn{
+	position:absolute;
+	top:0;
+	left:0;
+	width:37px;
+	height:50px;
+	background:url(../images/shopcar/bar_ico.png) no-repeat;
+	background-position:0 -367px;
+	cursor:pointer;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_head a{
+	position:absolute;
+	top:0;
+	right:10px;
+	font-size:12px;
+	line-height:50px;
+	color:#134ba0;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body{
+	position:relative;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox{
+	height:588px;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li{
+	position:relative;
+	margin:0 0 15px;
+	padding:0 0 15px;
+	background:#fff;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods{
+	position:relative;
+	padding:10px 10px 15px;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .checkBox{
+	float:left;
+	width:21px;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .checkBox input{
+	margin:15px 0 0;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .proPic{
+	float:left;
+	width:42px;
+	height:42px;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .proPic a img{
+	display:block;
+	border:1px solid #e6e5e4;
+	width:40px;
+	height:40px;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .proNum{
+	width:86px;
+	float:left;
+	font-size:12px;
+	line-height:42px;
+	text-align:center;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .proNum em{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	text-indent:-9999em;
+	overflow:hidden;
+	vertical-align:middle;
+	background:url(../images/shopcar/bar_ico.png) no-repeat;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .proNum .num-minus{
+	background-position:0 -437px;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .proNum .num-plus{
+	background-position:-17px -437px;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .proNum span{
+	display:inline-block;
+	padding:0 5px;
+	vertical-align:middle;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .proPrice{
+	width:66px;
+	float:left;
+	font-size:12px;
+	line-height:42px;
+	text-align:right;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .detailGoods .btn{
+	position:absolute;
+	top:5px;
+	right:10px;
+	width:16px;
+	height:16px;
+	background:url(../images/shopcar/bar_ico.png) no-repeat;
+	background-position:0 -471px;
+	display:none;
+}
+#rightSidebar .shopcarBox .rightbarRight .rightbarRight_body .bodycarBox .shopcarList li form .related{
+	line-height:40px;
+}

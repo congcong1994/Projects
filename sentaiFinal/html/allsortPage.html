@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/allsortPage.css" />
+	</head>
+	<body ng-app="myProject" ng-controller="allsortCtrl">
+		<div id="allsortBox">
+			<header>
+				<i class="iconfont sortbackBtn" ng-click="backbtnClick()">&#xe74d;</i>
+				所有分类
+				<i class="iconfont sorthomeBtn" ng-click="homebtnClick()">&#xe7a4;</i>
+			</header>
+			<section>
+				<div class="topBox">
+					<h4>绿　植</h4>
+					<ul class="clearfix">
+						<li class="hastopBorder hasleftBorder" ng-click="liclickFn(1,1001)">
+							<i class="iconfont">&#xe6e0;</i>
+							发财树
+						</li>
+						<li class="hastopBorder" ng-click="liclickFn(1,1004)">
+							<i class="iconfont back2">&#xe601;</i>
+							摇钱树
+						</li>
+						<li class="hastopBorder" ng-click="liclickFn(1,1003)">
+							<i class="iconfont back3">&#xe60c;</i>
+							幸福树
+						</li>
+						<li class="hasleftBorder" ng-click="liclickFn(1,1005)">
+							<i class="iconfont back4">&#xe648;</i>
+							招财树
+						</li>
+						<li ng-click="liclickFn(1,1006)">
+							<i class="iconfont back5">&#xe622;</i>
+							桌花
+						</li>
+						<li class="norightborder" ng-click="liclickFn(1,1002)">
+							<i class="iconfont back6">&#xe62b;</i>
+							其他
+						</li>
+					</ul>
+				</div>
+				<div class="bottomBox">
+					<h4>鲜　花</h4>
+					<ul>
+						<li ng-click="liclickFn(2,1008)">
+							<i class="iconfont">&#xe655;</i>
+							花束
+						</li>
+						<li class="noleftBorder" ng-click="liclickFn(2,1007)">
+							<i class="iconfont back2">&#xe7e9;</i>
+							婚礼花车
+						</li>
+					</ul>
+				</div>
+				
+			</section>
+		</div>
+		<!--<script src="../js/ionic.bundle.js"></script>
+		<script src="../js/mainModule.js"></script>
+		<script src="../js/controllers/allsortCtrl.js"></script>-->
+		<script type="text/javascript" src="../js/common.js"></script>
+	</body>
+</html>

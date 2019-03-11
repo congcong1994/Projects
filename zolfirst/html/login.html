@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/login.css" />
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script>
+		$(function(){
+			loginExp();
+		})
+	</script>
+</head>
+<body>
+<!--top-->
+	<div id="loginTop">
+		<div id="logintopLogo" class="clearfix">
+			<div class="logo">
+				<a href="index.html" target="_blank">
+					<img src="../images/login/loginLogo.png" alt="" />
+					<p>中关村在线旗下网上商城</p>
+				</a>
+			</div>
+			<div class="registerbox">
+				<a href="register.html">立即注册</a>
+				还没有ZOL商城账号？
+			</div>
+		</div>
+		<form action="" id="loginForm">
+			<div class="formBox clearfix">
+				<div class="adBox">
+					<div>
+						<a href="index.html" target="_blank">
+							<img src="../images/login/ad2.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="loginBox">
+					<div class="loginboxHead">
+						<a href="#" class="loginbar">手机动态码登录</a>
+						<h3>登录ZOL商城</h3>
+					</div>
+					<div class="loginboxContent">
+						<div class="wrongtips">
+							-
+						</div>
+						<div class="loginformUsername">
+							<input type="text" value="" placeholder="已注册手机号" class="text" id="zol_loginUser" name="zol_loginUsername" maxlength="100" />
+							<span class="usernametips">用户名输入错误</span>
+						</div>
+						<div class="loginformPwd">
+							<input type="password" placeholder="密码" class="text" id="zol_loginPwd" maxlength="20" />
+							<span class="pwdtips">密码输入错误</span>
+						</div>
+						<div class="loginformOther">
+							<a href="#">忘记密码？</a>
+						</div>
+						<input type="button" value="登 录" class="loginBtn" id="zol_loginBtn" />
+					</div>
+					<div class="collaborate clearfix">
+						<div class="line"></div>
+						<p>合作账号登录</p>
+						<div class="line"></div>
+					</div>
+					<div class="collImg clearfix">
+						<a href="#" class="wechat">用微信账号登录</a>
+						<a href="#" class="sinablog">用微博账号登录</a>
+						<a href="#" class="qq">用QQ账号登录</a>
+						<a href="#" class="alipay">用支付宝账号登录</a>
+						<a href="#" class="baidu">用百度账号登录</a>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div id="loginBottom">
+		<div class="loginbottomCon clearfix">
+			<div class="bottomAbout">
+				<a href="#">关于ZOL商城</a>|
+				<a href="#">联系我们</a>|
+				<a href="#">帮助中心</a>
+			</div>
+			<div class="bottomCopyright">
+				&copy;2016. 中关村在线 版权所有
+			</div>
+		</div>
+	</div>
+</body>
+</html>

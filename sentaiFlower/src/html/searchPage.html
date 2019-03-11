@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>searchPage</title>
+	<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+	<link rel="stylesheet" href="../css/searchpage.css" />
+</head>
+<body ng-app="myProject" ng-controller="searchCtrl">
+	<div id="searchPagebox">
+		<header>
+			<div class="backBtn" ng-click="backbtnFn()">
+				<i class="iconfont">&#xe74d;</i>
+			</div>
+			<div class="inputbox">
+				<input type="text" id="selectTextbox" placeholder="请输入搜索关键字" maxlength="20" value="{{selectText}}" ng-model="selectText" ng-change="inputChangefn()" />
+				<i class="iconfont searchbtn">&#xe632;</i>	
+			</div>
+		</header>
+		<section>
+			<ul>
+				<li ng-repeat="item in resultArr" ng-click="turnProduct(item)">
+					<div class="imgbox">
+						<img src="{{item.imgsUrl}}" alt="" />
+					</div>
+					<div class="textBox">
+						<span class="title">{{item.goodsName}}</span>
+						<a href="javascript:" class="toinfoPage">点击查看详细信息</a>
+						<i class="iconfont">&#xe63b;</i>
+					</div>
+				</li>
+				<li id="inputnogoods">
+					抱歉,暂时没有您要找的商品,您可以去我们的花店看一下哦~~
+				</li>
+			</ul>
+		</section>
+	</div>
+	<script src="../js/ionic.bundle.js"></script>
+	<script src="../js/mainModule.js"></script>
+	<script src="../js/controllers/searchCtrl.js"></script>
+</body>
+</html>

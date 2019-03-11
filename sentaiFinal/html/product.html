@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>productPage</title>
+		<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" href="../css/product.css" />
+	</head>
+	<body ng-app="myProject" ng-controller="productCtrl">
+		<div id="productPagebox">
+			<header>
+				<i class="iconfont backBtn" ng-click="backclickFn()">&#xe74d;</i>
+				{{thisgoodsInfo.goodsName}}
+				<i class="iconfont homeBtn" ng-click="homeclickFn()">&#xe7a4;</i>
+			</header>
+			<section>
+				<div class="imgBox">
+					<img src="{{thisgoodsInfo.imgsUrl}}" alt="" />
+				</div>
+				<div class="titleBox">
+					商品名称：
+					<span>{{thisgoodsInfo.goodsName}}</span>
+				</div>
+				<div class="classbox">
+					所属分类：
+					<span>{{thisgoodsInfo.className}}　</span>
+					<span>{{thisgoodsInfo.smallClassName}}</span>
+				</div>
+				<div class="todetailPage" ng-click="prodetailPage()">
+					查看商品详细信息
+					<i class="iconfont">&#xe60f;</i>
+				</div>
+			</section>
+		</div>
+		<!--<script src="../js/ionic.bundle.js"></script>
+		<script src="../js/mainModule.js"></script>
+		<script src="../js/controllers/productCtrl.js"></script>-->
+		<script type="text/javascript" src="../js/common.js"></script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+[
+	{
+		"imgUrl":"../images/activity/content11.jpg",
+		"price":"4999",
+		"versions":"联想IdeaPad 710S",
+		"desc":"i5-6200U,4G+256G固态，13.3英寸全高清，13.9mm铝镁合金机身"
+	},
+	{
+		"imgUrl":"../images/activity/content12.jpg",
+		"price":"4999",
+		"versions":"联想小新700电竞版",
+		"desc":"i5强悍四核，950M 4GB游戏独显，4G+1T"
+	},
+	{
+		"imgUrl":"../images/activity/content13.jpg",
+		"price":"5999",
+		"versions":"MacBook Air 13.3",
+		"desc":"13.3英寸，酷睿i5，配背光键盘，8G内存+128GB"
+	},
+	{
+		"imgUrl":"../images/activity/content14.jpg",
+		"price":"4949",
+		"versions":"联想小新Air 13 Pro",
+		"desc":"升级940MX独显，指纹识别，14.8mm金属纤薄机身，流贷i5-6200U,256G固态！"
+	},
+	{
+		"imgUrl":"../images/activity/content15.jpg",
+		"price":"769",
+		"versions":"AOC 23英寸窄边框显示器",
+		"desc":"AH-IPS面板包无亮点 爱眼净蓝光"
+	},
+	{
+		"imgUrl":"../images/activity/content16.jpg",
+		"price":"1699",
+		"versions":"六代i3固态硬盘入门游戏主机",
+		"desc":"微星H110M主板，8G内存，120G SSD固态硬盘"
+	},
+	{
+		"imgUrl":"../images/activity/content17.jpg",
+		"price":"4199",
+		"versions":"GTX1060 6GB独显 I5游戏本",
+		"desc":"I5-6500处理器，微星GTX 1060飙风6G独显，固态硬盘"
+	},
+	{
+		"imgUrl":"../images/activity/content18.jpg",
+		"price":"1999",
+		"versions":"iGame 1060烈焰战神X-6GD5 Top",
+		"desc":"搭载RGB信仰灯 6+2相I.P.P数字供电"
+	}
+]

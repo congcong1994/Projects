@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>loginPage</title>
+	<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+	<link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+	<div id="loginBox">
+		<header class="clearfix">
+			<div class="loginbackBtn">
+				<i class="iconfont">&#xe74d;</i>
+			</div>
+			用户登录
+			<div class="loginhomeBtn">
+				<i class="iconfont">&#xe7a4;</i>
+			</div>
+		</header>
+		<section>
+			<div class="loginuserName clearfix">
+				<span>用户账号：</span>
+				<input type="text" placeholder="请输入用户名" id="loginusernameBox" />
+			</div>
+			<div class="loginuserPwd clearfix">
+				<span>用户密码：</span>
+				<input type="password" placeholder="请输入密码" id="loginuserpwdBox" />
+			</div>
+			<div class="loginshowPwd loginpwdBox">
+				<label for="loginshowPwd" id="loginshowPwdbox">
+					<img src="../images/checkbox.png" alt="" />
+					<input type="checkbox" id="loginshowPwd" />
+					<span>显示密码</span>
+				</label>
+			</div>
+			<div class="loginrememberPwd loginpwdBox">
+				<label for="loginrememberPwd" id="loginrememberBox">
+					<img src="../images/checkbox.png" alt="" />
+					<input type="checkbox" id="loginrememberPwd" />
+					<span>记住密码</span>
+				</label>
+				<!--<a href="javascipt:">忘记密码？</a>-->
+			</div>
+			<div class="loginloginBtn loginclickBtn">
+				<input type="button" value="登录" />
+			</div>
+			<div class="loginregisterBtn loginclickBtn">
+				<input type="button" value="注册" />
+			</div>
+		</section>
+	</div>
+	<script src="../js/js/jquery-1.11.3.js"></script>
+	<script src="../js/js/login.js"></script>
+</body>
+</html>
+

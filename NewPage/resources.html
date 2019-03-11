@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link href="http://cdn.bootcss.com/semantic-ui/2.2.6/semantic.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="ui middle aligned center aligned grid">
+    <div id="fff" class="column">
+        <h2 class="ui image header">
+            <div class="content">
+                Log-in to your account
+            </div>
+        </h2>
+        <form id="loginForm" action="http://service.lavector.com/api/v1/register?" method="post" class="ui large form">
+            <div class="ui stacked secondary segment">
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input id="email" type="text" name="email" placeholder="E-mail address">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input id="password" type="password" name="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="ui fluid large teal submit button">Login</div>
+            </div>
+
+            <div class="ui error message"></div>
+
+        </form>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://cdn.bootcss.com/semantic-ui/2.2.6/semantic.min.js"></script>
+<script>
+    $(document)
+            .ready(function () {
+                $('.ui.form')
+                        .form({
+                            fields: {
+                                email: {
+                                    identifier: 'email',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please enter your e-mail'
+                                        },
+                                        {
+                                            type: 'email',
+                                            prompt: 'Please enter a valid e-mail'
+                                        }
+                                    ]
+                                },
+                                password: {
+                                    identifier: 'password',
+                                    rules: [
+                                        {
+                                            type: 'empty',
+                                            prompt: 'Please enter your password'
+                                        },
+                                        {
+                                            type: 'length[6]',
+                                            prompt: 'Your password must be at least 6 characters'
+                                        }
+                                    ]
+                                }
+                            }
+                        })
+                ;
+                $('#loginForm').submit(function (event) {
+                    if ($('form').form('is valid')) {
+                        event.preventDefault();
+                        dataString = $("#loginForm").serialize();
+                        $.ajax({
+                            type: "post",
+                            url: "http://localhost/website/resources",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            data: JSON.stringify({email:$('#email').val(), password:$('#password').val()}),
+                            success: function (response) {
+                                console.log('response = ' + JSON.stringify(response, null, 4));
+                                if (response.status === "success") {
+                                    console.log('success!!!!!');
+                                    // do something with response.message or whatever other data on success
+                                } else if (response.status === "error") {
+                                    // do something with response.message or whatever other data on error
+                                    console.log('failure!!!!');
+                                }
+                                $('#fff').html('<h1>NIUBILITY</h1>');
+                            },
+                            error: function(response) {
+                                console.log('error!!!!');
+                            }
+                        })
+                        return false;
+                    } else {
+                        event.preventDefault();
+                    }
+                });
+            })
+    ;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "微软雅黑";
+}
+ul,
+li,
+ol,
+dt,
+dd {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.clearfix:after {
+  content: ".";
+  width: 0;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 100px;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  font-size: 100px;
+}
+html body #productPagebox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 0.14rem;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+}
+html body #productPagebox header {
+  width: 100%;
+  height: 0.48rem;
+  background: #c10000;
+  color: #fff;
+  font-size: 0.2rem;
+  text-align: center;
+  line-height: 0.48rem;
+  position: relative;
+}
+html body #productPagebox header i.iconfont {
+  position: absolute;
+  top: 0;
+  font-size: 0.24rem;
+}
+html body #productPagebox header i.backBtn {
+  left: 5%;
+}
+html body #productPagebox header i.homeBtn {
+  right: 5%;
+}
+html body #productPagebox section {
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+}
+html body #productPagebox section .imgBox {
+  width: 100%;
+  height: 2.5rem;
+}
+html body #productPagebox section .imgBox img {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+html body #productPagebox section .titleBox {
+  margin-top: 0.3rem;
+  margin-left: 5%;
+  width: 100%;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  font-size: 0.16rem;
+}
+html body #productPagebox section .classbox {
+  margin-top: 0.3rem;
+  width: 100%;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  font-size: 0.16rem;
+  margin-left: 5%;
+}
+html body #productPagebox section .todetailPage {
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid #b1b1b1;
+  border-bottom: 1px solid #b1b1b1;
+  box-sizing: border-box;
+  padding-left: 5%;
+  position: relative;
+}
+html body #productPagebox section .todetailPage i.iconfont {
+  position: absolute;
+  right: 5%;
+}

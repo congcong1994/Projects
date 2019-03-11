@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ZOL商城</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/zol.css" />
+	<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="js/cookie.js"></script>
+	<script type="text/javascript" src="js/lunbotu.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/move.js"></script>
+	<script type="text/javascript" src="js/zol.js"></script>
+	<script type="text/javascript" src="js/smooth.js"></script>
+	<script type="text/javascript" src="js/index2.js"></script>
+	<script>
+		function banImg(){
+			var _zolBanner=new zolIndex();
+			_zolBanner.loadImg("json/banner.json","#bannerBox","#bannerPage","#banBLTop","#bannerNext","#bannerFront");
+		}
+		function banFoot(){
+			var _zolBFoot=new bannerBottom();
+			_zolBFoot.initData("json/bannerBottom.json");
+		}
+		function ngBuy(){
+			var _zolNB=new NationalBuy();
+			_zolNB.initData("json/countdown.json");
+		}
+		function lcBuy(){
+			var _zolLB=new localBuy();
+			_zolLB.initData("json/lccountdown.json");
+		}
+		function ffCenterimg(){
+			var _zolffImg=new ffCenter();
+			_zolffImg.initData("json/firstFloorcenter.json");
+		}
+		function ffBottomimg(){
+			var _zolffBImg=new ffBottomb();
+			_zolffBImg.initData("json/firstFloorbottom.json");
+		}
+		function mobilebr(){
+			var _zolmB=new mobilebrand();
+			_zolmB.initData("json/mobileBrand.json");
+		}
+		function hotbanImg(){
+			var _zolBanner=new zolIndex();
+			_zolBanner.loadImg("json/hotbanner.json","#hotbannerBox","#hotbannerPage","#hotBanbox","#hotbannerNext","#hotbannerFront");
+		}
+		function hotbannerbottom(){
+			var _zolhotbannerbottom=new hbBottom();
+			_zolhotbannerbottom.initData("json/hotbannerbottom.json");
+		}
+		function sfcomputer(){
+			var _zolsfCom=new sfComputer();
+			_zolsfCom.initData("json/sfcomputer.json");
+		}
+		function sftablet(){
+			var _zolsfTab=new sfTablet();
+			_zolsfTab.initData("json/sfTablet.json");
+		}
+		function comBrand(){
+			var _zolcombran=new computerbrand();
+			_zolcombran.initData("json/sfbottomCom.json");
+		}
+		function thotbannerbottom(){
+			var _zolthotbannerbottom=new thirdhbBottom();
+			_zolthotbannerbottom.initData("json/tfhotbanbottom.json");
+		}
+		function tfcamera(){
+			var _zoltfCom=new tfCamera();
+			_zoltfCom.initData("json/tfcamera.json");
+		}
+		function tfhotbanImg(){
+			var _zoltfBanner=new zolIndex();
+			_zoltfBanner.loadImg("json/tfhotbanner.json","#thirdhotbannerBox","#thirdhotbannerPage","#thirdhotBanbox","#thirdhotbannerNext","#thirdhotbannerFront");
+		}
+		function tfdigital(){
+			var _zoltfdigital=new tfDigital();
+			_zoltfdigital.initData("json/tfdigital.json");
+		}
+		function digBrand(){
+			var _zoldigbran=new digitalbrand();
+			_zoldigbran.initData("json/tfdigitalbottom.json");
+		}
+		function hotsalelist(){
+			var _zolhtlist=new hotsale();
+			_zolhtlist.initData("json/hotsale.json");
+		}
+		$(function(){
+			banImg();
+			banFoot();
+			setInterval("ngBuy()",500);
+			setInterval("lcBuy()",500);
+			ffCenterimg();
+			ffBottomimg();
+			mobilebr();
+			hotbanImg();
+			hotbannerbottom();
+			sfcomputer();
+			sftablet();
+			tableChange("#secondFloor .sfCenter .sfcRight .rightTop","#secondFloor .sfCenter .sfcRight .rightBottom");
+			comBrand();
+			tfhotbanImg();
+			thotbannerbottom();
+			tfcamera();
+			tfdigital();
+			tableChange("#thirdFloor .sfCenter .sfcRight .rightTop","#thirdFloor .sfCenter .sfcRight .rightBottom");
+			digBrand();
+			hotsalelist();
+			logoMenu();
+			fixtop();
+			fixtopBlock();
+			rightFixbox();
+			var cccookie=new DealCookie();
+			function shopcarPage(){
+				$(".topShopcar")[0].onclick=$("#topCon .topright")[0].children[2].onclick=function(){
+					var oUser=cccookie.getCookie("username");
+					if(oUser==null){
+						alert("未登录，请先登录~");
+						window.open("html/login.html");
+					}else{
+						window.open("html/shopcar.html");
+					}
+				}
+			}
+			shopcarPage();
+			//购物车图标上标
+			function shopcarSup(){
+				var product1=cccookie.getCookie("pro1");
+				var product2=cccookie.getCookie("pro2");
+				var aProid1,aProid2,nNum1,nNum2;
+				if(product1!=null){
+					product1=product1.replace("{","");
+					product1=product1.replace("}","");
+					aProid1=product1.split(",");
+					nNum1=parseInt(aProid1[1].split(":")[1]);//pro1的数
+				}else{
+					nNum1=0;
+				}
+				if(product2!=null){
+					product2=product2.replace("{","");
+					product2=product2.replace("}","");
+					aProid2=product2.split(",");
+					nNum2=parseInt(aProid2[1].split(":")[1]);//pro2的数
+				}else{
+					nNum2=0;
+				}
+				var numTotal=nNum1+nNum2;
+				$("#rightfixTop .topShopcar span").html(numTotal);
+				$($("#topCon .topright")[0].children[2]).html("<a href=\"#\">购物车"+numTotal+"件</a>");
+			}
+			shopcarSup();
+		})
+	</script>
+</head>
+<body>
+<!--top-->
+	<div id="top">
+		<div id="topCon" class="commonCon">
+			<div class="toplogin">
+				<span class="backHome"><a href="#">商城首页</a></span>
+				<span class="login">
+					Hi~欢迎来到ZOL商城
+					<a href="javascript:" target="_blank"></a>
+					<script>
+						var cccookie=new DealCookie();
+						var oUser=cccookie.getCookie("username");
+						if(oUser==null){
+							$(".userLogin").html("登录");
+						}else{
+							$(".userLogin").html(oUser);
+						}
+						if($(".userLogin").html()=="登录"){
+							$(".userLogin").click(function(){
+								window.open("html/login.html");
+							});
+						}
+					</script>
+				</span>
+				<span class="register">
+					<a href="javascript:" target="_blank">退出</a>
+					<script>
+						var cccookie=new DealCookie();
+						var oUser=cccookie.getCookie("username");
+						if(oUser==null){
+							$(".exitRegister").html("免费注册");
+						}else{
+							$(".exitRegister").html("退出");
+						}
+						if($(".exitRegister").html()=="免费注册"){
+							window.open("html/register.html");
+						}
+					</script>
+				</span>
+			</div>
+			<ul class="topright">
+				<li><a href="#">我的订单</a></li>
+				<li class="li1">
+					<a class="li1title" href="#">
+						买家中心
+						<span></span>
+					</a>
+					<div class="topsecMenu1">
+						<a href="#">
+							<span>关注的店铺&nbsp;&nbsp;</span>
+							<span>30</span>
+						</a>
+						<a href="#">
+							<span>关注的商品&nbsp;&nbsp;</span>
+							<span>47</span>
+						</a>
+					</div>
+				</li>
+				<li><a href="#">购物车0件</a></li>
+				<li><a href="#">帮助中心</a></li>
+				<li>|</li>
+				<li class="li2">
+					<a class="li2title" href="#">
+						手机商城
+						<span></span>
+					</a>
+					<div class="topsecMenu2">
+						<img src="images/topCode.jpg" />
+					</div>
+				</li>
+				<li><a href="#">中关村在线</a></li>
+				<li><a href="#">商家入驻</a></li>
+				<li class="li3">
+					<a class="li3title" href="#">
+						联系客服
+						<span></span>
+					</a>
+					<div class="topsecMenu3">
+						400-678-0068
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!--logo-->
+	<div id="logo" class="commonCon">
+		<h1><img src="images/logo.png" /></h1>
+		<div id="logoRightbox">
+			<div class="cityAdd">
+				<p>
+					北京
+					<span></span>
+				</p>
+				<ul class="locationMenu">
+					<li class="active"><a href="#">北京</a></li>
+					<li><a href="#">成都</a></li>
+					<li><a href="#">青岛</a></li>
+					<li><a href="#">沈阳</a></li>
+					<li><a href="#">全国</a></li>
+				</ul>
+			</div>
+			<p class="zoldesc">中关村在线旗下网上商城</p>
+		</div>
+		<div id="searchBox">
+			<form action="get" name="inputSearch">
+				<input class="logoText" type="text" value="" />
+				<input class="logoSubmit" type="submit" value="搜索" />
+			</form>
+			<div class="hotWords">
+				<a href="#">三星s7 Edge</a>
+				<a href="#">华为P9</a>
+				<a href="#">i7四核游戏本3399元！</a>
+				<a href="#">GTX1060</a>
+				<a href="#">九阳豆浆机直降100！</a>
+				<a href="#">热销机械键盘</a>
+			</div>
+		</div>
+		<div class="servicePro">
+			<img src="images/logoBoxright.jpg" alt="" />
+		</div>
+	</div>
+<!--banner-->
+ 	<div id="banner" class="commonCon">
+ 		<div id="bannerTop" class="clearfix">
+ 			<ul>
+ 				<li><a href="#">首页</a></li>
+ 				<li><a href="#">团购</a></li>
+ 				<li><a href="#">ZOL智选</a></li>
+ 				<li><a href="#">DIY攒机馆</a></li>
+ 			</ul>
+ 			<a class="bannerAd" href="#">苹果 iPhone 7 亮黑色 仅限10台!</a>
+ 		</div>
+ 		<div id="bannerBottom">
+ 			<div id="bannerBLeft">
+ 				<div id="banBLTop">
+ 					<ul id="bannerBox"></ul>
+ 					<div id="bannerNext"></div>
+ 					<div id="bannerFront"></div>
+ 					<div id="bannerPage">
+ 						<span class="active">1</span>
+ 						<span>2</span>
+ 						<span>3</span>
+ 					</div>
+ 				</div>
+ 				<ul id="banBLBottom" class="clearfix"></ul>
+ 			</div>
+ 			<div id="bannerBRight">
+ 				<a href="#"><img src="images/bannerR1.jpg" /></a>
+ 				<a href="#"><img src="images/bannerR2.jpg" /></a>
+ 			</div>
+ 		</div>
+ 	</div>
+ <!--NationalGroup-->
+ 	<div id="NationalGroup" class="commonCon">
+ 		<div id="ngTop">
+ 			<h3>全国团购</h3>
+ 			<div class="ngtopMore">
+ 				<a href="#">魅族</a>|
+ 				<a href="#">三星</a>|
+ 				<a href="#">苹果</a>|
+ 				<a href="#">华为</a>
+ 				<a href="#">更多团购<span> <img src="images/ngroupbg.jpg" /> </span></a>
+ 			</div>
+ 		</div>
+ 		<ul id="ngBottom" class="clearfix">
+ 			
+ 		</ul>
+ 	</div>
+ <!--localGroup-->
+ 	<div id="localGroup" class="commonCon">
+ 		<div id="lcTop">
+ 			<h3>本地团</h3>
+ 		</div>
+ 		<ul id="lcBottom" class="clearfix"></ul>
+ 	</div>
+ <!--firstFloor-->
+ 	<div id="firstFloor" class="commonCon">
+ 		<h2>1F 手机同城精选</h2>
+ 		<div id="ffBottom">
+ 			<div class="fftop clearfix">
+ 				<div class="topLogo">
+ 					<a href="#">
+ 						<img src="images/fflogo.jpg" />
+ 					</a>
+ 				</div>
+ 				<div class="topService">
+ 					承诺服务保障
+ 					<span>免费贴膜</span>
+ 					<span>先行赔付</span>
+ 					<span>到店有礼</span>
+ 					<span>三小时送达</span>
+ 				</div>
+ 			</div>
+ 			<ul class="ffCenter"></ul>
+ 			<ul class="ffBottomb"></ul>
+ 		</div>
+ 	</div>
+ <!--mobileBrand-->
+ 	<ul id="mobileBrand" class="clearfix commonCon"></ul>
+<!--secondFloor-->
+	<div id="secondFloor" class="commonCon">
+		<div class="sfTop">
+			<h2>2F 电脑数码</h2>
+		</div>
+		<div class="sfCenter clearfix">
+			<div class="sfcLeft">
+				<a href="#"><img src="images/sfbLeft.jpg" /></a>
+			</div>
+			<div class="sfcRight">
+				<ul class="rightTop">
+					<li class="active">热门</li>
+					<li>笔记本</li>
+					<li>平板电脑</li>
+				</ul>
+				<ul class="rightBottom">
+					<li class="sfhot" style="display:block">
+					<!-- hotbanner s -->
+						<div id="hotBanbox">
+							<ul id="hotbannerBox"></ul>
+		 					<div id="hotbannerNext"></div>
+		 					<div id="hotbannerFront"></div>
+		 					<div id="hotbannerPage">
+		 						<span class="active"></span>
+		 						<span></span>
+		 						<span></span>
+		 					</div>
+						</div>
+					<!-- hotbanner e -->
+						<ul class="hotBottombox clearfix"></ul>
+					</li>
+					<li style="display:none" class="sfComputer">
+						<ul class="sfcList clearfix"></ul>
+					</li>
+					<li style="display:none" class="sfTablet">
+						<ul class="sfcList clearfix"></ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 电脑品牌 -->
+		<ul class="sfBottom"></ul>
+	</div>
+<!--thirdFloor-->
+	<div id="thirdFloor" class="commonCon">
+		<div class="sfTop">
+			<h2>3F 数码摄影</h2>
+		</div>
+		<div class="sfCenter clearfix">
+			<div class="sfcLeft">
+				<a href="#"><img src="images/tfLeft.jpg" /></a>
+			</div>
+			<div class="sfcRight">
+				<ul class="rightTop">
+					<li class="active">热门</li>
+					<li>数码相机</li>
+					<li>数码摄像机</li>
+				</ul>
+				<ul class="rightBottom">
+					<li class="sfhot" style="display:block">
+					<!-- hotbanner s -->
+						<div id="thirdhotBanbox">
+							<ul id="thirdhotbannerBox"></ul>
+		 					<div id="thirdhotbannerNext"></div>
+		 					<div id="thirdhotbannerFront"></div>
+		 					<div id="thirdhotbannerPage">
+		 						<span class="active"></span>
+		 						<span></span>
+		 						<span></span>
+		 					</div>
+						</div>
+					<!-- hotbanner e -->
+						<ul class="hotBottombox clearfix"></ul>
+					</li>
+					<li style="display:none" class="sfComputer">
+						<ul class="sfcList clearfix"></ul>
+					</li>
+					<li style="display:none" class="sfTablet">
+						<ul class="sfcList clearfix"></ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 电脑品牌 -->
+		<ul class="sfBottom"></ul>
+	</div>
+<!--hotSale-->
+	<div id="hotSale" class="commonCon">
+		<div class="hotsaleTitle clearfix">
+			<h2>热卖商品</h2>
+			<a href="#" class="refresh">换一批</a>
+		</div>
+		<ul class="hotsaleList"></ul>
+	</div>
+
+<!--Footer-->
+	<div id="Footer">
+		<div id="footerCon">
+			<ul id="footerTop" class="commonCon">
+				<li class="footli1">
+					<a href="#">
+						<p class="aTop">先行赔付</p>
+						<p class="aBottom">权益受损先行赔付</p>
+					</a>
+				</li>
+				<li class="footli2">
+					<a href="#">
+						<p class="aTop">正品保障</p>
+						<p class="aBottom">正规渠道正品质量</p>
+					</a>
+				</li>
+				<li class="footli3">
+					<a href="#">
+						<p class="aTop">无忧退还</p>
+						<p class="aBottom">均支持7天无理由</p>
+					</a>
+				</li>
+				<li class="footli4">
+					<a href="#">
+						<p class="aTop">发票保障</p>
+						<p class="aBottom">所售商品均有发票</p>
+					</a>
+				</li>
+				<li class="footli5">
+					<a href="#">
+						<p class="aTop">顺丰包邮</p>
+						<p class="aBottom">部分商品顺丰包邮</p>
+					</a>
+				</li>
+				<li class="footli6">
+					<a href="#">
+						<p class="aTop">急速发货</p>
+						<p class="aBottom">48小时内急速发货</p>
+					</a>
+				</li>
+			</ul>
+			<div id="footerBottom">
+				<ul>
+					<li class="liTitle"><a href="#">购物指南</a></li>
+					<li><a href="#">账号注册</a></li>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">付款方式</a></li>
+				</ul>
+				<ul>
+					<li class="liTitle"><a href="#">售后服务</a></li>
+					<li><a href="#">先行赔付</a></li>
+					<li><a href="#">退款退货流程</a></li>
+					<li><a href="#">投诉举报</a></li>
+				</ul>
+				<ul>
+					<li class="liTitle"><a href="#">商城保障</a></li>
+					<li><a href="#">行货保障</a></li>
+					<li><a href="#">如实描述</a></li>
+					<li><a href="#">物流配送</a></li>
+					<li><a href="#">48小时发货</a></li>
+					<li><a href="#">发票保障</a></li>
+				</ul>
+				<ul>
+					<li class="liTitle"><a href="#">商家服务</a></li>
+					<li><a href="#">商家中心</a></li>
+					<li><a href="#">商城规则</a></li>
+					<li><a href="#">商家帮助</a></li>
+				</ul>
+				<div class="hotLine">
+					<p class="hotTitle">400-678-0068</p>
+					<p>工作日9:00 - 18:00</p>
+					<p><a href="#">关注新浪微博</a></p>
+				</div>
+				<div class="business">
+					<h5>商家合作</h5>
+					<p>错过天猫？别再错过我们！</p>
+					<p>ZOL商城开启全新旅程！</p>
+					<a href="#">关于入驻 <span>&gt;</span> </a>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--BottomNav-->
+	<div id="BottomNav">
+		<div id="bottomNavCon" class="commonCon">
+			<div class="bottom1">
+				<p>合作伙伴：</p>
+				<p class="bottom1Right">
+					<a href="#">卷皮网</a>|
+					<a href="#">电子商务平台</a>|
+					<a href="#">中国电子银行网</a>|
+					<a href="#">华为商城</a>|
+					<a href="#">三帝贸易网</a>|
+					<a href="#">团购</a>|
+					<a href="#">eNet商城</a>|
+					<a href="#">易趣</a>|
+					<a href="#">家具网</a>|
+					<a href="#">手表品牌大全</a>|
+					<a href="#">钻石</a>|
+					<a href="#">伊秀女性网</a>|
+					<a href="#">华强电子网</a>|
+					<a href="#">电子产品世界</a>|
+					<a href="#">挖东西比价网</a>|
+					<a href="#">广告网</a>|
+					<a href="#">易购网</a>
+				</p>
+			</div>
+			<div class="bottom2">
+				<a href="#">中关村在线</a>|
+				<a href="#">ZOL商城</a>|
+				<a href="#">团购</a>|
+				<a href="#">限时抢购</a>|
+				<a href="#">经销商</a>|
+				<a href="#">产品报价</a>|
+				<a href="#">论坛</a>|
+				<a href="#">问答</a>
+			</div>
+			<div class="bottom3">
+				<a href="#">关于ZOL商城</a>|
+				<a href="#">帮助中心</a>|
+				<a href="#">联系我们</a>|
+				<a href="#">发展历程</a>|
+				<a href="#">媒体报道</a>
+			</div>
+			<div class="bottom4">
+				<span>&copy;2016 中关村在线 版权所有.</span>
+				<span><a href="#">京ICP证150096号</a></span>
+				<span>京ICP备14061128号</span>
+				<span><a href="#">京公安网备11010802020026号</a></span>
+				<span><a href="#">网络文化经营许可证京网文[2016]1631-199</a></span>
+				<a class="bottomAd" href="#">广告</a>
+			</div>
+		</div>
+	</div>
+
+
+ <!--leftFloor-->
+ 	<div id="leftFloor">
+ 		<h5>分类</h5>
+ 		<ul>
+ 			<li><a class="leftli1" href="html/prolist2.html"><span></span>手机</a></li>
+ 			<li><a class="leftli2" href="javascript:"><span></span>攒机</a></li>
+ 			<li><a class="leftli3" href="javascript:"><span></span>摄影</a></li>
+ 			<li><a class="leftli4" href="javascript:"><span></span>智能</a></li>
+ 			<li><a class="leftli5" href="javascript:"><span></span>外设</a></li>
+ 			<li><a class="leftli6" href="html/prolist.html"><span></span>家电</a></li>
+ 			<li><a class="leftli7" href="javascript:"><span></span>电脑</a></li>
+ 		</ul>
+ 	</div>
+ <!--leftCode-->
+ 	<div id="leftCode">
+ 		<img src="images/zolDingYue.jpg" />
+		<p>微信关注：ZOL商城</p>
+		<p>扫码赢优惠</p>
+		<p>订单时时查</p>
+ 	</div>
+ <!--fixTop-->
+ 	<div id="fixTop">
+ 		<div id="fixTopCon" class="clearfix commonCon">
+ 			<a class="fixtoplogo" href="#">
+ 				<img src="images/fixtopLogo.png" alt="" />
+ 			</a>
+ 			<div class="logorightbox">
+ 				<div class="logorightcityloc">
+ 					<span class="cityname">
+ 						北京
+ 						<span></span>
+ 					</span>
+ 					<ul class="cityList">
+ 						<li class="active"><a href="#">北京</a></li>
+ 						<li><a href="#">成都</a></li>
+ 						<li><a href="#">上海</a></li>
+ 						<li><a href="#">沈阳</a></li>
+ 						<li><a href="#">全国</a></li>
+ 					</ul>
+ 				</div>
+ 			</div>
+ 			<div class="searchboxtop">
+ 				<div class="searchtop">
+ 					<form action="" method="">
+ 						<input class="search" type="text" value="" />
+ 						<input class="searchbtn" type="submit" value="搜 索" />
+ 					</form>
+ 				</div>
+ 			</div>
+ 			<div class="fixtopright">
+ 				<div class="fixloginbox">
+ 					<a href="#" class="login">登录</a>
+ 					<a href="#" class="register">注册</a>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+<!--rightfix-->
+	<div id="rightfix">
+		<div id="rightfixTop">
+			<div class="fixtopIcon topOrder">
+				<div>我的订单</div>
+			</div>
+			<div class="fixtopIcon topFootprint">
+				<div>我的足迹</div>
+			</div>
+			<div class="fixtopIcon topShopcar">
+				<span>0</span>
+				<div>购物车</div>
+			</div>
+			<div class="fixtopIcon topCoupon">
+				<div>优惠券</div>
+			</div>
+		</div>
+		<div id="rightfixBottom">
+			<a href="#" target="_blank" class="advice">建议反馈</a>
+			<a href="#top" class="rightfixBacktop"></a>
+		</div>
+	</div>
+</body>
+</html>

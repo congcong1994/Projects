@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>prolistPage</title>
+	<link rel="stylesheet" href="../css/iconfont/iconfont.css" />
+	<link rel="stylesheet" href="../css/ionic.min.css" />
+	<link rel="stylesheet" href="../css/prolist.css" />
+</head>
+<body ng-app="myProject" ng-controller="prolistCtrl">
+	<div id="prolistBox">
+		<header class="clearfix" id="prolistTop">
+			<i class="iconfont backBtn" id="probackBtn">&#xe74d;</i>
+			<i class="iconfont menuBtn" id="promenuBtn" ng-click="proturnPagefn('../html/allsortPage.html')">&#xe6e3;</i>
+			{{prolistTitle}}
+			<i class="iconfont searchBtn" id="prosearchBtn" ng-click="proturnPagefn('../html/searchPage.html')">&#xe632;</i>
+			<i class="iconfont homeBtn" id="prohomeBtn" ng-click="proturnPagefn('../index.html')">&#xe7a4;</i>
+		</header>
+		<section>
+			<ion-view>
+				<ion-content on-scroll="getScrollPosition()">
+					<ion-list>
+						<ul class="prolistbox clearfix">
+							<li ng-repeat="item in prolistArr" ng-click="liClick(item)">
+								<div class="imgbox">
+									<img src="{{item.imgsUrl}}" alt="" />
+								</div>
+								<div class="textBox">
+									<span class="title">{{item.goodsName}}</span>
+									<a href="javascript:" class="toinfoPage">点击查看详细信息</a>
+									<i class="iconfont">&#xe63b;</i>
+								</div>
+							</li>
+						</ul>	
+					</ion-list>
+				</ion-content>	
+			</ion-view>
+			<button ng-click="scrollTop()" id="prolisttopBtn">
+				<!--<img src="../images/top.png" alt="" />-->
+			</button>
+		</section>
+	</div>
+	<script src="../js/ionic.bundle.js"></script>
+	<script src="../js/mainModule.js"></script>
+	<script src="../js/controllers/prolistCtrl.js"></script>
+</body>
+</html>

@@ -1,0 +1,564 @@
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{margin:0;padding:0;}
+body{font-family:"微软雅黑";}
+a,u{text-decoration:none;}
+ul,ol,li{list-style:none;}
+img{display:block;border:0;}
+em,i{font-style:normal;}
+b,strong{font-weight:100;}
+h1,h2,h3,h4,h5,h6{font-weight:100;font-size:16px;}
+.clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility:hidden;}
+.commonCon{
+	width:960px;
+	margin:0 auto;
+}
+
+/*top*/
+#top{
+	position:relative;
+	height:29px;
+	font-size:12px;
+	line-height:29px;
+	background:#f5f5f5;
+	border-bottom:1px solid #e6e6e6;
+	font-family:"宋体";
+}
+#topCon .topConleft{
+	float:left;
+}
+#topCon .topConleft .backHome{
+	padding:0 20px 0 0;
+}
+#topCon .topConleft .backHome a{
+	color:#666;
+}
+#topCon .topConleft .backHome a:hover{
+	color:#ce1a1b;
+	text-decoration:underline;
+}
+#topCon .topConleft .loginName{
+	padding:0 20px 0 0;
+	color:#666;
+}
+#topCon .topConleft .loginName a{
+	color:#36c;
+}
+#topCon .topConleft .loginName a:hover{
+	color:#ce1a1b;
+	text-decoration:underline;
+}
+#topCon .topConleft .quitLogin{
+	color:#134ba0;
+}
+#topCon .topConleft .quitLogin:hover{
+	color:#ce1a1b;
+	text-decoration:underline;
+}
+#topCon .topConright{
+	float:right;
+	margin:0 -10px 0 0;
+}
+#topCon .topConright li{
+	float:left;
+	margin:0 10px;
+	height:29px;
+	font-size:12px;
+	line-height:29px;
+	font-family:"arial";
+}
+#topCon .topConright li a{
+	display:inline-block;
+	color:#666;
+}
+#topCon .topConright li a:hover{
+	text-decoration:underline;
+	color:#ce1a1b;
+}
+#topCon .topConright li a .ico{
+	position:absolute;
+	top:13px;
+	right:10px;
+	width:7px;
+	height:4px;
+	background:url(../images/shopcar/topbar_ico.png) no-repeat;
+	background-position:0 -45px;
+}
+#topCon .topConright .userCenter{
+	margin:0;
+	position:relative;
+}
+#topCon .topConright .userCenter:hover{
+	background:#fff;
+	border:1px solid #ededed;
+	border-bottom:none;
+}
+#topCon .topConright .userCenter:hover>a{
+	color:#666;
+	text-decoration:none;
+}
+#topCon .topConright .userCenter:hover>.centerBody{
+	display:block;
+}
+#topCon .topConright .userCenter .centerHead{
+	position:relative;
+	padding:0 23px 0 10px;
+}
+#topCon .topConright .userCenter .centerBody{
+	display:none;
+	position:absolute;
+	top:29px;
+	left:-1px;
+	padding:3px 9px;
+	width:88px;
+	border:1px solid #ededed;
+	border-top:none;
+	background:#fff;
+}
+#topCon .topConright .line{
+	color:#ccc;
+}
+#topCon .topConright .mobileCenter{
+	margin:0;
+	position:relative;
+}
+#topCon .topConright .mobileCenter:hover{
+	background:#fff;
+	border:1px solid #ededed;
+	border-bottom:none;
+}
+#topCon .topConright .mobileCenter:hover>a{
+	text-decoration:none;
+	color:#666;
+}
+#topCon .topConright .mobileCenter:hover>.mobileBody{
+	display:block;
+}
+#topCon .topConright .mobileCenter .mobileHead{
+	padding:0 23px 0 25px;
+	background:url(../images/shopcar/topbar_ico.png) no-repeat;
+	background-position:0 0;
+}
+#topCon .topConright .mobileCenter .mobileBody{
+	display:none;
+	position:absolute;
+	top:29px;
+	left:-1px;
+	padding:20px;
+	width:130px;
+	height:130px;
+	border:1px solid #ededed;
+	border-top:none;
+	background:#fff;
+}
+#topCon .topConright .mobileCenter .mobileBody img{
+	width:130px;
+	height:130px;
+}
+#topCon .topConright .contact{
+	position:relative;
+}
+#topCon .topConright .contact:hover{
+	background:#fff;
+	border:1px solid #ededed;
+	border-bottom:none;
+}
+#topCon .topConright .contact:hover>a{
+	color:#666;
+	text-decoration:none;
+}
+#topCon .topConright .contact:hover>.contactBody{
+	display:block;
+}
+#topCon .topConright .contact .contactHead{
+	position:relative;
+	padding:0 23px 0 10px;
+}
+#topCon .topConright .contact .contactBody{
+	display:none;
+	position:absolute;
+	top:29px;
+	right:-1px;
+	padding:3px 9px;
+	width:80px;
+	border:1px solid #ededed;
+	border-top:none;
+	font-size:12px;
+	line-height:28px;
+	text-align:right;
+	font-family:"arial";
+	background:#fff;
+}
+/*logo*/
+#logo{
+	padding:30px 0;
+}
+#logoLeft{
+	float:left;
+}
+#logoLeft a img{
+	float:left;
+}
+#logoLeft a .img1{
+	width:212px;
+	height:40px;
+}
+#logoLeft a .img2{
+	width:165px;
+	height:40px;
+}
+#logoRight{
+	float:right;
+	padding:2px 0 0;
+}
+#logoRight .payStep li{
+	float:left;
+	width:90px;
+	padding:0 14px 0 0;
+	font-size:14px;
+	line-height:36px;
+	text-align:center;
+	background:#e6e6e6 url(../images/shopcar/step-bg.png) no-repeat;
+	background-position:100% -74px;
+}
+#logoRight .payStep .comment{
+	padding:0;
+	background:#e6e6e6;
+}
+/*MainBox*/
+#MainBox form{
+	display:block;
+	font-family:"宋体";
+	font-size:12px;
+}
+#MainBox form .orderBox{
+	margin-top:50px;
+}
+#MainBox form .orderBox td{
+	border-top:1px solid #e3e3e3;
+	border-bottom:1px solid #e3e3e3;
+	text-align:center;
+}
+#MainBox form .orderBox table{
+	border-collapse:collapse;
+	border-spacing:0;
+	table-layout:fixed;
+}
+#MainBox form .orderBox table tbody{
+	vertical-align:middle;
+}
+#MainBox form .orderBox table tbody .line1{
+	margin-bottom:10px;
+}
+#MainBox form .orderBox table tbody tr th{
+	height:36px;
+	background:#f5f5f5;
+	border-top:2px solid #e02d2d;
+	line-height:36px;
+	font-weight:normal;
+}
+#MainBox form .orderBox table tbody tr .th-1{
+	width:62px;
+}
+#MainBox form .orderBox table tbody tr .th-1 label input{
+	margin:0 5px 0 0;
+	vertical-align:middle;
+	font-size:100%;
+}
+#MainBox form .orderBox table tbody tr .th-2{
+	width:217px;
+	padding:0 0 0 100px;
+	text-align:left;
+}
+#MainBox form .orderBox table tbody tr .th-3{
+	width:122px;
+}
+#MainBox form .orderBox table tbody tr .th-4{
+	width:106px;
+}
+#MainBox form .orderBox table tbody tr .th-5{
+	width:121px;
+}
+#MainBox form .orderBox table tbody tr .th-6{
+	width:107px;
+}
+#MainBox form .orderBox table tbody tr .th-7{
+	width:81px;
+}
+#MainBox form .orderBox table tbody .proDesc td{
+	background:#fcfcfc;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo{
+	padding:10px 10px 10px 12px;
+	width:357px;
+	border-left:1px solid #e3e3e3;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo input{
+	float:left;
+	margin:24px 10px 0 0;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .picbox{
+	float:left;
+	width:80px;
+	height:60px;
+	border:1px solid #ccc;
+	line-height:58px;
+	text-align:center;
+	background:#fff;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .picbox img{
+	width:80px;
+	height:60px;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox{
+	float:left;
+	width:240px;
+	padding:0 0 0 10px;
+	line-height:20px;
+	text-align:left;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox h3{
+	margin:-2px 0 4px;
+	height:40px;
+	line-height:20px;
+	font-weight:normal;
+	font-size:12px;
+	overflow:hidden;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox h3 a{
+	color:#134ba0;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox h3 a:hover{
+	color:#f90;
+	text-decoration:underline;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox .service{
+	padding:5px 0;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox .service a{
+	float:left;
+	width:16px;
+	height:16px;
+	display:block;
+	margin-right:5px;
+	background:url(../images/shopcar/pic.png) no-repeat;
+	background-position:0 -286px;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox p{
+	color:#666;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox .info-con{
+	height:20px;
+	line-height:20px;
+	color:#666;
+	position:relative;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox .info-con:hover>.info-help{
+	display:block;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox .info-con .info-help{
+	display:none;
+	width:475px;
+	position:absolute;
+	left:36px;
+	top:20px;
+	padding:10px;
+	border:1px solid #ccc;
+	background:#fff;
+	color:#333;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox .info-con .info-help h5{
+	display:block;
+	font-size:12px;
+	height:20px;
+	line-height:20px;
+	padding:0 0 6px;
+	font-weight:bold;
+}
+#MainBox form .orderBox table tbody .proDesc .proInfo .infoBox .info-con .info-help p{
+	line-height:22px;
+	color:#666;
+	text-align:center;
+}
+#MainBox form .orderBox table tbody .proDesc .price{
+	font-family:"微软雅黑";
+}
+#MainBox form .orderBox table tbody .proDesc .buyNum{
+	width:130px;
+}
+#MainBox form .orderBox table tbody .proDesc .buyNum .buynumber{
+	position:relative;
+	width:110px;
+	height:20px;
+	padding:31px 0;
+	text-align:center;
+	margin-left:20px;
+}
+#MainBox form .orderBox table tbody .proDesc .buyNum .buynumber a{
+	float:left;
+	width:10px;
+	height:10px;
+	line-height:10px;
+	background:#fff;
+	color:#333;
+	text-align:center;
+	border:1px solid #ccc;
+	overflow:hidden;
+}
+#MainBox form .orderBox table tbody .proDesc .buyNum .buynumber .minus{
+	margin:5px 8px 0 10px;
+}
+#MainBox form .orderBox table tbody .proDesc .buyNum .buynumber .textNum{
+	width:28px;
+	height:16px;
+	float:left;
+	padding:1px 3px;
+	text-align:center;
+}
+#MainBox form .orderBox table tbody .proDesc .buyNum .buynumber .plus{
+	margin:5px 0 0 8px;
+}
+#MainBox form .orderBox table tbody .proDesc .s-total .price{
+	color:#f00;
+}
+#MainBox form .orderBox table tbody .proDesc .deletePro{
+	border-right:1px solid #e3e3e3;
+	width:61px;
+}
+#MainBox form .orderBox table tbody .proDesc .deletePro .deletebox{
+	position:relative;
+}
+#MainBox form .orderBox table tbody .proDesc .deletePro .deletebox a{
+	display:block;
+	line-height:20px;
+	color:#134ba0;
+}
+#MainBox form .orderBox table tbody .proDesc .deletePro .deletebox a:hover{
+	text-decoration:underline;
+	color:#f30;
+}
+#MainBox form .orderBox table tbody .doubleactive .reduction{
+	text-align:left;
+	border:1px solid #e3e3e3;
+	padding:10px;
+}
+#MainBox form .orderBox table tbody .doubleactive .reduction ul li{
+	position:relative;
+	padding:5px 0 5px 62px;
+	font-size:12px;
+	line-height:22px;
+	color:#666;
+}
+#MainBox form .orderBox table tbody .doubleactive .reduction ul li span{
+	position:absolute;
+	top:5px;
+	left:0;
+	width:50px;
+	height:20px;
+	border:1px solid #ff9a9a;
+	color:#ff6e6e;
+	font-size:12px;
+	line-height:20px;
+	text-align:center;
+	overflow:hidden;
+}
+#MainBox form .orderBox .totalPrice{
+	padding:0 10px 0 0;
+	height:52px;
+	line-height:52px;
+	text-align:right;
+	color:#333;
+}
+#MainBox form .orderBox .totalPrice span{
+	color:#666;
+}
+#MainBox form .orderBox .totalPrice .rmbIco,#MainBox form .orderBox .totalPrice .rmbNum{
+	font-family:"微软雅黑";
+	color:#f00;
+	font-size:16px;
+	font-weight:bold;
+}
+#MainBox form .orderBox .probottom{
+	position:relative;
+	padding:0 0 0 12px;
+	height:33px;
+	border:1px solid #e3e3e3;
+	line-height:33px;
+}
+#MainBox form .orderBox .probottom label{
+	float:left;
+	padding:0 25px 0 0;
+}
+#MainBox form .orderBox .probottom label input{
+	margin:0 5px 0 0;
+	vertical-align:middle;
+}
+#MainBox form .orderBox .probottom a{
+	float:left;
+	margin:0 30px 0 0;
+	color:#134ba0;
+}
+#MainBox form .orderBox .probottom .goshopping{
+	float:none;
+	position:absolute;
+	top:0;
+	right:150px;
+	margin:0;
+}
+#MainBox form .orderBox .probottom .calcBtn{
+	position:absolute;
+	top:-1px;
+	right:-1px;
+	width:130px;
+	height:35px;
+	font-size:18px;
+	line-height:35px;
+	color:#fff;
+	background:url(../images/shopcar/pic.png) no-repeat;
+	background-position:0 -113px;
+	cursor:pointer;
+	border:none;
+	outline:none;
+}
+/*bottom*/
+#bottom{
+	margin:40px auto 0;
+	padding:5px 0 20px;
+	width:960px;
+	text-align:center;
+	border-top:1px solid #e3e3e3;
+}
+#bottom .yqLink{
+	padding:14px 0 6px;
+	color:#ccc;
+}
+#bottom .yqLink a{
+	margin:0 10px;
+	color:#134ba0;
+	font-size:12px;
+}
+#bottom .copyInf{
+	width:960px;
+	height:23px;
+	line-height:23px;
+	padding-left:28px;
+	position:relative;
+	color:#333;
+	font-size:12px;
+}
+#bottom .copyInf a{
+	color:#134ba0;
+}
+#bottom .picBox{
+	width:348px;
+	margin:0 auto;
+	padding-top:12px;
+	text-align:center;
+}
+#bottom .picBox a{
+	margin-right:8px;
+	vertical-align:middle;
+	float:left;
+}
+#bottom .picBox a img{
+	width:108px;
+	height:40px;
+}

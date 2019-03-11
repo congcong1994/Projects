@@ -1,0 +1,590 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: "微软雅黑";
+}
+
+.clearfix:after {
+    content: ".";
+    width: 0;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.whCss {
+    width: 100%;
+    height: 100%;
+}
+
+.imgCss {
+    display: block;
+    width: 100%;
+}
+
+@keyframes music {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.addMus {
+    animation: music 3s linear 0s infinite;
+}
+
+.music {
+    z-index: 10;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    font-size: 24px;
+    background: none;
+    right: 15px;
+    top: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+
+@keyframes one {
+    from {
+        transform: scale(0.5) rotate(0deg) translate(0px);
+    }
+    to {
+        transform: scale(1) rotate(-180deg) translate(20px);
+    }
+}
+
+@keyframes two {
+    from {
+        transform: scale(0.5) rotate(0deg) translate(0px);
+    }
+    to {
+        transform: scale(1) rotate(180deg) translate(15px);
+    }
+}
+
+@keyframes three {
+    from {
+        transform: scale(0.5) rotate(0deg) translate(0px);
+    }
+    to {
+        transform: scale(1) rotate(-180deg) translate(-15px);
+    }
+}
+
+.music .one {
+    animation: one 3s linear 0s infinite;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    z-index: 20;
+}
+
+.music .two {
+    animation: two 3s linear 0s infinite;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 5px;
+    z-index: 20;
+}
+
+.music .three {
+    animation: thre 3s linear 0s infinite;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 5px;
+    z-index: 20;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+html body {
+    width: 100%;
+    height: 100%;
+}
+
+html body .swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+html body .swiper-container .pageStyle {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../image/back2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+html body .swiper-container .pageStyle .backBox {
+    width: calc(100% - 120px);
+    height: 100%;
+    background-color: #403e4c;
+    background-image: url(../image/snow.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    margin: 0 auto;
+    ;
+}
+
+html body .swiper-container .page1 .heartBox {
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 80px;
+}
+
+html body .swiper-container .page1 .heartBox img {
+    display: block;
+    width: 100%;
+}
+
+html body .swiper-container .page1 .candleBox {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 235px;
+    overflow: hidden;
+}
+
+html body .swiper-container .page1 .candleBox div {
+    display: inline-block;
+    width: 17%;
+    text-align: center;
+}
+
+html body .swiper-container .page1 .redLineBox {
+    width: calc(100% - 80px);
+    position: absolute;
+    left: 40px;
+    top: 350px;
+}
+
+html body .swiper-container .page1 .redLineBox img {
+    display: block;
+    width: 100%;
+}
+
+html body .swiper-container .page1 .redLineBox div {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    color: #fff;
+}
+
+html body .swiper-container .page1 .wordsBox {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 445px;
+    color: #fff;
+}
+
+html body .swiper-container .page1 .wordBox {
+    width: 120px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #7ecdcf;
+    color: #7ecdcf;
+    position: absolute;
+    top: 520px;
+    left: 50%;
+    margin-left: -60px;
+}
+
+html body .swiper-container .page2 .photoBox {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -110px;
+    top: 50px;
+    overflow: hidden;
+}
+
+html body .swiper-container .page2 .photoBox .photobox {
+    display: block;
+    width: 100%;
+    margin-top: -50px;
+}
+
+html body .swiper-container .page2 .birdsBox {
+    position: absolute;
+    width: 136px;
+    height: 50px;
+    left: 50%;
+    margin-left: -68px;
+    top: 305px;
+}
+
+html body .swiper-container .page2 .birdsBox img.bird {
+    display: block;
+    height: 100%;
+}
+
+html body .swiper-container .page2 .birdsBox img.heart {
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+html body .swiper-container .page2 .wordsBox {
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    color: #fff;
+    top: 375px;
+}
+
+html body .swiper-container .page2 .wordBox {
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    color: #fff;
+    top: 435px;
+}
+
+html body .swiper-container .page2 .heartBox {
+    position: absolute;
+    top: 495px;
+    width: 130px;
+    height: 95px;
+    left: 50%;
+    margin-left: -65px;
+    background-image: url(../image/qipao.src);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+html body .swiper-container .page2 .heartBox .heart1 {
+    display: block;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+html body .swiper-container .page2 .heartBox .heart2 {
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 35px;
+    left: 76px;
+}
+
+html body .swiper-container .commonTop .topBorderBox {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    width: 280px;
+    height: 30px;
+    margin-left: -140px;
+}
+
+html body .swiper-container .commonTop .topBorderBox img {
+    display: block;
+    width: 100%;
+}
+
+html body .swiper-container .commonTop .wordBox {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 280px;
+    height: 50px;
+    margin-left: -140px;
+}
+
+html body .swiper-container .commonTop .wordBox img {
+    display: block;
+    width: 100%;
+}
+
+html body .swiper-container .commonTop .bottomBorderBox {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    width: 280px;
+    height: 30px;
+    margin-left: -140px;
+}
+
+html body .swiper-container .commonTop .bottomBorderBox img {
+    display: block;
+    width: 100%;
+}
+
+html body .swiper-container .page3 .photoBox1 {
+    position: absolute;
+    top: 216px;
+    left: 15%;
+    width: 160px;
+    height: 280px;
+}
+
+html body .swiper-container .page3 .photoBox1 img {
+    display: block;
+    width: 100%;
+}
+
+html body .swiper-container .page3 .photoBox2 {
+    position: absolute;
+    top: 372px;
+    right: 16%;
+    width: 160px;
+    height: 280px;
+}
+
+html body .swiper-container .page3 .photoBox2 img {
+    display: block;
+    width: 100%;
+}
+
+html body .swiper-container .page4 .wordsBox {
+    position: absolute;
+    left: 50%;
+    top: 230px;
+    text-align: center;
+    width: 240px;
+    margin-left: -120px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 22px;
+}
+
+html body .swiper-container .page4 .photoBox {
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    width: 300px;
+    margin-left: -150px;
+}
+
+html body .swiper-container .page4 .photoBox img {
+    display: block;
+    width: 100%;
+}
+
+html body .swiper-container .page5 .wordsBox {
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    top: 230px;
+    left: 50%;
+    margin-left: -125px;
+    color: #fff;
+    font-size: 22px;
+}
+
+html body .swiper-container .page5 .photoBox {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    top: 300px;
+}
+
+html body .swiper-container .page5 .photoBox img {
+    display: block;
+    width: 100%;
+}
+
+html body .swiper-container .page6 .wordsBox {
+    position: absolute;
+    left: 50%;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    width: 300px;
+    margin-left: -150px;
+}
+
+html body .swiper-container .page6 .wordsBox1 {
+    top: 210px;
+}
+
+html body .swiper-container .page6 .wordsBox2 {
+    top: 240px;
+}
+
+html body .swiper-container .page6 .wordsBox3 {
+    top: 270px;
+}
+
+html body .swiper-container .page6 .wordsBox4 {
+    top: 300px;
+}
+
+html body .swiper-container .page6 .wordsBox5 {
+    top: 330px;
+}
+
+html body .swiper-container .page6 .photoBox {
+    position: absolute;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    top: 400px;
+}
+
+html body .swiper-container .page6 .photoBox img {
+    display: block;
+    width: 100%;
+}
+
+html body .swiper-container .page7 .wordsBox {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+html body .swiper-container .page7 .wordsBox1 {
+    top: 220px;
+}
+
+html body .swiper-container .page7 .wordsBox2 {
+    top: 280px;
+}
+
+html body .swiper-container .page7 .wordsBox3 {
+    top: 340px;
+}
+
+html body .swiper-container .page7 .wordsBox4 {
+    top: 400px;
+}
+
+html body .swiper-container .page7 .wordsBox5 {
+    top: 460px;
+}
+
+html body .swiper-container .page7 .wordsBox6 {
+    top: 520px;
+}
+
+html body .swiper-container .page7 .wordsBox6 img {
+    width: 20px;
+}
