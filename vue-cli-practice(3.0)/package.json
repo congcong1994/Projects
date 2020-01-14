@@ -11,10 +11,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "clipboard": "^2.0.4",
     "vant": "^1.6.21",
     "vue": "^2.5.2",
     "vue-calendar-component": "^2.8.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-video-player": "^5.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

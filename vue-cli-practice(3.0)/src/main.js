@@ -1,19 +1,27 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
+import Vue from "vue";
+import App from "./App";
+import router from "./router";
 
-import Vant from 'vant'
-import 'vant/lib/index.css'
+import Vant from "vant";
+import "vant/lib/index.css";
 
-Vue.config.productionTip = false
-Vue.use(Vant)
+import VideoPlayer from "vue-video-player";
+// import "vue-video-player/src/custom-theme";
+// import "vue-video-player/node_modules/video.js/dist/video-js";
+require("vue-video-player/node_modules/video.js/dist/video-js.css");
+require("vue-video-player/src/custom-theme.css");
+
+Vue.config.productionTip = false;
+Vue.use(Vant);
+
+Vue.use(VideoPlayer);
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: "#app",
   router,
   components: { App },
-  template: '<App/>'
-})
+  template: "<App/>"
+});
