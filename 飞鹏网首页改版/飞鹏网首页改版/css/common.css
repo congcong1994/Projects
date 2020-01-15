@@ -1,0 +1,53 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+ul,
+li,
+footer,
+header,
+nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: "Droid Sans Fallback""Rounded MT Bold", tahoma, Arial, "\5B8B\4F53", sans-serif;
+}
+
+ul,
+li,
+ol,
+dt,
+dd {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: ".";
+    width: 0;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
