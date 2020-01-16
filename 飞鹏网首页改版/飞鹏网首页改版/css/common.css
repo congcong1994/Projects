@@ -57,3 +57,8 @@ body {
     height: auto;
     overflow-x: hidden;
 }
+
+.no-margin {
+    margin-left: 0;
+    margin-right: 0;
+}
