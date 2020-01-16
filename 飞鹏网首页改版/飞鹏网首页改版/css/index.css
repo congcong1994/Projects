@@ -79,7 +79,7 @@ header .menu-box {
 }
 
 /* 轮播图 + 导航 */
-.nav-box {
+#nav-box {
     width: 100vw;
     padding: 0 6vw;
     height: 425px;
@@ -115,12 +115,12 @@ header .menu-box {
     vertical-align: top;
 }
 
-.swiper-container-horizontal>.swiper-pagination-bullets {
+#nav-box .swiper-container-horizontal>.swiper-pagination-bullets {
     bottom: 15px;
 }
 
-.my-bullet,
-.my-bullet-active {
+#nav-box .my-bullet,
+#nav-box .my-bullet-active {
     width: 8px;
     height: 8px;
     border-radius: 100%;
@@ -128,17 +128,17 @@ header .menu-box {
     margin: 0 4px;
 }
 
-.my-bullet {
+#nav-box .my-bullet {
     background: #c4c4c4;
     opacity: .7;
 }
 
-.my-bullet-active {
+#nav-box .my-bullet-active {
     background: #f75d34;
     opacity: 1;
 }
 
-.nav-list {
+#nav-box .nav-list {
     width: 100%;
     height: 176px;
 }
@@ -166,17 +166,15 @@ header .menu-box {
 }
 
 /* 编辑推荐 */
-.editor-recommend-box {
+#editor-recommend-box {
     width: 100vw;
-    /* height: 135px; */
     min-height: 135px;
-    /* margin-top: 10px; */
     background: url(../img/bg-1.png) no-repeat center center;
     background-size: cover;
     padding: 10px 0 15px;
 }
 
-.editor-recommend-box .title-box {
+#editor-recommend-box .title-box {
     padding-top: 10px;
     padding-left: 4.8vw;
     text-align: left;
@@ -186,34 +184,34 @@ header .menu-box {
     line-height: 20px;
 }
 
-.editor-recommend-box .content-wrapper {
+#editor-recommend-box .content-wrapper {
     display: none;
     min-height: 105px;
     width: 100%;
     position: relative;
 }
 
-.editor-recommend-box .active {
+#editor-recommend-box .active {
     display: block;
 }
 
-.editor-recommend-box .content-wrapper .content-box {
+#editor-recommend-box .content-wrapper .content-box {
     width: 100%;
     height: 100%;
 }
 
-.editor-recommend-box .content-wrapper .content-box .top-box {
+#editor-recommend-box .top-box {
     height: 37px;
     margin-top: 14px;
     padding-left: 5vw;
 }
 
-.editor-recommend-box .content-wrapper .content-box .top-box .img-box,
-.editor-recommend-box .content-wrapper .content-box .top-box .text-box {
+#editor-recommend-box .top-box .img-box,
+#editor-recommend-box .top-box .text-box {
     display: inline-block;
 }
 
-.editor-recommend-box .content-wrapper .content-box .top-box .img-box {
+#editor-recommend-box .top-box .img-box {
     width: 35px;
     height: 35px;
     border-radius: 3px;
@@ -221,24 +219,24 @@ header .menu-box {
     margin-right: 10px;
 }
 
-.editor-recommend-box .content-wrapper .content-box .top-box .img-box img {
+#editor-recommend-box .top-box .img-box img {
     width: 35px;
     height: 35px;
 }
 
-.editor-recommend-box .content-wrapper .content-box .top-box .text-box {
+#editor-recommend-box .top-box .text-box {
     height: 35px;
     vertical-align: top;
 }
 
-.editor-recommend-box .content-wrapper .content-box .top-box .text-box .score-box {
+#editor-recommend-box .top-box .text-box .score-box {
     height: 15px;
     line-height: 15px;
     font-size: 12px;
     color: #4a4a4a;
 }
 
-.editor-recommend-box .content-wrapper .content-box .top-box .text-box .top-text {
+#editor-recommend-box .top-box .text-box .top-text {
     height: 18px;
     line-height: 18px;
     font-size: 14px;
@@ -246,7 +244,7 @@ header .menu-box {
     margin-bottom: 2px;
 }
 
-.editor-recommend-box .content-wrapper .content-box .bottom-box {
+#editor-recommend-box .bottom-box {
     width: calc(100% - 10vw);
     margin: 10px auto 0;
     padding: 0 5vw;
@@ -260,7 +258,7 @@ header .menu-box {
     position: relative;
 }
 
-.editor-recommend-box .content-wrapper .content-box .bottom-box .narrow-bg {
+#editor-recommend-box .bottom-box .narrow-bg {
     display: block;
     width: 15px;
     height: 11px;
@@ -270,7 +268,7 @@ header .menu-box {
     left: 5.5vw;
 }
 
-.editor-recommend-box .content-wrapper .right-narrow {
+#editor-recommend-box .content-wrapper .right-narrow {
     width: 7px;
     height: 14px;
     position: absolute;
@@ -278,4 +276,127 @@ header .menu-box {
     right: 3vw;
     background: url(../img/右箭头.png) no-repeat center center;
     background-size: cover;
+}
+
+/* H5游戏推荐 + 热门游戏 */
+.game-module {
+    width: 100vw;
+    height: 230px;
+    background: #ffffff;
+    margin-top: 10px;
+}
+
+#game-recommend {
+    margin-top: -10px;
+}
+
+.game-module .top-box {
+    height: 40px;
+    padding-top: 18px;
+}
+
+.game-module .top-box .title-box {
+    padding-left: 4.8vw;
+    display: inline-block;
+    color: #1f1f1f;
+    font-size: 16px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.game-module .top-box .title-box div {
+    display: inline-block;
+}
+
+.game-module .top-box .mark-box {
+    width: 42px;
+    height: 22px;
+    line-height: 22px;
+    vertical-align: top;
+    background: #ff6d26;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.game-module .top-box .btn-box {
+    float: right;
+    position: relative;
+    padding-right: 8vw;
+    font-size: 14px;
+    color: #ff6d26;
+    height: 22px;
+    line-height: 22px;
+}
+
+.game-module .top-box .btn-box .narrow-box {
+    width: 9px;
+    height: 14px;
+    position: absolute;
+    top: 5px;
+    right: 3vw;
+    background: url(../img/chevron.png) no-repeat center center;
+    background-size: cover;
+}
+
+.game-module .bottom-box {
+    height: 190px;
+    padding: 18px 0 10px;
+}
+
+.game-module .bottom-box .swiper-container,
+.game-module .bottom-box .search-wrapper {
+    height: 100%;
+}
+
+.game-module .bottom-box .swiper-slide.row {
+    margin: 0;
+}
+
+.game-module .bottom-box .swiper-slide.row .col-xs-3 {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.game-module .bottom-box .swiper-slide.row .img-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: url(../img/lazy-small-bg.png) no-repeat center center;
+    background-size: cover;
+}
+
+.game-module .bottom-box .swiper-slide.row img {
+    width: 70px;
+    height: 70px;
+}
+
+.game-module .bottom-box .text,
+.game-module .bottom-box .title2 {
+    font-size: 12px;
+    line-height: 16px;
+    height: 24px;
+    color: #1f1f1f;
+    padding-top: 8px;
+}
+
+.game-module .bottom-box .title2 {
+    color: #c4c4c4;
+    padding-top: 4px;
+}
+
+.game-module .bottom-box .button {
+    width: 60px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #ff6d26;
+    border: 1px solid #ff6d26;
+    border-radius: 16px;
+    background: #fff;
+    margin: 5px auto;
 }

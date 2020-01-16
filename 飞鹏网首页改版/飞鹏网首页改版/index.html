@@ -42,9 +42,9 @@
         </div>
     </header>
     <!-- 轮播 + 导航 -->
-    <div class="nav-box">
+    <div id="nav-box">
         <div class="banner-box">
-            <div class="swiper-container">
+            <div class="swiper-container" id="banner-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img data-src="img/banner1.jpg" class="swiper-lazy">
@@ -133,7 +133,7 @@
         </div>
     </div>
     <!-- 编辑推荐 -->
-    <div class="editor-recommend-box">
+    <div id="editor-recommend-box">
         <div class="title-box">编辑推荐</div>
         <div class="content-wrapper">
             <div class="content-box">
@@ -224,12 +224,322 @@
             <div class="right-narrow"></div>
         </div>
     </div>
+    <!-- H5游戏推荐 -->
+    <div id="game-recommend" class="game-module">
+        <div class="top-box">
+            <div class="title-box">
+                <div>H5游戏推荐</div>
+                <span class="mark-box">New</span>
+            </div>
+            <div class="btn-box">
+                进入游戏库
+                <span class="narrow-box"></span>
+            </div>
+        </div>
+        <div class="bottom-box">
+            <div class="swiper-container" id="recommend-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide row">
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img data-src="img/tu-5.png" alt=""
+                                         class="swiper-lazy">
+                                </div>
+                                <div class="text">
+                                    热血修仙
+                                </div>
+                                <div class="title2">
+                                    其他
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img data-src="img/tu-3.png" alt=""
+                                         class="swiper-lazy">
+                                </div>
+                                <div class="text">
+                                    荣耀足球
+                                </div>
+                                <div class="title2">
+                                    其他
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img data-src="img/tu-4.png" alt=""
+                                         class="swiper-lazy">
+                                </div>
+                                <div class="text">
+                                    妖怪宝可萌
+                                </div>
+                                <div class="title2">
+                                    其他
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img data-src="img/tu-4.png" alt=""
+                                         class="swiper-lazy">
+                                </div>
+                                <div class="text">
+                                    驯龙三国
+                                </div>
+                                <div class="title2">
+                                    其他
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide row">
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img data-src="img/tu-1-1.png" alt=""
+                                         class="swiper-lazy">
+                                </div>
+                                <div class="text">
+                                    驯龙三国
+                                </div>
+                                <div class="title2">
+                                    其他
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img data-src="img/tu-1-2.png" alt=""
+                                         class="swiper-lazy">
+                                </div>
+                                <div class="text">
+                                    宝贝星球
+                                </div>
+                                <div class="title2">
+                                    角色扮演
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img data-src="img/tu-2.png" alt=""
+                                         class="swiper-lazy">
+                                </div>
+                                <div class="text">
+                                    梦想海岛王
+                                </div>
+                                <div class="title2">
+                                    其他
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img data-src="img/tu-1-4.png" alt=""
+                                         class="swiper-lazy">
+                                </div>
+                                <div class="text">
+                                    决斗之皇H5
+                                </div>
+                                <div class="title2">
+                                    其他
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 热门游戏 -->
+    <div id="hot-game" class="game-module">
+        <div class="top-box">
+            <div class="title-box">
+                <div>热门游戏</div>
+                <span class="mark-box">Hot</span>
+            </div>
+            <div class="btn-box">
+                进入游戏库
+                <span class="narrow-box"></span>
+            </div>
+        </div>
+        <div class="bottom-box">
+            <div class="swiper-container" id="hot-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide row">
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img src="img/tu-6.png" alt="">
+                                </div>
+                                <div class="text">
+                                    石器时代手
+                                </div>
+                                <div class="title2">
+                                    角色
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img src="img/tu-7.png" alt="">
+                                </div>
+                                <div class="text">
+                                    末日之光
+                                </div>
+                                <div class="title2">
+                                    射击
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img src="img/tu-8.png" alt="">
+                                </div>
+                                <div class="text">
+                                    导师N条狗
+                                </div>
+                                <div class="title2">
+                                    角色
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img src="img/tu-9.png" alt="">
+                                </div>
+                                <div class="text">
+                                    非人学园
+                                </div>
+                                <div class="title2">
+                                    角色
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide row">
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img src="img/tu-2-1.png" alt="">
+                                </div>
+                                <div class="text">
+                                    料理次元
+                                </div>
+                                <div class="title2">
+                                    休闲
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img src="img/tu-2-2.png" alt="">
+                                </div>
+                                <div class="text">
+                                    冒险岛2手游
+                                </div>
+                                <div class="title2">
+                                    策略
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img src="img/tu-2-3.png" alt="">
+                                </div>
+                                <div class="text">
+                                    梦幻西游手
+                                </div>
+                                <div class="title2">
+                                    角色
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-3">
+                            <a href="javascript:">
+                                <div class="img-box">
+                                    <img src="img/tu-2-4.png" alt="">
+                                </div>
+                                <div class="text">
+                                    超能继承者
+                                </div>
+                                <div class="title2">
+                                    角色
+                                </div>
+                                <div class="button">
+                                    下载
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 侧边栏 -->
     <div class="menu-list">
         <div class="avatar-box"></div>
     </div>
     <script>
-        var mySwiper = new Swiper('.swiper-container', {
+        var mySwiper = new Swiper('#banner-swiper', {
             direction: 'horizontal',
             autoplay: {
                 disableOnInteraction: false
@@ -243,6 +553,24 @@
                 clickable: true,
                 bulletClass: 'my-bullet',
                 bulletActiveClass: 'my-bullet-active'
+            }
+        })
+
+        var mySwiper = new Swiper('#recommend-swiper', {
+            direction: 'horizontal',
+            autoplay: false,
+            loop: false,
+            lazy: {
+                loadPrevNext: true
+            }
+        })
+
+        var mySwiper = new Swiper('#hot-swiper', {
+            direction: 'horizontal',
+            autoplay: false,
+            loop: false,
+            lazy: {
+                loadPrevNext: true
             }
         })
     </script>
