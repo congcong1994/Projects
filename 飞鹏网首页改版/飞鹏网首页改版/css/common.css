@@ -36,6 +36,7 @@ dd {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 a:focus,
@@ -66,6 +67,18 @@ body {
 }
 
 .no-margin {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.no-margin-left {
+    margin-left: 0 !important;
+}
+
+.no-margin-right {
+    margin-right: 0 !important;
+}
+
+.no-bottom-border {
+    border-bottom: none !important;
 }
