@@ -832,3 +832,95 @@ footer {
     border-radius: 80px;
     box-shadow: 0px 4px 10px #fec362;
 }
+
+@media screen and (min-width:370px) {
+    #nav-box {
+        height: 445px;
+    }
+
+    .banner-box {
+        height: 260px;
+    }
+
+    .banner-box .swiper-slide {
+        height: 160px;
+    }
+}
+
+@media screen and (min-width:410px) {
+    #nav-box {
+        height: 463px;
+    }
+
+    .banner-box {
+        height: 278px;
+    }
+
+    .banner-box .swiper-slide {
+        height: 178px;
+    }
+}
+
+@media screen and (min-width:700px) {
+    header {
+        height: 63px;
+    }
+
+    header .search-wrapper {
+        height: 36px;
+    }
+
+    header .search-wrapper .logo-box {
+        height: 36px;
+        line-height: 36px;
+    }
+
+    header .search-wrapper .logo-box img {
+        height: 36px;
+    }
+
+    header .search-wrapper .logo-box span {
+        font-size: 18px;
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        padding-top: 0;
+    }
+
+    header .search-wrapper .search-box input {
+        height: 34px;
+    }
+
+    header .search-wrapper .search-box span,
+    header .search-wrapper .search-box span img {
+        width: 34px;
+        height: 34px;
+    }
+
+    header .menu-box {
+        width: 20px;
+        padding-top: 8px;
+    }
+
+    header .menu-box img {
+        width: 20px;
+        height: 17px;
+    }
+
+    #nav-box {
+        height: 595px;
+    }
+
+    .banner-box {
+        height: 410px;
+        padding-top: 70px;
+    }
+
+    .banner-box .swiper-slide {
+        height: 300px;
+    }
+
+    #editor-recommend-box .bottom-box .narrow-bg {
+        left: 2.2vw;
+    }
+}
