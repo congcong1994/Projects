@@ -44,35 +44,34 @@ $(function() {
     }
   });
 
-  // 编辑推荐切换
-  $('#editor-recommend-box .content-wrapper .right-narrow').click(function() {
-    var totalNum = $('#editor-recommend-box .content-wrapper').length;
-    var currentIndex = $(this)
-      .parent()
-      .siblings('.content-wrapper')
-      .index();
-    console.log('current' + currentIndex);
-    var nextIndex;
+  // 侧边栏点击事件
+  $('#menu-box .list li').click(function() {
     $(this)
-      .parent()
+      .siblings()
       .removeClass('active');
-    if (currentIndex < totalNum) {
-      console.log(1);
+    $(this).addClass('active');
+  });
+
+  // 编辑推荐切换
+  $('#editor-recommend-box .right-narrow').click(function() {
+    var currentIndex;
+    var currentEle;
+    var nextIndex;
+    var totalNum = $('#editor-recommend-box .content-wrapper').length;
+    $('#editor-recommend-box .content-wrapper').each(function(i, o) {
+      if ($(o).hasClass('active')) {
+        currentEle = $(o);
+        currentIndex = i;
+        return;
+      }
+    });
+    if (currentIndex < totalNum - 1) {
       nextIndex = currentIndex + 1;
     } else {
       nextIndex = 0;
-      console.log(2);
     }
-    console.log(nextIndex);
-    console.log($(this).parent());
-    console.log(
-      $(this)
-        .parent()
-        .siblings()
-    );
-    $(this)
-      .parent()
-      .siblings('.content-wrapper')
+    currentEle.removeClass('active');
+    $('#editor-recommend-box .content-wrapper')
       .eq(nextIndex)
       .addClass('active');
   });

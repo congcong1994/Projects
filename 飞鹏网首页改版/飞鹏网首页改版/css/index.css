@@ -169,10 +169,11 @@ header .menu-box {
 /* 编辑推荐 */
 #editor-recommend-box {
     width: 100vw;
-    min-height: 135px;
+    min-height: 145px;
     background: url(../img/bg-1.png) no-repeat center center;
     background-size: cover;
     padding: 10px 0 15px;
+    position: relative;
 }
 
 #editor-recommend-box .title-box {
@@ -187,9 +188,8 @@ header .menu-box {
 
 #editor-recommend-box .content-wrapper {
     display: none;
-    min-height: 105px;
+    min-height: 115px;
     width: 100%;
-    position: relative;
 }
 
 #editor-recommend-box .active {
@@ -248,7 +248,7 @@ header .menu-box {
 #editor-recommend-box .bottom-box {
     width: calc(100% - 10vw);
     margin: 10px auto 0;
-    padding: 0 5vw;
+    padding: 5px 5vw;
     background: #fff;
     line-height: 20px;
     font-size: 12px;
@@ -269,11 +269,12 @@ header .menu-box {
     left: 5.5vw;
 }
 
-#editor-recommend-box .content-wrapper .right-narrow {
+/* #editor-recommend-box .content-wrapper .right-narrow */
+#editor-recommend-box .right-narrow {
     width: 7px;
     height: 14px;
     position: absolute;
-    top: 14px;
+    top: 65px;
     right: 3vw;
     background: url(../img/右箭头.png) no-repeat center center;
     background-size: cover;
