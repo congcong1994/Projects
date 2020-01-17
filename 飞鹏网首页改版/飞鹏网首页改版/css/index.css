@@ -739,7 +739,8 @@ header .menu-box {
 }
 
 #bottom-nav div {
-    width: 250px;
+    /* width: 250px; */
+    width: 90vw;
     margin: 8px auto;
     height: 20px;
     line-height: 20px;
