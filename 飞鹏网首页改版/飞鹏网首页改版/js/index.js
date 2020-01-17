@@ -43,4 +43,37 @@ $(function() {
       $('#menu-box').hide();
     }
   });
+
+  // 编辑推荐切换
+  $('#editor-recommend-box .content-wrapper .right-narrow').click(function() {
+    var totalNum = $('#editor-recommend-box .content-wrapper').length;
+    var currentIndex = $(this)
+      .parent()
+      .siblings('.content-wrapper')
+      .index();
+    console.log('current' + currentIndex);
+    var nextIndex;
+    $(this)
+      .parent()
+      .removeClass('active');
+    if (currentIndex < totalNum) {
+      console.log(1);
+      nextIndex = currentIndex + 1;
+    } else {
+      nextIndex = 0;
+      console.log(2);
+    }
+    console.log(nextIndex);
+    console.log($(this).parent());
+    console.log(
+      $(this)
+        .parent()
+        .siblings()
+    );
+    $(this)
+      .parent()
+      .siblings('.content-wrapper')
+      .eq(nextIndex)
+      .addClass('active');
+  });
 });
