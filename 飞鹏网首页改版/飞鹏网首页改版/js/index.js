@@ -44,6 +44,12 @@ $(function() {
     }
   });
 
+  $('#menu-box .menu-list-bg').click(function() {
+    if ($('#menu-box').is(':visible')) {
+      $('#menu-box').hide();
+    }
+  });
+
   // 侧边栏点击事件
   $('#menu-box .list li').click(function() {
     $(this)

@@ -778,7 +778,6 @@ footer {
     width: 100vw;
     height: 100vh;
     z-index: 9000;
-    background: rgba(0, 0, 0, 0.5);
     overflow: hidden;
 }
 
@@ -833,6 +832,13 @@ footer {
     color: #ff6d26;
     border-radius: 80px;
     box-shadow: 0px 4px 10px #fec362;
+}
+
+#menu-box .menu-list-bg {
+    float: left;
+    width: 34vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5)
 }
 
 @media screen and (min-width:370px) {
