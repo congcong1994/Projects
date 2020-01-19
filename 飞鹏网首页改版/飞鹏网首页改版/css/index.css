@@ -670,7 +670,7 @@ header .menu-box span {
     margin-top: 15px;
 }
 
-#hot-new-game .new-sort-list li>div {
+#hot-new-game .new-sort-list li div {
     display: inline-block;
     vertical-align: top;
 }
