@@ -844,8 +844,7 @@ footer {
     width: 66vw;
     float: right;
     height: 100vh;
-    background: url(../img/侧导航背景.png) no-repeat center center;
-    background-size: cover;
+    background-image: linear-gradient(#f8a44a, #f77b3f);
     padding-top: 53px;
 }
 
