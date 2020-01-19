@@ -61,15 +61,14 @@ header .search-wrapper .search-box input {
 header .search-wrapper .search-box span {
     display: block;
     position: absolute;
-    top: 0px;
-    right: 1.5vw;
-    width: 24px;
-    height: 24px;
-}
-
-header .search-wrapper .search-box span img {
-    width: 24px;
-    height: 24px;
+    top: -3px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    background-image: url(../img/spirit-new.png);
+    background-position: -44px -71px;
+    transform: scale(0.5);
 }
 
 
@@ -158,6 +157,53 @@ header .menu-box {
 
 .nav-list .nav-content-box .img-box {
     height: 28px;
+}
+
+.nav-list .nav-content-box .img-box .img-bg {
+    width: 24px;
+    height: 28px;
+    background-image: url(../img/spirit-new.png);
+    margin: 0 auto;
+}
+
+.nav-list .nav-content-box .img-box .gift-box {
+    background-position: -68px 0;
+}
+
+.nav-list .nav-content-box .img-box .games-box {
+    background-position: 0 0;
+}
+
+.nav-list .nav-content-box .img-box .news-box {
+    background-position: -34px 0;
+}
+
+.nav-list .nav-content-box .img-box .game-box {
+    background-position: 0 -38px;
+}
+
+.nav-list .nav-content-box .img-box .gonglue-box {
+    width: 19px;
+    background-position: -71px -38px;
+}
+
+.nav-list .nav-content-box .img-box .video-box {
+    background-position: -103px -38px;
+}
+
+.nav-list .nav-content-box .img-box .score-box {
+    width: 21px;
+    background-position: -34px -38px;
+}
+
+.nav-list .nav-content-box .play-wrapper {
+    padding-top: 3px;
+}
+
+.nav-list .nav-content-box .img-box .play-box {
+    width: 25px;
+    height: 19px;
+    background-position: -102px 0;
 }
 
 .nav-list .nav-content-box .text-box {
@@ -269,15 +315,16 @@ header .menu-box {
     left: 5.5vw;
 }
 
-/* #editor-recommend-box .content-wrapper .right-narrow */
 #editor-recommend-box .right-narrow {
-    width: 7px;
-    height: 14px;
+    display: inline-block;
+    border-top: 1px solid #ee753c;
+    border-right: 1px solid #ee753c;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
     position: absolute;
-    top: 65px;
     right: 3vw;
-    background: url(../img/右箭头.png) no-repeat center center;
-    background-size: cover;
+    top: 65px;
 }
 
 /* H5游戏推荐 + 热门游戏 */
@@ -320,14 +367,13 @@ header .menu-box {
     text-align: center;
     font-size: 12px;
     display: inline-block;
-    margin-left: 10px;
     border-radius: 5px;
 }
 
 .game-module .top-box .btn-box {
     float: right;
     position: relative;
-    padding-right: 8vw;
+    padding-right: 6vw;
     font-size: 14px;
     color: #ff6d26;
     height: 22px;
@@ -335,13 +381,16 @@ header .menu-box {
 }
 
 .game-module .top-box .btn-box .narrow-box {
-    width: 9px;
-    height: 14px;
+    display: inline-block;
+    border-top: 1px solid #ef773f;
+    border-right: 1px solid #ef773f;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
     position: absolute;
-    top: 5px;
     right: 3vw;
-    background: url(../img/chevron.png) no-repeat center center;
-    background-size: cover;
+    top: 7px;
+    opacity: 0.7;
 }
 
 .game-module .bottom-box {
@@ -611,7 +660,7 @@ header .menu-box {
     margin-top: 15px;
 }
 
-#hot-new-game .new-sort-list li div {
+#hot-new-game .new-sort-list li>div {
     display: inline-block;
     vertical-align: top;
 }
@@ -619,7 +668,7 @@ header .menu-box {
 #hot-new-game .new-sort-list li .score-box {
     width: 24px;
     height: 33px;
-    line-height: 33px;
+    line-height: 30px;
     color: #f5a623;
     font-size: 16px;
     text-align: center;
@@ -628,19 +677,19 @@ header .menu-box {
 
 #hot-new-game .new-sort-list li .score-bg {
     color: #ffffff;
-    background-size: cover;
+    background-image: url(../img/spirit-new.png);
 }
 
 #hot-new-game .new-sort-list li .score-box.first-score {
-    background: url(../img/diyi.png) no-repeat center center;
+    background-position: 0 -110px;
 }
 
 #hot-new-game .new-sort-list li .score-box.second-score {
-    background: url(../img/dier.png) no-repeat center center;
+    background-position: -34px -110px;
 }
 
 #hot-new-game .new-sort-list li .score-box.third-score {
-    background: url(../img/disan.png) no-repeat center center;
+    background-position: -67px -110px;
 }
 
 #hot-new-game .new-sort-list li .img-box {
@@ -899,10 +948,11 @@ footer {
         height: 34px;
     }
 
-    header .search-wrapper .search-box span,
-    header .search-wrapper .search-box span img {
-        width: 34px;
-        height: 34px;
+    header .search-wrapper .search-box span {
+        width: 38px;
+        height: 38px;
+        transform: scale(0.76);
+        top: 0;
     }
 
     header .menu-box {
@@ -930,5 +980,9 @@ footer {
 
     #editor-recommend-box .bottom-box .narrow-bg {
         left: 2.2vw;
+    }
+
+    .game-module .top-box .btn-box {
+        padding-right: 5vw;
     }
 }
