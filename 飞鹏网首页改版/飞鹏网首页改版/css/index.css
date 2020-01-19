@@ -56,6 +56,8 @@ header .search-wrapper .search-box input {
     background: #ffffff;
     box-shadow: 5px 5px 15px rgba(36, 39, 44, 0.04);
     padding: 0 4px;
+    -webkit-appearance: none;
+    outline: none;
 }
 
 header .search-wrapper .search-box span {
