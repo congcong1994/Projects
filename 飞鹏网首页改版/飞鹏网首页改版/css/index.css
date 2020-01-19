@@ -78,6 +78,14 @@ header .menu-box {
     padding-top: 2px;
 }
 
+header .menu-box span {
+    display: inline-block;
+    width: 18px;
+    height: 12px;
+    background-image: url(../img/spirit-new.png);
+    background-position: 0 -76px;
+}
+
 /* 轮播图 + 导航 */
 #nav-box {
     width: 100vw;
@@ -251,6 +259,7 @@ header .menu-box {
     height: 37px;
     margin-top: 14px;
     padding-left: 5vw;
+    margin-right: 20px;
 }
 
 #editor-recommend-box .top-box .img-box,
@@ -309,10 +318,11 @@ header .menu-box {
     display: block;
     width: 15px;
     height: 11px;
-    background: url(../img/top-narrow2.png) no-repeat center center;
+    background-image: url(../img/spirit-new.png);
+    background-position: -26px -76px;
     position: absolute;
-    top: -9px;
-    left: 5.5vw;
+    top: -6px;
+    left: 5.2vw;
 }
 
 #editor-recommend-box .right-narrow {
@@ -956,13 +966,12 @@ footer {
     }
 
     header .menu-box {
-        width: 20px;
+        width: 22px;
         padding-top: 8px;
     }
 
-    header .menu-box img {
-        width: 20px;
-        height: 17px;
+    header .menu-box span {
+        transform: scale(1.2);
     }
 
     #nav-box {
