@@ -445,6 +445,11 @@ header .menu-box span {
     height: 24px;
     color: #1f1f1f;
     padding-top: 8px;
+	width: 92%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0 auto;
 }
 
 .game-module .bottom-box .title2 {
@@ -732,6 +737,10 @@ header .menu-box span {
 
 #hot-new-game .new-sort-list li .text-box .top-text {
     color: #42505c;
+    width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #hot-new-game .new-sort-list li .text-box .bottom-text {
