@@ -1,12 +1,13 @@
 # vue-cli-practice
 
-> A Vue.js project
+> A Vue.js project for personal demo
 
 ## Build Setup
 
 ``` bash
 # install dependencies
 npm install
+cnpm install
 
 # serve with hot reload at localhost:8080
 npm run dev
