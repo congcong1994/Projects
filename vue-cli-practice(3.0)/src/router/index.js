@@ -5,6 +5,7 @@ import HelloWorld from "@/components/HelloWorld";
 import Calendar from "@/components/Calendar";
 import Uploader from "@/components/Uploader";
 import Video from "@/components/Video";
+import Canvas from "@/components/Canvas";
 
 Vue.use(Router);
 
@@ -29,6 +30,11 @@ export default new Router({
       path: "/video",
       name: "Video",
       component: Video
+    },
+    {
+      path: "/canvas",
+      name: "Canvas",
+      component: Canvas
     }
   ]
 });
