@@ -1,0 +1,850 @@
+.wrapper{
+	min-height:50px;
+	background:transparent;
+}
+/*banner*/
+#bannerContainer{
+	width: 100%;
+	height:750px;
+	background:url(../img/Home.jpg) no-repeat center center;
+	background-size:cover;
+	margin-top:-50px;
+	padding-top:50px;
+}
+#bannerContainer .banner{
+	height: 450px;
+	color: #fff;
+	padding-top: 250px;
+}
+#bannerContainer .banner h2{
+	height: 60px;
+	line-height: 60px;
+	font-size: 30px;
+	width:100%;
+	text-align:center;
+	font-weight:normal;
+}
+#bannerContainer .banner a{
+	margin-top:60px;
+	margin-left:calc(50% - 60px);
+}
+/*introduce*/
+#introduce{
+	height:700px;
+}
+#introduce .intro{
+	height:700px;
+	box-sizing:border-box;
+	padding:0 3%;
+}
+#introduce .intro .top{
+	height:266px;
+	color:#fff;
+}
+#introduce .intro .top h4{
+	height:32px;
+	line-height:32px;
+	width:100%;
+	font-size:32px;
+	text-align:center;
+	padding-top:80px;
+	font-weight:normal;
+}
+#introduce .intro .top .words{
+	margin-top:71px;
+	line-height:34px;
+	font-size:14px;
+	padding:0 2%;
+}
+#introduce .intro .bottom{
+	height:390px;
+	width:100%;
+	position:relative;
+	box-sizing:border-box;
+	padding-left:2%;
+}
+#introduce .intro .bottom .mR{
+	margin-right:40%;
+}
+#introduce .intro .bottom .navBox{
+	width:30%;
+	height:50%;
+	float:left;
+	padding-top:50px;
+}
+#introduce .intro .bottom .navBox .picbox{
+	width:100%;
+	height:30px;
+	padding-left:calc(50% - 15px);
+	text-align:center;
+}
+#introduce .intro .bottom .navBox .picbox img{
+	display:block;
+	height:100%;
+}
+#introduce .intro .bottom .navBox h5{
+	width:100%;
+	height:60px;
+	line-height:60px;
+	font-size:20px;
+	color:#ffd800;
+	text-align:center;
+	font-weight:normal;
+}
+#introduce .intro .bottom .navBox h6{
+	width:100%;
+	height:20px;
+	line-height:20px;
+	font-size:14px;
+	text-align:center;
+	color:#a1a1a1;
+	font-weight:normal;
+}
+#introduce .intro .bottom .bCenter{
+	width:250px;
+	height:250px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-125px;
+	margin-top:-115px;
+}
+#introduce .intro .bottom .bCenter img{
+	display:block;
+	width:100%;
+}
+/*nav*/
+#nav{
+	height:200px;
+	margin-top:68px;
+}
+#nav .nav{
+	height:176px;
+}
+#nav .nav h3{
+	width:100%;
+	height:80px;
+	line-height:80px;
+	font-size:32px;
+	text-align:center;
+	color:#fff;
+}
+#nav .nav ul{
+	width:88%;
+	height:60px;
+}
+#nav .nav ul li{
+	float:left;
+	width:20%;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	font-size:18px;
+	border-bottom:2px solid #6f6f6f;
+}
+#nav .nav ul li a{
+	float:left;
+	width:100%;
+	text-align:center;
+	color:#6f6f6f;
+	padding:0;
+}
+#nav .nav ul li:hover{
+	border-bottom:2px solid #ffd800;
+	transition:.4s linear;
+	-webkit-transition:.4s linear;
+}
+#nav .nav ul li:hover a{
+	color:#ffd800;
+}
+/*floor*/
+.floor{
+	height:540px;
+	margin-top:10px;
+	background:#191b29;
+}
+.floor .picLeft,.floor .picRight{
+	width:1150px !important;
+}
+.floor .picLeft{
+	height:540px;
+}
+.floor .picLeft .left{
+	float:left;
+	width:50%;
+	height:540px;
+	position:relative;
+}
+.floor .picLeft .left .vb{
+	width:372px;
+	height:auto;
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+}
+.floor .picLeft .left .vb h3{
+	font-size:24px;
+	color:#f6d002;
+	height:30px;
+	line-height:30px;
+	text-align:left;
+}
+.floor .picLeft .left .vb .words{
+	color:#f1f6ff;
+	font-size:16px;
+	line-height:32px;
+	margin-top:45px;
+	text-align:justify;
+}
+.floor .picLeft .left .vb a{
+	margin-top:45px;
+}
+.floor .picLeft .right{
+	float:left;
+	width:50%;
+	height:100%;
+	text-align:center;
+}
+.floor .picLeft .right span{
+	display:inline-block;
+	height:100%;
+	vertical-align:middle;
+}
+.floor .picLeft .right img{
+	display:inline-block;
+	height:70%;
+	vertical-align:middle;
+}
+.floor .picRight{
+	height:540px;
+}
+.floor .picRight .left{
+	float:left;
+	width:50%;
+	height:100%;
+	text-align:center;
+}
+.floor .picRight .left span{
+	display:inline-block;
+	height:100%;
+	vertical-align:middle;
+}
+.floor .picRight .left img{
+	display:inline-block;
+	height:70%;
+	vertical-align:middle;
+}
+.floor .picRight .right{
+	float:left;
+	width:50%;
+	height:540px;
+	position:relative;
+}
+.floor .picRight .right .vb{
+	width:372px;
+	height:auto;
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+}
+.floor .picRight .right h3{
+	font-size:24px;
+	color:#f6d002;
+	height:30px;
+	line-height:30px;
+	text-align:left;
+}
+.floor .picRight .right .words{
+	color:#f1f6ff;
+	font-size:16px;
+	line-height:32px;
+	margin-top:45px;
+	text-align:justify;
+}
+.floor .picRight .right a{
+	margin-top:45px;
+}
+#competitive{
+	margin-bottom:45px;
+}
+/*marketing*/
+#marketing{
+	height:530px;
+	background:#202336;
+	position:relative;
+}
+#marketing .marketing{
+	height:448px;
+	padding-top:45px;
+}
+#marketing .marketing h5{
+	width:100%;
+	height:100px;
+	line-height:100px;
+	font-size:24px;
+	text-align:center;
+	color:#ffd800;
+}
+#marketing .marketing .left{
+	float:left;
+	width:50%;
+	height:448px;
+}
+#marketing .marketing .left .picBox{
+	width:100%;
+	height:140px;
+	text-align:center;
+	padding-left:calc(50% - 70px);
+}
+#marketing .marketing .left .picBox img{
+	display:block;
+	height:100%;
+}
+#marketing .marketing .left .words{
+	margin-top:30px;
+	line-height:34px;
+	font-size:16px;
+	color:#fff;
+	width:100%;
+	padding:0 13%;
+}
+#marketing .marketing .left a{
+	margin-left:calc(50% - 60px);
+	margin-top:40px;
+}
+#marketing .marketing .right{
+	float:left;
+	width:50%;
+	height:448px;
+	text-align:center;
+}
+#marketing .marketing .right dl{
+	width:80%;
+	margin-left:10%;
+	height:116px;
+}
+#marketing .marketing .right dl dt{
+	font-size:16px;
+	height:40px;
+	line-height:40px;
+}
+#marketing .marketing .right dl dt a{
+	color:#fff;
+}
+#marketing .marketing .right dl dd{
+	color:#9f9f9f;
+	font-size:14px;
+}
+#marketing .marketing .line{
+	width:2px;
+	height:330px;
+	background:#191b29;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-1px;
+	margin-top:-165px;
+}
+/*tryBox*/
+#tryBox{
+	height:996px;
+	background:url(../img/earth.jpg) no-repeat center center;
+	background-size:cover;
+}
+#tryBox .tryBox{
+	height:996px;
+}
+#tryBox .tryBox .top{
+	width:100%;
+	height:625px;
+}
+#tryBox .tryBox .top h3{
+	width:100%;
+	font-size:24px;
+	color:#ffd800;
+	height:58px;
+	line-height:58px;
+	text-align:center;
+}
+#tryBox .tryBox .top h6{
+	font-size:16px;
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	color:#fff;
+}
+#tryBox .tryBox .top form{
+	width:100%;
+	height:516px;
+	padding:44px 80px 0;
+}
+#tryBox .tryBox .top form .pleft{
+	padding-left:5px;
+}
+#tryBox .tryBox .top form .row1,#tryBox .tryBox .top form .row2,#tryBox .tryBox .top form .row3{
+	width:100%;
+	height:40px;
+	line-height:40px;
+	overflow:hidden;
+	margin-bottom:30px;
+}
+#tryBox .tryBox .top form .row1 input{
+	height:38px;
+	outline:none;
+	border:1px solid #cccccc;
+	width:31%;
+	margin-right:3%;
+	font-size:14px;
+	background:transparent;
+	color:#fff;
+}
+#tryBox .tryBox .top form .row1 input:last-child{
+	margin-right:0;
+}
+#tryBox .tryBox .top form .row2 input{
+	height:38px;
+	outline:none;
+	border:1px solid #cccccc;
+	width:48%;
+	margin-right:3.5%;
+	font-size:14px;
+	background:transparent;
+	color:#fff;
+}
+#tryBox .tryBox .top form .row2 input:last-child{
+	margin-right:0;
+}
+#tryBox .tryBox .top form .row3{
+	height:200px;
+	line-height:20px;
+}
+#tryBox .tryBox .top form .row3 textarea{
+	width:100%;
+	border:1px solid #cccccc;
+	resize:none;
+	height:200px;
+	padding:5px;
+	outline:none;
+	font-size:14px;
+	color:#fff;
+	background:transparent;
+}
+#tryBox .tryBox .top form input[type="button"]{
+	background:none;
+	outline:none;
+	margin-left:calc(50% - 60px);
+	cursor:pointer;
+	font-size:16px;
+}
+#tryBox .tryBox .top form input[type="button"]:hover{
+	background:#ffd800;
+	color:#191b29;
+	transition:.4s linear;
+	-webkit-transition:.4s linear;
+}
+#tryBox .tryBox .bottom{
+	width:100%;
+	height:300px;
+	margin-top:70px;
+}
+#tryBox .tryBox .bottom .picBox{
+	width:100%;
+	height:77px;
+	line-height:77px;
+	padding:0 calc(50% - 52.5px);
+}
+#tryBox .tryBox .bottom .picBox img{
+	display:block;
+	height:100%;
+}
+#tryBox .tryBox .bottom div{
+	width:100%;
+	text-align:center;
+	font-size:16px;
+	height:48px;
+	line-height:48px;
+	color:#fff;
+}
+#tryBox .tryBox .bottom a{
+	margin:15px calc(50% - 60px) 0;
+}
+
+@media screen and (max-width:800px){
+	/*banner*/
+	#bannerContainer{
+		width:100%;
+		height:450px;
+	}
+	#bannerContainer .banner{
+		width:100%;
+		height:350px;
+		padding-top:100px;
+	}
+	#bannerContainer .banner h2{
+		font-size:18px;
+		height:56px;
+		line-height:56px;
+		text-align:center;
+	}
+	#bannerContainer .banner a{
+		margin-left:calc(50% - 60px);
+	}
+	/*introduce*/
+	#introduce{
+		width:100%;
+		height:auto;
+	}
+	#introduce .intro{
+		width:100%;
+		height:auto;
+	}
+	#introduce .intro .top{
+		height:auto;
+	}
+	#introduce .intro .top h4{
+		font-size:18px;
+		padding-top:30px;
+	}
+	#introduce .intro .top .words{
+		margin-top:30px;
+		font-size:14px;
+		padding:0 5%;
+	}
+	#introduce .intro .bottom{
+		height:600px;
+	}
+	#introduce .intro .bottom .navBox{
+		position:static;
+		width:100%;
+		height:150px;
+		padding-top:20px;
+	}
+	#introduce .intro .bottom .navBox .picbox{
+		height:30px;
+		padding-left:calc(50% - 15px);
+	}
+	#introduce .intro .bottom .navBox h5{
+		font-size:18px;
+	}
+	#introduce .intro .bottom .navBox h6{
+		font-size:14px;
+	}	
+	#introduce .intro .bottom .bCenter{
+		display:none;
+	}	
+	/*nav*/
+	#nav{
+		width:100%;
+		height:auto;
+		margin-top:55px;
+	}
+	#nav .nav{
+		width:100%;
+		height:auto;
+	}
+	#nav .nav h3{
+		font-size:18px;
+		height:35px;
+		line-height:45px;
+	}
+	#nav .nav ul{
+		padding:0 3%;
+	}
+	#nav .nav ul li{
+		font-size:12px;
+	}
+	/*floor*/
+	#floor,.floor .picLeft,.floor .picRight{
+		width:100% !important;
+		height:auto;
+	}
+	.floor{
+		margin-top:-60px;
+	}
+	.floor .picLeft .left{
+		width:100%;
+		position:static;
+		float:none;
+		padding:110px 8% 0;
+		height:auto;
+	}
+	.floor .picLeft .left .vb,.floor .picRight .right .vb{
+		width:100%;
+		position:static;
+		left:0;
+		top:0;
+		transform:none;
+	}
+	.floor .picLeft .left .vb h3{
+		width:100%;
+		text-align:center;
+		font-size:18px;
+		height:24px;
+		line-height:24px;
+	}
+	.floor .picLeft .left .vb .words{
+		width:100%;
+		text-align:justify;
+		font-size:14px;
+		line-height:24px;
+		margin-top:30px;
+	}
+	.floor .picLeft .right{
+		width:100%;
+		height:300px;
+		float:none;
+	}
+	.floor .picLeft .right img{
+		height:80%;
+	}
+	.floor .picRight .left,.floor .picRight .right{
+		display:none;
+	}
+	.floor .picRight .left_m{
+		width:100%;
+		padding:110px 8% 0;
+		height:auto;
+		display:block !important;
+	}
+	#evaluation .picRight .left_m{
+		padding:140px 8% 0;
+	}
+	#competitive{
+		margin-top:-30px;
+	}
+	.floor .picRight .left_m h3{
+		width:100%;
+		text-align:center;
+		font-size:18px;
+		height:24px;
+		line-height:24px;
+		color:#f6d002;
+	}
+	.floor .picRight .left_m .words{
+		width:100%;
+		text-align:justify;
+		font-size:14px;
+		line-height:24px;
+		margin-top:30px;
+		color:#f1f6ff;
+	}
+	.floor .picRight .right_m {
+		width:100%;
+		height:300px;
+		text-align:center;
+		margin-top:30px;
+		display:block !important;
+	}
+	.floor .picRight .right_m img{
+		height:80%;
+	}
+	#competitive a{
+		display:none;
+	}
+	/*marketing*/
+	#marketing,#marketing .marketing{
+		width:100%;
+		height:auto;
+	}
+	#marketing .marketing .left,#marketing .marketing .right{
+		float:none;
+		width:100%;
+		height:auto;
+		margin-bottom:61px;
+	}
+	#marketing .marketing .right{
+		margin-top:30px;
+	}
+	#marketing .marketing h5{
+		font-size:18px;
+		height:80px;
+		line-height:80px;
+	}
+	#marketing .marketing .left .picBox{
+		height:110px;
+		padding-left:calc(50% - 55px);
+	}
+	#marketing .marketing .left .words{
+		line-height:28px;
+		font-size:14px;
+	}
+	#marketing .marketing .left a{
+		margin-top:20px;
+	}
+	#marketing .marketing .right dl{
+		height:100px;
+	}
+	#marketing .marketing .right dl dt{
+		height:36px;
+		line-height:36px;
+		font-size:16px;
+		width:100%;
+		overflow:hidden;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		text-align:left;
+	}
+	#marketing .marketing .right dl dd{
+		font-size:14px;
+		text-align:left;
+	}
+	#marketing .marketing .line{
+		width:300px;
+		height:2px;
+		margin-left:-150px;
+		margin-top:-1px;
+	}
+	/*tryBox*/
+	#tryBox,#tryBox .tryBox,#tryBox .tryBox .top{
+		width:100%;
+		height:auto;
+	}
+	#tryBox .tryBox .top h3{
+		font-size:18px;
+		padding-top:20px;
+	}
+	#tryBox .tryBox .top h6{
+		font-size:14px;
+	}
+	#tryBox .tryBox .top form{
+		display:none;
+	}
+	#tryBox .tryBox .top .mBox{
+		display:block !important;
+		padding:40px 0 0;
+		text-align:center;
+	}
+	#tryBox .tryBox .top .mBox input[type="text"],#tryBox .tryBox .top .mBox textarea{
+		width:80%;
+		height:28px;
+		line-height:28px;
+		border:1px solid #ccc;
+		outline:none;
+		margin-bottom:10px;
+		background:transparent;
+		color:#fff;
+	}
+	#tryBox .tryBox .top .mBox textarea{
+		height:80px;
+		resize:none;
+		margin-bottom:45px;
+	}
+	#tryBox .tryBox .bottom{
+		margin-top:-60px;
+		height:280px;
+	}
+	#tryBox .tryBox .bottom .picBox{
+		height:60px;
+		line-height:60px;
+		padding:0 calc(50% - 40px);
+	}
+	#tryBox .tryBox .bottom div{
+		font-size:14px;
+	}
+	#tryBox .tryBox .bottom .words{
+		font-size:14px;
+		height:60px;
+		line-height:30px;
+		padding:0 5%;
+	}
+	#tryBox .tryBox .bottom a{
+		margin-top:35px;
+	}
+}
+@media screen and (min-width:801px) and (max-width:968px){
+	#bannerContainer .banner{
+		box-sizing:border-box;
+		padding-left:3%;
+	}
+	#introduce .intro .top .words{
+		width:90%;
+		padding:0 4%;
+		line-height:28px;
+	}
+	#introduce .intro .bottom{
+		box-sizing:border-box;
+		padding:0 3%;
+		margin-right:0;
+	}
+	#introduce .intro .bottom .navBox{
+		width:30%;
+	}
+	#introduce .intro .bottom .mR{
+		margin-right:33%;
+	}
+	#introduce .intro .bottom .navBox .picbox{
+		height:30px;
+		padding-left:calc(50% - 15px);
+	}
+	#introduce .intro .bottom .navBox h5{
+		font-size:18px;
+	}
+	#introduce .intro .bottom .navBox h6{
+		font-size:14px;
+	}
+	#introduce .intro .bottom .bCenter{
+		width:160px;
+		height:160px;
+		margin-left:-90px;
+		margin-top:-80px;
+	}
+	#nav .nav ul{
+		padding:0 3%;
+	}
+	.floor .picLeft .left h3,.floor .picRight .right h3{
+		font-size:18px;
+	}
+	.floor .picLeft .left .words,.floor .picRight .right .words{
+		font-size:14px;
+		line-height:28px;
+		margin-top:30px;
+	}
+	.floor .picLeft .right{
+		width:50%;
+	}
+	#marketing .marketing h5{
+		font-size:18px;
+	}
+	#marketing .marketing .left .picBox{
+		height:100px;
+		padding-left:calc(50% - 50px);
+	}
+	#marketing .marketing .left .words{
+		font-size:14px;
+		line-height:28px;
+	}
+	#marketing .marketing .right dl dt{
+		width:100%;
+		overflow:hidden;
+		text-overflow:ellispsis;
+		white-space:nowrap;
+		font-size:16px;
+	}
+	#marketing .marketing .right dl dd{
+		font-size:14px;
+	}
+	#tryBox .tryBox .top h3{
+		font-size:18px;
+	}
+	#tryBox .tryBox .top h6{
+		font-size:14px;
+	}
+	#tryBox .tryBox .top form .row1 input{
+		width:30%;
+	}
+	#tryBox .tryBox .top form .row2 input{
+		width:46.8%;
+	}
+	#tryBox .tryBox .top form .row3 textarea{
+		width:98%;
+	}
+	#tryBox .tryBox .bottom .picBox{
+		height:70px;
+		padding-left:calc(50% - 47.5px);
+	}
+	#tryBox .tryBox .bottom div{
+		font-size:18px;
+	}
+}
