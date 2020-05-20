@@ -7,11 +7,7 @@
         <button @click="clear">清除</button>
       </div>
       <div class="canvas-box">
-        <vueSignature
-          ref="signature"
-          :sigOption="option"
-          :defaultUrl="initBackImg"
-        ></vueSignature>
+        <vueSignature ref="signature" :sigOption="option"></vueSignature>
       </div>
     </div>
   </div>
@@ -22,9 +18,9 @@ export default {
     return {
       option: {
         penColor: "#1989fa",
-        backgroundColor: "#fff"
-      },
-      initBackImg: require("../assets/sign.png")
+        backgroundColor: "#f5f5f5"
+      }
+      // initBackImg: require("../assets/sign.png")
     };
   },
   methods: {
