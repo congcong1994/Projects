@@ -1,6 +1,15 @@
 <template>
   <div class="canvas-test-wrapper">
-    <van-nav-bar title="标题" left-text="返回" right-text="按钮" left-arrow />
+    <van-nav-bar
+      title="移动端canvas签名"
+      left-arrow
+      @click-left="onClickNavLeft"
+      @click-right="onClickNavRight"
+    >
+      <template slot="right">
+        <van-icon name="home-o" />
+      </template>
+    </van-nav-bar>
     <div class="canvasBox">
       <div class="button-box">
         <button @click="save">保存</button>
@@ -24,11 +33,29 @@ export default {
     };
   },
   methods: {
+    onClickNavLeft() {
+      this.$router.go(-1);
+    },
+    onClickNavRight() {
+      this.$router.push("/");
+    },
     save() {
       var png = this.$refs.signature.save();
       // var jpeg = _this.$refs.signature.save("image/jpeg");
       console.log(png);
       // console.log(jpeg);
+      setTimeout(function() {
+        // 安卓手机
+        document.addEventListener(
+          "WeixinJSBridgeReady",
+          function() {
+            WeixinJSBridge.call("closeWindow");
+          },
+          false
+        );
+        // ios手机
+        WeixinJSBridge.call("closeWindow");
+      }, 100);
     },
     clear() {
       this.$refs.signature.clear();
@@ -68,7 +95,6 @@ export default {
   height: calc(100% - 52px);
   width: 98vw;
   margin-left: 1vw;
-  border: 1px solid red;
   border-radius: 3px;
 }
 </style>
