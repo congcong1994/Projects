@@ -12,8 +12,7 @@ import "vant/lib/index.css";
 import VideoPlayer from "vue-video-player";
 
 import vueSignature from "vue-signature";
-// import "vue-video-player/src/custom-theme";
-// import "vue-video-player/node_modules/video.js/dist/video-js";
+import store from "./utils/store";
 require("vue-video-player/node_modules/video.js/dist/video-js.css");
 require("vue-video-player/src/custom-theme.css");
 
@@ -29,5 +28,6 @@ new Vue({
   el: "#app",
   router,
   components: { App },
-  template: "<App/>"
+  template: "<App/>",
+  store
 });

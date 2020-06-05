@@ -22,6 +22,16 @@
           video播放视频
         </a>
       </li>
+      <li>
+        <a href="javascript:" @click="turnToPage('/vuex')">
+          vuex入门接触
+        </a>
+      </li>
+      <li>
+        <a href="javascript:" @click="turnToPage('/vant')">
+          vant组件
+        </a>
+      </li>
     </ul>
   </div>
 </template>
