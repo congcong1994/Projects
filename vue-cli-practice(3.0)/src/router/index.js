@@ -8,6 +8,7 @@ import Video from "@/pages/Video";
 import Canvas from "@/pages/Canvas";
 import Vuex from "@/pages/Vuex";
 import VantCalendar from "@/pages/VantCalendar";
+import VCharts from "@/pages/VCharts";
 
 Vue.use(Router);
 
@@ -100,6 +101,19 @@ export default new Router({
       },
       meta: {
         title: "vant日历demo",
+        isShowLeftNarrow: true,
+        isShowHomeIcon: true
+      }
+    },
+    {
+      path: "/vcharts",
+      name: "VCharts",
+      components: {
+        headerPart: Header,
+        contentPart: VCharts
+      },
+      meta: {
+        title: "v-charts图表",
         isShowLeftNarrow: true,
         isShowHomeIcon: true
       }

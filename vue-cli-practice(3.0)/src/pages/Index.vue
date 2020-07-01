@@ -32,6 +32,11 @@
           vant组件
         </a>
       </li>
+      <li>
+        <a href="javascript:" @click="turnToPage('/vcharts')">
+          v-charts图表
+        </a>
+      </li>
     </ul>
   </div>
 </template>

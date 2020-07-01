@@ -1,15 +1,5 @@
 <template>
   <div class="canvas-test-wrapper">
-    <van-nav-bar
-      title="移动端canvas签名"
-      left-arrow
-      @click-left="onClickNavLeft"
-      @click-right="onClickNavRight"
-    >
-      <template slot="right">
-        <van-icon name="home-o" />
-      </template>
-    </van-nav-bar>
     <div class="canvasBox">
       <div class="button-box">
         <button @click="save">保存</button>
@@ -29,16 +19,9 @@ export default {
         penColor: "#1989fa",
         backgroundColor: "#f5f5f5"
       }
-      // initBackImg: require("../assets/sign.png")
     };
   },
   methods: {
-    onClickNavLeft() {
-      this.$router.go(-1);
-    },
-    onClickNavRight() {
-      this.$router.push("/");
-    },
     save() {
       var png = this.$refs.signature.save();
       // var jpeg = _this.$refs.signature.save("image/jpeg");
