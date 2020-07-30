@@ -18,11 +18,6 @@
         </a>
       </li>
       <li>
-        <a href="javascript:" @click="turnToPage('/video')">
-          video播放视频
-        </a>
-      </li>
-      <li>
         <a href="javascript:" @click="turnToPage('/vuex')">
           vuex入门接触
         </a>
@@ -35,6 +30,11 @@
       <li>
         <a href="javascript:" @click="turnToPage('/vcharts')">
           v-charts图表
+        </a>
+      </li>
+      <li>
+        <a href="javascript:" @click="turnToPage('/vantTreeSelect')">
+          vant分类选择
         </a>
       </li>
     </ul>

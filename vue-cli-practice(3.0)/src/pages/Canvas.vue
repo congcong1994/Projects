@@ -12,7 +12,11 @@
   </div>
 </template>
 <script>
+import vueSignature from "vue-signature";
 export default {
+  components: {
+    vueSignature
+  },
   data() {
     return {
       option: {
@@ -27,18 +31,18 @@ export default {
       // var jpeg = _this.$refs.signature.save("image/jpeg");
       console.log(png);
       // console.log(jpeg);
-      setTimeout(function() {
-        // 安卓手机
-        document.addEventListener(
-          "WeixinJSBridgeReady",
-          function() {
-            WeixinJSBridge.call("closeWindow");
-          },
-          false
-        );
-        // ios手机
-        WeixinJSBridge.call("closeWindow");
-      }, 100);
+      // setTimeout(function() {
+      //   // 安卓手机
+      //   document.addEventListener(
+      //     "WeixinJSBridgeReady",
+      //     function() {
+      //       WeixinJSBridge.call("closeWindow");
+      //     },
+      //     false
+      //   );
+      //   // ios手机
+      //   WeixinJSBridge.call("closeWindow");
+      // }, 100);
     },
     clear() {
       this.$refs.signature.clear();

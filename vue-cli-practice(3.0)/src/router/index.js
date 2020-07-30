@@ -4,11 +4,11 @@ import Header from "@/components/Header";
 import Index from "@/pages/Index";
 import Calendar from "@/pages/Calendar";
 import Uploader from "@/pages/Uploader";
-import Video from "@/pages/Video";
 import Canvas from "@/pages/Canvas";
 import Vuex from "@/pages/Vuex";
 import VantCalendar from "@/pages/VantCalendar";
 import VCharts from "@/pages/VCharts";
+import VantTreeSelect from "@/pages/VantTreeSelect";
 
 Vue.use(Router);
 
@@ -49,19 +49,6 @@ export default new Router({
       },
       meta: {
         title: "vant图片上传组件",
-        isShowLeftNarrow: true,
-        isShowHomeIcon: true
-      }
-    },
-    {
-      path: "/video",
-      name: "Video",
-      components: {
-        headerPart: Header,
-        contentPart: Video
-      },
-      meta: {
-        title: "vue-video插件",
         isShowLeftNarrow: true,
         isShowHomeIcon: true
       }
@@ -114,6 +101,19 @@ export default new Router({
       },
       meta: {
         title: "v-charts图表",
+        isShowLeftNarrow: true,
+        isShowHomeIcon: true
+      }
+    },
+    {
+      path: "/vantTreeSelect",
+      name: "VantTreeSelect",
+      components: {
+        headerPart: Header,
+        contentPart: VantTreeSelect
+      },
+      meta: {
+        title: "vant分类选择",
         isShowLeftNarrow: true,
         isShowHomeIcon: true
       }

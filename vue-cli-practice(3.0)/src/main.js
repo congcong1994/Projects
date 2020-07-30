@@ -9,19 +9,13 @@ import "./assets/vant.css";
 import Vant from "vant";
 import "vant/lib/index.css";
 
-import VideoPlayer from "vue-video-player";
-
-import vueSignature from "vue-signature";
 import store from "./utils/store";
-require("vue-video-player/node_modules/video.js/dist/video-js.css");
-require("vue-video-player/src/custom-theme.css");
+
+import FormatFun from "./utils/format";
 
 Vue.config.productionTip = false;
+Vue.prototype.FormatFun = FormatFun;
 Vue.use(Vant);
-
-Vue.use(VideoPlayer);
-
-Vue.use(vueSignature);
 
 /* eslint-disable no-new */
 new Vue({
