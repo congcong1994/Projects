@@ -6,7 +6,7 @@ import Calendar from "@/pages/Calendar";
 import Uploader from "@/pages/Uploader";
 import Canvas from "@/pages/Canvas";
 import Vuex from "@/pages/Vuex";
-import VantCalendar from "@/pages/VantCalendar";
+import VantDemo from "@/pages/VantDemo";
 import VCharts from "@/pages/VCharts";
 import VantTreeSelect from "@/pages/VantTreeSelect";
 
@@ -81,13 +81,13 @@ export default new Router({
     },
     {
       path: "/vant",
-      name: "VantCalendar",
+      name: "VantDemo",
       components: {
         headerPart: Header,
-        contentPart: VantCalendar
+        contentPart: VantDemo
       },
       meta: {
-        title: "vant日历demo",
+        title: "vant组件demo",
         isShowLeftNarrow: true,
         isShowHomeIcon: true
       }

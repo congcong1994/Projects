@@ -10,12 +10,14 @@ import Vant from "vant";
 import "vant/lib/index.css";
 
 import store from "./utils/store";
+import VCharts from "v-charts";
 
 import FormatFun from "./utils/format";
 
 Vue.config.productionTip = false;
 Vue.prototype.FormatFun = FormatFun;
 Vue.use(Vant);
+Vue.use(VCharts);
 
 /* eslint-disable no-new */
 new Vue({
