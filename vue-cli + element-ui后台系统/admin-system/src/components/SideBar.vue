@@ -1,18 +1,35 @@
 <template>
-  <div>
-    <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-      <el-radio-button :label="false">展开</el-radio-button>
-      <el-radio-button :label="true">收起</el-radio-button>
-    </el-radio-group>
+  <div class="left-panel-wrapper">
     <el-menu
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
       :collapse="isCollapse"
+      :unique-opened="isOneMenuOpen"
     >
+      <div class="user-info-wrapper">
+        <div class="img-box">
+          <img src="../assets/logo.png" alt="" />
+        </div>
+        <div class="drop-menu">
+          <el-dropdown trigger="click">
+            <span class="el-dropdown-link">
+              超级管理员<i class="el-icon-arrow-down el-icon--right"></i>
+            </span>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item icon="el-icon-edit-outline"
+                >修改密码</el-dropdown-item
+              >
+              <el-dropdown-item icon="el-icon-switch-button"
+                >安全退出</el-dropdown-item
+              >
+            </el-dropdown-menu>
+          </el-dropdown>
+        </div>
+      </div>
       <el-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-link"></i>
           <span slot="title">权限管理</span>
         </template>
         <el-menu-item-group>
@@ -36,7 +53,7 @@
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">
-          <i class="el-icon-menu"></i>
+          <i class="el-icon-chat-dot-round"></i>
           <span slot="title">体检预约</span>
         </template>
         <el-menu-item-group>
@@ -66,16 +83,16 @@
         </el-menu-item-group>
       </el-submenu>
       <el-menu-item index="5">
-        <i class="el-icon-document"></i>
+        <i class="el-icon-s-order"></i>
         <span slot="title">订单管理</span>
       </el-menu-item>
       <el-menu-item index="6">
-        <i class="el-icon-document"></i>
+        <i class="el-icon-postcard"></i>
         <span slot="title">体检卡管理</span>
       </el-menu-item>
       <el-submenu index="7">
         <template slot="title">
-          <i class="el-icon-menu"></i>
+          <i class="el-icon-s-tools"></i>
           <span slot="title">基础信息维护</span>
         </template>
         <el-menu-item-group>
@@ -103,6 +120,45 @@
           <span slot="title">预约提示信息管理</span>
         </el-menu-item-group>
       </el-submenu>
+      <el-submenu index="8">
+        <template slot="title">
+          <i class="el-icon-s-custom"></i>
+          <span slot="title">体检供应商</span>
+        </template>
+        <el-menu-item-group>
+          <span slot="title">供应商预约管理</span>
+        </el-menu-item-group>
+        <el-menu-item-group>
+          <span slot="title">供应商取消预约</span>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="9">
+        <template slot="title">
+          <i class="el-icon-folder"></i>
+          <span slot="title">文件信息查询</span>
+        </template>
+        <el-menu-item-group>
+          <span slot="title">导出列表</span>
+        </el-menu-item-group>
+        <el-menu-item-group>
+          <span slot="title">导入列表</span>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="10">
+        <template slot="title">
+          <i class="el-icon-s-data"></i>
+          <span slot="title">统计报表</span>
+        </template>
+        <el-menu-item-group>
+          <span slot="title">优惠码统计</span>
+        </el-menu-item-group>
+        <el-menu-item-group>
+          <span slot="title">报告上传查询</span>
+        </el-menu-item-group>
+        <el-menu-item-group>
+          <span slot="title">电子发票导出列表</span>
+        </el-menu-item-group>
+      </el-submenu>
     </el-menu>
   </div>
 </template>
@@ -110,7 +166,8 @@
 export default {
   data() {
     return {
-      isCollapse: false
+      isCollapse: false,
+      isOneMenuOpen: true
     };
   },
   methods: {

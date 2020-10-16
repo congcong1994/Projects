@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png">
-    <router-view/> -->
     <el-container>
       <el-aside width="200px">
         <side-bar></side-bar>
       </el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header>
+          <header-bar></header-bar>
+        </el-header>
         <el-main><router-view /></el-main>
       </el-container>
     </el-container>
@@ -15,9 +15,10 @@
 </template>
 <script>
 import sideBar from "./components/SideBar";
+import headerBar from "./components/HeaderBar";
 export default {
   name: "App",
-  components: { sideBar }
+  components: { sideBar, headerBar }
 };
 </script>
 
@@ -27,6 +28,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 </style>

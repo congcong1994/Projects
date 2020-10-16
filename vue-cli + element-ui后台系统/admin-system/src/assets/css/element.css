@@ -1,26 +1,74 @@
 @charset "utf-8";
 
-body>.el-container {
-  margin-bottom: 40px;
+body #app .el-container {
+  min-height: 100%;
 }
 
 .el-header {
   background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
+  color: #fff;
+  text-align: left;
+  padding: 0;
+  height: auto !important;
 }
 
 .el-aside {
-  background-color: #d3dce6;
+  background-color: #545c64;
   color: #333;
   text-align: center;
-  line-height: 200px;
 }
 
 .el-main {
   background-color: #e9eef3;
   color: #333;
   text-align: center;
-  line-height: 160px;
+}
+
+/* 左侧边栏样式 */
+.left-panel-wrapper ul.el-menu-vertical-demo.el-menu {
+  text-align: left;
+  background: #545c64;
+  border-right: none;
+}
+
+.left-panel-wrapper ul.el-menu-vertical-demo.el-menu .el-submenu__title,
+.left-panel-wrapper ul.el-menu-vertical-demo.el-menu .el-menu-item {
+  color: #fff;
+}
+
+.el-dropdown-link {
+  cursor: pointer;
+  color: #fff;
+}
+
+.left-panel-wrapper ul.el-menu-vertical-demo.el-menu .el-submenu__title:hover,
+.left-panel-wrapper ul.el-menu-vertical-demo.el-menu .el-menu-item:hover {
+  color: #333;
+}
+
+.left-panel-wrapper ul.el-menu-vertical-demo.el-menu .el-menu-item-group .el-menu-item-group__title {
+  cursor: pointer;
+}
+
+/* 顶部标题 + 面包屑 */
+.header-wrapper .title-box .el-icon-d-arrow-left {
+  height: 50px;
+  line-height: 50px;
+  vertical-align: top;
+}
+
+.header-wrapper .title-box .nav-box .el-breadcrumb {
+  height: 50px;
+  line-height: 50px;
+}
+
+.header-wrapper .title-box .nav-box .el-breadcrumb .el-breadcrumb__inner a,
+.header-wrapper .title-box .nav-box .el-breadcrumb .el-breadcrumb__inner.is-link,
+.header-wrapper .title-box .nav-box .el-breadcrumb .el-breadcrumb__inner {
+  color: #fff;
+  font-size: 16px;
+}
+
+.header-wrapper .title-box .nav-box .el-breadcrumb .el-breadcrumb__separator {
+  color: #fff;
 }
