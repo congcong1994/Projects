@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: '微软雅黑';
+  font-family: "微软雅黑";
 }
 
 img {
@@ -45,7 +45,8 @@ body,
 }
 
 /* 左侧菜单栏 */
-.left-panel-wrapper .user-info-wrapper {
+.left-panel-wrapper .user-info-wrapper,
+.mini-left-panel-wrapper .user-info-wrapper {
   border-bottom: 1px solid #434a50;
 }
 
@@ -69,18 +70,63 @@ body,
   text-align: center;
 }
 
-/* 顶部标题 + 面包屑导航栏 */
+.mini-left-panel-wrapper .user-info-wrapper .img-box {
+  width: 64px;
+  height: 64px;
+  padding-top: 15px;
+  padding-left: 12px;
+}
+
+.mini-left-panel-wrapper .user-info-wrapper .img-box img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+/* 顶部标题 + 面包屑导航栏 + 标签栏 */
 
 .header-wrapper .title-box {
   font-size: 24px;
   height: 50px;
   line-height: 50px;
-  /* margin-bottom: 15px;
-  border-bottom: 1px solid #eee; */
   padding-left: 15px;
 }
 
-
 .header-wrapper .title-box .nav-box {
   display: inline-block;
+}
+
+.header-wrapper .tags-box {
+  width: 100%;
+  overflow-x: auto;
+  height: 40px;
+  padding-left: 15px;
+  font-size: 14px;
+  background: #fff;
+  color: #aaa;
+}
+
+.header-wrapper .tags-box .tag-item {
+  display: inline-block;
+  padding: 0 8px;
+  border: 1px solid #aaa;
+  height: 26px;
+  line-height: 26px;
+  margin-top: 6px;
+  margin-right: 8px;
+}
+
+.header-wrapper .tags-box .tag-item span {
+  margin-left: 8px;
+}
+
+/* 登录页 */
+.login-page .login-title {
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+  padding: 20px 0;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
 }

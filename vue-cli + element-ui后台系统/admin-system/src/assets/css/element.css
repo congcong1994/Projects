@@ -4,6 +4,10 @@ body #app .el-container {
   min-height: 100%;
 }
 
+body #app .el-container .el-container {
+  flex-direction: column;
+}
+
 .el-header {
   background-color: #b3c0d1;
   color: #fff;
@@ -12,10 +16,18 @@ body #app .el-container {
   height: auto !important;
 }
 
-.el-aside {
+.el-aside.full-aside {
+  width: 200px !important;
   background-color: #545c64;
   color: #333;
   text-align: center;
+}
+
+.el-aside.mini-aside {
+  width: 64px !important;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #545c64;
 }
 
 .el-main {
@@ -25,15 +37,17 @@ body #app .el-container {
 }
 
 /* 左侧边栏样式 */
-.left-panel-wrapper ul.el-menu-vertical-demo.el-menu {
+.mini-left-panel-wrapper,
+.left-panel-wrapper {
+  min-height: 100%;
+  background: #545c64;
+}
+
+.left-panel-wrapper ul.el-menu-vertical.el-menu,
+.mini-left-panel-wrapper ul.el-menu-vertical.el-menu {
   text-align: left;
   background: #545c64;
   border-right: none;
-}
-
-.left-panel-wrapper ul.el-menu-vertical-demo.el-menu .el-submenu__title,
-.left-panel-wrapper ul.el-menu-vertical-demo.el-menu .el-menu-item {
-  color: #fff;
 }
 
 .el-dropdown-link {
@@ -41,17 +55,17 @@ body #app .el-container {
   color: #fff;
 }
 
-.left-panel-wrapper ul.el-menu-vertical-demo.el-menu .el-submenu__title:hover,
-.left-panel-wrapper ul.el-menu-vertical-demo.el-menu .el-menu-item:hover {
-  color: #333;
-}
-
-.left-panel-wrapper ul.el-menu-vertical-demo.el-menu .el-menu-item-group .el-menu-item-group__title {
-  cursor: pointer;
+.left-panel-wrapper ul.el-menu-vertical:not(.el-menu--collapse) {
+  width: 200px;
 }
 
 /* 顶部标题 + 面包屑 */
-.header-wrapper .title-box .el-icon-d-arrow-left {
+.header-wrapper {
+  cursor: pointer;
+}
+
+.header-wrapper .title-box .el-icon-d-arrow-left,
+.header-wrapper .title-box .el-icon-d-arrow-right {
   height: 50px;
   line-height: 50px;
   vertical-align: top;
@@ -63,7 +77,11 @@ body #app .el-container {
 }
 
 .header-wrapper .title-box .nav-box .el-breadcrumb .el-breadcrumb__inner a,
-.header-wrapper .title-box .nav-box .el-breadcrumb .el-breadcrumb__inner.is-link,
+.header-wrapper
+  .title-box
+  .nav-box
+  .el-breadcrumb
+  .el-breadcrumb__inner.is-link,
 .header-wrapper .title-box .nav-box .el-breadcrumb .el-breadcrumb__inner {
   color: #fff;
   font-size: 16px;
@@ -71,4 +89,13 @@ body #app .el-container {
 
 .header-wrapper .title-box .nav-box .el-breadcrumb .el-breadcrumb__separator {
   color: #fff;
+}
+
+/* 登录页 */
+.login-page .el-form {
+  width: 340px;
+  height: 300px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 5px 20px;
 }
