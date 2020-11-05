@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import router from "../router/index";
 
 Vue.use(Vuex);
 
@@ -21,7 +22,8 @@ export default new Vuex.Store({
         routerName: "Index",
         tagName: "首页",
         isActive: true,
-        routerUrl: "/"
+        routerUrl: "/",
+        tagIndex: "0"
       }
     ]
   },
@@ -50,16 +52,55 @@ export default new Vuex.Store({
         }
       }
       if (!flag) {
+        for (var i = 0; i < state.openedTagArray.length; i++) {
+          state.openedTagArray[i]["isActive"] = false;
+        }
         state.openedTagArray.push(value);
+        router.push(value.routerUrl);
+      } else {
+        for (var i = 0; i < state.openedTagArray.length; i++) {
+          state.openedTagArray[i]["isActive"] =
+            state.openedTagArray[i]["routerName"] == value.routerName
+              ? true
+              : false;
+        }
+        var newUrl = state.openedTagArray.filter(
+          tag => tag.isActive == true
+        )[0]["routerUrl"];
+        var currentUrl = router.history.current.path;
+        if (currentUrl != newUrl) {
+          router.push(newUrl);
+        }
       }
     },
     deleteOpenedTag(state, value) {
       var arrLenth = state.openedTagArray.length;
+      // 关闭标签时，获取到当前高亮显示的标签对象
+      var currentActiveTag = state.openedTagArray.filter(
+        tag => tag.isActive == true
+      )[0];
+      // 当前高亮标签是否为当前点击标签，true是，false否
+      var flag = currentActiveTag.routerName == value.routerName ? true : false;
       for (var i = 0; i < arrLenth; i++) {
         if (value.routerName == state.openedTagArray[i]["routerName"]) {
+          if (flag) {
+            state.openedTagArray[i - 1]["isActive"] = true;
+          }
           state.openedTagArray.splice(i, 1);
           break;
         }
+      }
+      if (flag) {
+        var newUrl = state.openedTagArray.filter(
+          tag => tag.isActive == true
+        )[0]["routerUrl"];
+        var currentUrl = router.history.current.path;
+        if (currentUrl != newUrl) {
+          router.push(newUrl);
+        }
+        state.activeSideBarIndex = state.openedTagArray.filter(
+          tag => tag.isActive == true
+        )[0]["tagIndex"];
       }
     }
   },
@@ -75,7 +116,6 @@ export default new Vuex.Store({
       context.commit("changeBreadCrumbName", value);
     },
     addOpenedTagsArray(context, value) {
-      console.log(value);
       context.commit("updateOpenedTags", value);
     },
     deleteOpenedTagsArrary(context, value) {

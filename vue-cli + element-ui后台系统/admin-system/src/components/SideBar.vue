@@ -175,14 +175,13 @@
           pageName: nextRouter.pageName,
           pageRouter: nextRouter.path
         });
-        console.log(nextRouter);
         this.$store.dispatch("addOpenedTagsArray", {
           routerName: nextRouter.name,
           tagName: nextRouter.pageName,
           isActive: true,
-          routerUrl: nextRouter.path
+          routerUrl: nextRouter.path,
+          tagIndex: activeIndex.toString()
         });
-        this.$router.push(nextRouter.path);
       }
     }
   };

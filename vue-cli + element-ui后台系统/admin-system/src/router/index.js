@@ -87,7 +87,7 @@ export default new Router({
     {
       path: "/rolePermissionManagement",
       name: "RolePermissionManagement",
-      pageName: "用户管理",
+      pageName: "角色权限管理",
       component: () =>
         import("../pages/PropertyManagement/RolePermissionManagement.vue"),
       meta: {

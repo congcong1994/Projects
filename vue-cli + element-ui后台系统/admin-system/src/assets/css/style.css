@@ -116,6 +116,17 @@ body,
   margin-right: 8px;
 }
 
+.header-wrapper .tags-box .tag-item-active {
+  display: inline-block;
+  padding: 0 8px;
+  border: 1px solid #333;
+  color: #333;
+  height: 26px;
+  line-height: 26px;
+  margin-top: 6px;
+  margin-right: 8px;
+}
+
 .header-wrapper .tags-box .tag-item span {
   margin-left: 8px;
 }

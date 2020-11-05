@@ -17,13 +17,14 @@
     </div>
     <div class="tags-box">
       <div
-        class="tag-item"
         v-for="tag in tagsArray"
         :key="tag.routerName"
+        :class="tag.isActive ? 'tag-item-active' : 'tag-item'"
+        @click="changeCurrentRouter(tag)"
       >
         {{ tag.tagName}}<span
           v-if="tag.routerName != 'Index'"
-          @click="deleteCurrentTag(tag)"
+          @click.stop="deleteCurrentTag(tag)"
         >×</span>
       </div>
     </div>
@@ -37,7 +38,6 @@
     computed: {
       tagsArray: {
         get: function () {
-          console.log(this.$store.state.openedTagArray);
           return this.$store.state.openedTagArray;
         },
         set: function (newValue) {
@@ -61,6 +61,14 @@
           pageRouter: "/"
         });
         this.$router.push('/');
+      },
+      changeCurrentRouter(tag) {
+        if (!tag.isActive) {
+          this.$router.push(tag.routerUrl);
+        }
+        tag.isActive = true;
+        this.$store.dispatch("addOpenedTagsArray", tag);
+        this.$store.dispatch("setSideBarActiveIndex", tag.tagIndex);
       },
       deleteCurrentTag(tag) {
         this.$store.dispatch("deleteOpenedTagsArrary", tag);
